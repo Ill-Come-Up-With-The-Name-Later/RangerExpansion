@@ -29,7 +29,7 @@ namespace RangerExpansion.Content.Items.Guns.MP5
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 45; ; 
+            Item.damage = 45;
             Item.knockBack = 3f; 
             Item.noMelee = true; 
 
