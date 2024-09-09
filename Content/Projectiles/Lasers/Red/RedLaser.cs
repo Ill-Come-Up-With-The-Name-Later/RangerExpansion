@@ -1,4 +1,5 @@
-﻿using Terraria.ModLoader;
+﻿using Microsoft.Xna.Framework;
+using Terraria.ModLoader;
 
 namespace RangerExpansion.Content.Projectiles.Lasers.Red
 {
@@ -19,6 +20,11 @@ namespace RangerExpansion.Content.Projectiles.Lasers.Red
             Projectile.tileCollide = true;
             Projectile.extraUpdates = 1;
             Projectile.damage = 0;
+        }
+
+        public override void AI()
+        {
+            Projectile.velocity = new Vector2(0, 0);
         }
     }
 }

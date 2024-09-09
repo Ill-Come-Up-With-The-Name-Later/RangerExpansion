@@ -12,7 +12,7 @@ namespace RangerExpansion.Content.Rarities
 
         public override int GetPrefixedRarity(int offset, float valueMult)
         {
-            if (offset < 0)
+            if(offset < 0)
             {
                 return ItemRarityID.Purple;
             }
