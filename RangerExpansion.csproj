@@ -10,6 +10,7 @@
 
 	<!-- References -->
 	<ItemGroup>
+	  <Folder Include="Assets\Sounds\" />
 	  <Folder Include="Content\Items\Bows\" />
 	  <Folder Include="Content\Items\Accessories\" />
 	  <Folder Include="Content\Projectiles\Arrows\" />

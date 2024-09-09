@@ -4,6 +4,5 @@ namespace RangerExpansion
 {
 	public class RangerExpansion : Mod
 	{
-
-	}
+    }
 }
