@@ -37,8 +37,11 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
 
             if(Projectile.timeLeft == 599)
             {
+                float rotation = MathHelper.ToRadians(20);
+                Vector2 velocity = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+
                 Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position + new Vector2(0, 8),
-                    Projectile.velocity, ProjectileID.Bullet, Projectile.damage, Projectile.knockBack);
+                    velocity, ProjectileID.Bullet, Projectile.damage, Projectile.knockBack);
             }
         }
     }

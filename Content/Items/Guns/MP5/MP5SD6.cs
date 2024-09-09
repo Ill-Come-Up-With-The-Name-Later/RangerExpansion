@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RangerExpansion.Content.Rarities;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -17,7 +18,7 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             Item.width = 60; 
             Item.height = 26; 
             Item.scale = 1;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ModContent.RarityType<DeveloperRarity>();
 
             // Use Properties
             Item.useTime = 5; 
