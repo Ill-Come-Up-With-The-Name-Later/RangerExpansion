@@ -1,11 +1,11 @@
 Items: {
 	MP5SD6: {
-		Tooltip: The US Navy loves it! And so do I!
+		Tooltip: ""The US Navy loves it! And so do I!"
 		DisplayName: MP5SD6
 	}
 
 	DuplexRound: {
-		Tooltip: ""
+		Tooltip: "Shoots two bullets at once."
 		DisplayName: Duplex Round
 	}
 }
