@@ -3,4 +3,11 @@ Items: {
 		Tooltip: The US Navy loves it! And so do I!
 		DisplayName: MP5SD6
 	}
+
+	DuplexRound: {
+		Tooltip: ""
+		DisplayName: Duplex Round
+	}
 }
+
+Projectiles.DuplexBullet.DisplayName: Duplex Bullet
