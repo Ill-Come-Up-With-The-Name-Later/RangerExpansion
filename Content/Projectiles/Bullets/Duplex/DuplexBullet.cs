@@ -1,5 +1,4 @@
-﻿
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -40,6 +39,9 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
             {
                 float rotation = MathHelper.ToRadians(8);
                 Vector2 velocity = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+                Vector2 velocity2 = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+
+                Projectile.velocity = velocity2;
 
                 Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position + new Vector2(0, 8),
                     velocity, ProjectileID.Bullet, Projectile.damage, Projectile.knockBack);
