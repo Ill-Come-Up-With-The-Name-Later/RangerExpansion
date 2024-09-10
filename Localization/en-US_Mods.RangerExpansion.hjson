@@ -10,4 +10,8 @@ Items: {
 	}
 }
 
-Projectiles.DuplexBullet.DisplayName: Duplex Bullet
+Projectiles: {
+	DuplexBullet.DisplayName: Duplex Bullet
+	RedLaser.DisplayName: Red Laser
+	GreenLaser.DisplayName: Green Laser
+}

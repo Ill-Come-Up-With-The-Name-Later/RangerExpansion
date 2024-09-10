@@ -1,5 +1,7 @@
-﻿using RangerExpansion.Content.Rarities;
+﻿using Microsoft.Xna.Framework;
+using RangerExpansion.Content.Rarities;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -38,6 +40,12 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             Item.shoot = ProjectileID.PurificationPowder;
             Item.shootSpeed = 12f;
             Item.useAmmo = AmmoID.Bullet;
+        }
+
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            float rotation = MathHelper.ToRadians(8);
+            velocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
         }
     }
 }

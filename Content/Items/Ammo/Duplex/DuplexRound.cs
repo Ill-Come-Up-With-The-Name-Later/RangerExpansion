@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using RangerExpansion.Content.Projectiles.Bullets.Duplex;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -22,7 +23,7 @@ namespace RangerExpansion.Content.Items.Ammo.Duplex
             Item.consumable = true;
             Item.value = 10;
             Item.rare = ItemRarityID.Green;
-            Item.shoot = ModContent.ProjectileType<Projectiles.Bullets.Duplex.DuplexBullet>();
+            Item.shoot = ModContent.ProjectileType<DuplexBullet>();
             Item.shootSpeed = 4f;
             Item.ammo = AmmoID.Bullet;
         }
