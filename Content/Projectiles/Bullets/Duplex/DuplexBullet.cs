@@ -33,9 +33,16 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
 
         public override void AI()
         {
-            Player owner = Main.player[Projectile.owner]; 
+            Player owner = Main.player[Projectile.owner];
 
-            if(Projectile.timeLeft == 599)
+            if(!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            {
+                Projectile.Kill();
+                return;
+            }
+
+            // Spawn second projectile with random rotation and rotate original projectile
+            if (Projectile.timeLeft == 599)
             {
                 float rotation = MathHelper.ToRadians(8);
                 Vector2 velocity = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));

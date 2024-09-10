@@ -23,7 +23,8 @@ namespace RangerExpansion.Content.Projectiles.Lasers.Red
         }
 
         public override void AI()
-        {
+        {   
+            // Stay still
             Projectile.velocity = new Vector2(0, 0);
         }
     }

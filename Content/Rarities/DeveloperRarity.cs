@@ -12,6 +12,7 @@ namespace RangerExpansion.Content.Rarities
 
         public override int GetPrefixedRarity(int offset, float valueMult)
         {
+            // Developer rarity should be above purple rarity
             if(offset < 0)
             {
                 return ItemRarityID.Purple;

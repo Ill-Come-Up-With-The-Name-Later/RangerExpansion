@@ -25,6 +25,7 @@ namespace RangerExpansion.Content.Projectiles.Lasers.Green
 
         public override void AI()
         {
+            // Stay still
             Projectile.velocity = new Vector2(0, 0);
         }
     }
