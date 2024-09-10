@@ -9,7 +9,7 @@ namespace RangerExpansion.Content.Items
     {
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if(item.rare == ModContent.RarityType<DeveloperRarity>())
+            if(item.rare == ModContent.RarityType<DeveloperRarity>()) // Add tooltip for developer rarity items
             {
                 tooltips.Add(new TooltipLine(Mod, "Tooltip1", "Developer Item"));
             }

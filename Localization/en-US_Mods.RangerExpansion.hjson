@@ -1,12 +1,16 @@
 Items: {
 	MP5SD6: {
-		Tooltip: The US Navy loves it! And so do I!
 		DisplayName: MP5SD6
+		Tooltip: "'The US Navy loves it! And so do I!'"
 	}
 
 	DuplexRound: {
-		Tooltip: Shoots two bullets at once.
 		DisplayName: Duplex Round
+		Tooltip:
+			'''
+			Shoots two bullets at once.
+			Bullets have significant inaccuracy.
+			'''
 	}
 }
 
