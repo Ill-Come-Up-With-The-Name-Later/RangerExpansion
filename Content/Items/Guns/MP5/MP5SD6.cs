@@ -55,7 +55,7 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             float rotation = MathHelper.ToRadians(8);
             velocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
 
-            SoundEngine.PlaySound(SoundID.Item11, position);
+            SoundEngine.PlaySound(SoundID.Item11, position); // Play sound every shot
         }
     }
 }
