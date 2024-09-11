@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using RangerExpansion.Content.Rarities;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -17,9 +16,8 @@ namespace RangerExpansion.Content.Items.Guns.MP5
         public override void SetDefaults()
         {
             // Common Properties
-            Item.width = 60; 
-            Item.height = 26; 
-            Item.scale = 1;
+            Item.width = 60;
+            Item.height = 26;
             Item.rare = ModContent.RarityType<DeveloperRarity>();
 
             // Use Properties

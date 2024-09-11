@@ -5,7 +5,7 @@ Items: {
 	}
 
 	DuplexRound: {
-		DisplayName: Duplex Round
+		DisplayName: Duplex Bullet
 		Tooltip:
 			'''
 			Shoots two bullets at once.

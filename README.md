@@ -5,4 +5,5 @@ A Terraria mod expanding upon the ranger class.
 # Credits
 
 All coding by BurningAspect.
-All assets by Hat.
+<br>
+All assets by Hat except if noted.
