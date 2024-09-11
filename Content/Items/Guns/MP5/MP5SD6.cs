@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using RangerExpansion.Content.Rarities;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -39,8 +40,6 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             Item.shootSpeed = 12f;
             Item.useAmmo = AmmoID.Bullet;
 
-            Item.UseSound = SoundID.Item11;
-
             Item.value = Item.buyPrice(0, 15, 20, 50);
         }
 
@@ -55,6 +54,8 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             // Rotate projectile randomy
             float rotation = MathHelper.ToRadians(8);
             velocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+
+            SoundEngine.PlaySound(SoundID.Item11, position);
         }
     }
 }

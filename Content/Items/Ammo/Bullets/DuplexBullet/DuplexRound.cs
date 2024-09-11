@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Items.Ammo.Duplex
+namespace RangerExpansion.Content.Items.Ammo.Bullet.DuplexBullet
 {
     class DuplexRound : ModItem
     {

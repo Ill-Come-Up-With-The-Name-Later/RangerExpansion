@@ -11,9 +11,9 @@ namespace RangerExpansion.Content.Items
             if(item.DamageType == DamageClass.Ranged)
             {
                 // Make projectiles come from muzzle
-                Vector2 muzzleOffset = Vector2.Normalize(velocity) * item.width; // multiply normal velocity by gun length
+                Vector2 muzzleOffset = Vector2.Normalize(velocity) * item.width; // Multiply normal velocity by gun length
 
-                if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
+                if(Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
                 {
                     position += muzzleOffset;
                 }

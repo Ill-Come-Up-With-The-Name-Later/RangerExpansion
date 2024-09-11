@@ -1,7 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.GameContent.UI;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace RangerExpansion.Content.Rarities
@@ -12,13 +9,7 @@ namespace RangerExpansion.Content.Rarities
 
         public override int GetPrefixedRarity(int offset, float valueMult)
         {
-            // Developer rarity should be above purple rarity
-            if(offset < 0)
-            {
-                return ItemRarityID.Purple;
-            }
-
-            return Type;
+            return Type; // Modifiers cannot affect rarity of developer items
         }
     }
 }
