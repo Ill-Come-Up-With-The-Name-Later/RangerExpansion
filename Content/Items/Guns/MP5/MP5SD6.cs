@@ -23,12 +23,12 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             Item.rare = ModContent.RarityType<DeveloperRarity>();
 
             // Use Properties
-            Item.useTime = 5; 
-            Item.useAnimation = 15;
-            Item.reuseDelay = 15;
-            Item.consumeAmmoOnLastShotOnly = true;
+            Item.useTime = 6;
+            Item.useAnimation = 18;
+            Item.reuseDelay = 18;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.autoReuse = true; 
+            Item.autoReuse = true;
+            Item.shootsEveryUse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
@@ -40,7 +40,17 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             Item.shoot = ProjectileID.PurificationPowder;
             Item.shootSpeed = 12f;
             Item.useAmmo = AmmoID.Bullet;
+
+            Item.UseSound = SoundID.Item11;
+
+            Item.value = Item.buyPrice(0, 15, 20, 50);
         }
+
+        public override Vector2? HoldoutOffset()
+        {
+            return new Vector2(-24f, 0);
+        }
+
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
