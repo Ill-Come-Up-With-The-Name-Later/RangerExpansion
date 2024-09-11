@@ -27,7 +27,7 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             Item.reuseDelay = 18;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
-            Item.shootsEveryUse = true;
+            Item.consumeAmmoOnLastShotOnly = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;

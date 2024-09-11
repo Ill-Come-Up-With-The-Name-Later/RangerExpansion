@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
 {
-    class DuplexBullet : ModProjectile
+    class DuplexBulletProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {

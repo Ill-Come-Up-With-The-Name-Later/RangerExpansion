@@ -18,4 +18,5 @@ Projectiles: {
 	DuplexBullet.DisplayName: Duplex Bullet
 	RedLaser.DisplayName: Red Laser
 	GreenLaser.DisplayName: Green Laser
+	DuplexBulletProjectile.DisplayName: Duplex Bullet Projectile
 }

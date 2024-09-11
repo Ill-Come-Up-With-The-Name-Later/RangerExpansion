@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Items.Ammo.Bullet.DuplexBullet
+namespace RangerExpansion.Content.Items.Ammo.Bullets.DuplexBullet
 {
     class DuplexRound : ModItem
     {
@@ -23,7 +23,7 @@ namespace RangerExpansion.Content.Items.Ammo.Bullet.DuplexBullet
             Item.consumable = true;
             Item.value = 10;
             Item.rare = ItemRarityID.Green;
-            Item.shoot = ModContent.ProjectileType<DuplexBullet>();
+            Item.shoot = ModContent.ProjectileType<DuplexBulletProjectile>();
             Item.shootSpeed = 4f;
             Item.ammo = AmmoID.Bullet;
         }
