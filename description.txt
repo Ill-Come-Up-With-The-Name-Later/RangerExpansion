@@ -1,1 +1,5 @@
 A mod expanding upon the ranger class. More Endless Ammo or LuiAFK is recommended for adding infinite ammo pouches.
+
+This mod adds more guns, bows, dart guns, ammunition, and accessories.
+
+Work in Progress.

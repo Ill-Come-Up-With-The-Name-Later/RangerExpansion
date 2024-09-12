@@ -27,20 +27,19 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
 
         public override void AI()
         {
-            Player owner = Main.player[Projectile.owner];
-
-            if(Projectile.timeLeft % 80 == 0) // Spawns two vortex beater rocket ten times over projectile lifespan
-            {
-                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position, new Vector2(Projectile.velocity.X / 2, -3),
-                    ProjectileID.VortexBeaterRocket, Projectile.damage, Projectile.knockBack);
-                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position, new Vector2(Projectile.velocity.X / 2, 3),
-                    ProjectileID.VortexBeaterRocket, Projectile.damage, Projectile.knockBack);
-            }
-
             if(Projectile.timeLeft % 3 == 0)
             {
                 Dust.NewDust(Projectile.position, 2, 2, DustID.Vortex);
             }
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            Player owner = Main.player[Projectile.owner];
+            Vector2 velocity = target.position - owner.position;
+
+            Projectile.NewProjectile(owner.GetSource_FromThis(), owner.position, velocity, ModContent.ProjectileType<LuminiteDartProjectile>(), 
+                Projectile.damage, Projectile.knockBack);
         }
     }
 }

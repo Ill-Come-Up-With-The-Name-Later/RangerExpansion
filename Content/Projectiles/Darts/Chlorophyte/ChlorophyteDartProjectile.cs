@@ -36,9 +36,9 @@ namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
 
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            Projectile.penetrate -= 1;
+            Projectile.penetrate -= 1; // Remove piercing from the projectile when it bounces
            
-            if(Projectile.penetrate <= 0)
+            if(Projectile.penetrate <= 0) // If the projectile cannot pierce anymore, remove it
             {
                 Projectile.Kill();
                 return true;
