@@ -15,8 +15,8 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
 
         public override void SetDefaults()
         {
-            Projectile.width = 8; 
-            Projectile.height = 8;
+            Projectile.width = 12; 
+            Projectile.height = 24;
             Projectile.aiStyle = 1; 
             Projectile.friendly = true; 
             Projectile.hostile = false; 

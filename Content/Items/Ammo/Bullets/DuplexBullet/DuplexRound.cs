@@ -24,7 +24,7 @@ namespace RangerExpansion.Content.Items.Ammo.Bullets.DuplexBullet
             Item.value = 10;
             Item.rare = ItemRarityID.Green;
             Item.shoot = ModContent.ProjectileType<DuplexBulletProjectile>();
-            Item.shootSpeed = 4f;
+            Item.shootSpeed = 8f;
             Item.ammo = AmmoID.Bullet;
         }
     }

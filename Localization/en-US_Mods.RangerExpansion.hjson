@@ -12,6 +12,16 @@ Items: {
 			Bullets have significant inaccuracy.
 			'''
 	}
+
+	VenomDart: {
+		Tooltip: ""
+		DisplayName: Venom Dart
+	}
+
+	LuminiteDart: {
+		Tooltip: ""
+		DisplayName: Luminite Dart
+	}
 }
 
 Projectiles: {
@@ -19,4 +29,6 @@ Projectiles: {
 	RedLaser.DisplayName: Red Laser
 	GreenLaser.DisplayName: Green Laser
 	DuplexBulletProjectile.DisplayName: Duplex Bullet Projectile
+	VenomousDartProjectile.DisplayName: Venomous Dart Projectile
+	LuminiteDartProjectile.DisplayName: Luminite Dart Projectile
 }
