@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -24,6 +26,14 @@ namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
             AIType = ProjectileID.CrystalDart;
         }
 
+        public override void AI()
+        {
+            if(Projectile.timeLeft % 3 == 0)
+            {
+                Dust.NewDust(Projectile.position, 2, 2, DustID.Chlorophyte);
+            }
+        }
+
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             Projectile.penetrate -= 1;
@@ -31,9 +41,10 @@ namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
             if(Projectile.penetrate <= 0)
             {
                 Projectile.Kill();
+                return true;
             }
 
-            Projectile.velocity *= -1;
+            Projectile.velocity *= (float) -(1 + new Random().NextDouble());
 
             return false;
         }

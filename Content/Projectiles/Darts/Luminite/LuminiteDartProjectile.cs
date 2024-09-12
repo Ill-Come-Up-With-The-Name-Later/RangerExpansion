@@ -36,6 +36,11 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
                 Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position, new Vector2(Projectile.velocity.X / 2, 3),
                     ProjectileID.VortexBeaterRocket, Projectile.damage, Projectile.knockBack);
             }
+
+            if(Projectile.timeLeft % 3 == 0)
+            {
+                Dust.NewDust(Projectile.position, 2, 2, DustID.Vortex);
+            }
         }
     }
 }

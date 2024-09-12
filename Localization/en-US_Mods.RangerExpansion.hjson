@@ -22,6 +22,11 @@ Items: {
 		Tooltip: ""
 		DisplayName: Luminite Dart
 	}
+
+	ChlorophyteDart: {
+		DisplayName: Chlorophyte Dart
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -31,4 +36,5 @@ Projectiles: {
 	DuplexBulletProjectile.DisplayName: Duplex Bullet Projectile
 	VenomousDartProjectile.DisplayName: Venomous Dart Projectile
 	LuminiteDartProjectile.DisplayName: Luminite Dart Projectile
+	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart Projectile
 }

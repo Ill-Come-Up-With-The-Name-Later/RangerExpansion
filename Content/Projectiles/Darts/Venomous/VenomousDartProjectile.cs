@@ -23,6 +23,14 @@ namespace RangerExpansion.Content.Projectiles.Darts.Venomous
             AIType = ProjectileID.CrystalDart;
         }
 
+        public override void AI()
+        {
+            if(Projectile.timeLeft % 3 == 0)
+            {
+                Dust.NewDust(Projectile.position, 2, 2, DustID.Venom);
+            }
+        }
+
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             target.AddBuff(BuffID.Venom, 30 * 60);
