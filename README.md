@@ -16,8 +16,8 @@ All assets by Hat except if noted.
   <li>
     BurningAspect
     <ul>
-      <li> Chlorophyte Dart </li>
-      <li> Venom Dart </li>
+      <li> Chlorophyte Dart Mockup </li>
+      <li> Venom Dart Mockup </li>
       <li> Luminite Dart </li>
     </ul>
   </li>
