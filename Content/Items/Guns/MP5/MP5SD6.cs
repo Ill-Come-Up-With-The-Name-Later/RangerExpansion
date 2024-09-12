@@ -37,7 +37,7 @@ namespace RangerExpansion.Content.Items.Guns.MP5
 
             // Gun Properties
             Item.shoot = ProjectileID.PurificationPowder;
-            Item.shootSpeed = 12f;
+            Item.shootSpeed = 15f;
             Item.useAmmo = AmmoID.Bullet;
 
             Item.value = Item.buyPrice(0, 15, 20, 50);

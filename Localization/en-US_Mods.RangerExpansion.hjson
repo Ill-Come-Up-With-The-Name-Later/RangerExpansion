@@ -24,11 +24,7 @@ Items: {
 
 	LuminiteDart: {
 		DisplayName: Luminite Dart
-		Tooltip:
-			'''
-			Shoots a secondary dart upon
-			successfully hitting an enemy.
-			'''
+		Tooltip: Darts pass through tiles.
 	}
 
 	ChlorophyteDart: {

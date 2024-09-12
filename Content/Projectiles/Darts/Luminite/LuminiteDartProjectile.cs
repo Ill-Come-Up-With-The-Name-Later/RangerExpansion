@@ -18,7 +18,7 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
             Projectile.timeLeft = 800;
             Projectile.alpha = 255;
             Projectile.ignoreWater = true;
-            Projectile.tileCollide = true;
+            Projectile.tileCollide = false;
             Projectile.penetrate = 10;
             Projectile.light = 0.2f;
 
@@ -39,22 +39,6 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
             {
                 Dust.NewDust(Projectile.position, 2, 2, DustID.Vortex);
             }
-        }
-
-        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            Player owner = Main.player[Projectile.owner];
-
-            if (!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
-            {
-                Projectile.Kill();
-                return;
-            }
-
-            Vector2 velocity = target.position - owner.position;
-
-            Projectile.NewProjectile(owner.GetSource_FromThis(), owner.position, velocity, ModContent.ProjectileType<LuminiteDartProjectile>(), 
-                Projectile.damage, Projectile.knockBack);
         }
     }
 }
