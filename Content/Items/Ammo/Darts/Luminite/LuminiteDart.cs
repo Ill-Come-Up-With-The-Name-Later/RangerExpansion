@@ -24,7 +24,7 @@ namespace RangerExpansion.Content.Items.Ammo.Darts.Luminite
             Item.value = Item.buyPrice(0, 0, 7, 40);
             Item.rare = ItemRarityID.Cyan;
             Item.shoot = ModContent.ProjectileType<LuminiteDartProjectile>();
-            Item.shootSpeed = 7;
+            Item.shootSpeed = 6;
             Item.ammo = AmmoID.Dart;
         }
 

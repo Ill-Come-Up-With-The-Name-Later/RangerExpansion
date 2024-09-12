@@ -25,8 +25,7 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
             Projectile.alpha = 255; 
             Projectile.light = 0.5f; 
             Projectile.ignoreWater = false;
-            Projectile.tileCollide = true; 
-            Projectile.extraUpdates = 1; 
+            Projectile.tileCollide = true;
 
             AIType = ProjectileID.Bullet;
         }

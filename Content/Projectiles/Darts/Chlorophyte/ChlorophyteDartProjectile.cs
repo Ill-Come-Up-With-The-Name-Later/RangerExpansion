@@ -1,10 +1,10 @@
-﻿using Terraria.ID;
-using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Projectiles.Darts.Venomous
+namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
 {
-    class VenomousDartProjectile : ModProjectile
+    class ChlorophyteDartProjectile : ModProjectile
     {
         public override void SetDefaults()
         {
@@ -19,13 +19,23 @@ namespace RangerExpansion.Content.Projectiles.Darts.Venomous
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
             Projectile.light = 0.2f;
+            Projectile.penetrate = 6;
 
             AIType = ProjectileID.CrystalDart;
         }
 
-        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+        public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            target.AddBuff(BuffID.Venom, 30 * 60);
+            Projectile.penetrate -= 1;
+           
+            if(Projectile.penetrate <= 0)
+            {
+                Projectile.Kill();
+            }
+
+            Projectile.velocity *= -1;
+
+            return false;
         }
     }
 }

@@ -19,8 +19,10 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
             Projectile.alpha = 255;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.extraUpdates = 1;
-            Projectile.penetrate = 10;;
+            Projectile.penetrate = 10;
+            Projectile.light = 0.2f;
+
+            AIType = ProjectileID.CrystalDart;
         }
 
         public override void AI()
@@ -29,9 +31,9 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
 
             if(Projectile.timeLeft % 80 == 0) // Spawns two vortex beater rocket ten times over projectile lifespan
             {
-                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position, new Vector2(Projectile.velocity.X / 2, -8),
+                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position, new Vector2(Projectile.velocity.X / 2, -3),
                     ProjectileID.VortexBeaterRocket, Projectile.damage, Projectile.knockBack);
-                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position, new Vector2(Projectile.velocity.X / 2, 8),
+                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position, new Vector2(Projectile.velocity.X / 2, 3),
                     ProjectileID.VortexBeaterRocket, Projectile.damage, Projectile.knockBack);
             }
         }
