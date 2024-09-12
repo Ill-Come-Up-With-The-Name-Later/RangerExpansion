@@ -28,7 +28,15 @@ namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
 
         public override void AI()
         {
-            if(Projectile.timeLeft % 3 == 0)
+            Player owner = Main.player[Projectile.owner];
+
+            if(!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            {
+                Projectile.Kill();
+                return;
+            }
+
+            if (Projectile.timeLeft % 3 == 0)
             {
                 Dust.NewDust(Projectile.position, 2, 2, DustID.Chlorophyte);
             }
