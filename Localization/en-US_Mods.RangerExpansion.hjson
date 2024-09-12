@@ -38,7 +38,6 @@ Projectiles: {
 	RedLaser.DisplayName: Red Laser
 	GreenLaser.DisplayName: Green Laser
 	DuplexBulletProjectile.DisplayName: Duplex Bullet Projectile
-	VenomousDartProjectile.DisplayName: Venomous Dart Projectile
 	LuminiteDartProjectile.DisplayName: Luminite Dart Projectile
 	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart Projectile
 	VenomDartProjectile.DisplayName: Venom Dart Projectile

@@ -41,16 +41,18 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
             }
 
             // Spawn second projectile with random rotation and rotate original projectile
-            if (Projectile.timeLeft == 599)
+            if(Projectile.timeLeft == 599)
             {
+                Projectile.velocity *= 1.5f;
+
                 float rotation = MathHelper.ToRadians(5);
                 Vector2 velocity = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
                 Vector2 velocity2 = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
 
                 Projectile.velocity = velocity2;
 
-                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position + new Vector2(0, 8),
-                    velocity, ProjectileID.Bullet, Projectile.damage, Projectile.knockBack);
+                Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position - new Vector2(0, 10),
+                    velocity * 0.75f, ProjectileID.Bullet, Projectile.damage, Projectile.knockBack);
             }
         }
     }
