@@ -43,7 +43,7 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
             // Spawn second projectile with random rotation and rotate original projectile
             if (Projectile.timeLeft == 599)
             {
-                float rotation = MathHelper.ToRadians(8);
+                float rotation = MathHelper.ToRadians(5);
                 Vector2 velocity = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
                 Vector2 velocity2 = Projectile.velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
 

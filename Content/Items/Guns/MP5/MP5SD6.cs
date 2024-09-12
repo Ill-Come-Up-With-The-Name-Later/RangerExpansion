@@ -52,7 +52,7 @@ namespace RangerExpansion.Content.Items.Guns.MP5
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             // Rotate projectile randomy
-            float rotation = MathHelper.ToRadians(8);
+            float rotation = MathHelper.ToRadians(6);
             velocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
 
             SoundEngine.PlaySound(SoundID.Item11, position); // Play sound every shot

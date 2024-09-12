@@ -14,18 +14,26 @@ Items: {
 	}
 
 	VenomDart: {
-		Tooltip: ""
 		DisplayName: Venom Dart
+		Tooltip:
+			'''
+			Applies venom when an
+			enemy is hit.
+			'''
 	}
 
 	LuminiteDart: {
-		Tooltip: ""
 		DisplayName: Luminite Dart
+		Tooltip:
+			'''
+			Shoots a secondary dart upon
+			successfully hitting an enemy.
+			'''
 	}
 
 	ChlorophyteDart: {
 		DisplayName: Chlorophyte Dart
-		Tooltip: ""
+		Tooltip: Bounces off of tiles.
 	}
 }
 
@@ -37,4 +45,5 @@ Projectiles: {
 	VenomousDartProjectile.DisplayName: Venomous Dart Projectile
 	LuminiteDartProjectile.DisplayName: Luminite Dart Projectile
 	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart Projectile
+	VenomDartProjectile.DisplayName: Venom Dart Projectile
 }

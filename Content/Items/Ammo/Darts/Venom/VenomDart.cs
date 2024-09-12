@@ -1,4 +1,4 @@
-﻿using RangerExpansion.Content.Projectiles.Darts.Venomous;
+﻿using RangerExpansion.Content.Projectiles.Darts.Venom;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
