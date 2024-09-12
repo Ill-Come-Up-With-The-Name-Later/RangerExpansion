@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Items.Ammo.Darts.Venomous
+namespace RangerExpansion.Content.Items.Ammo.Darts.Venom
 {
     class VenomDart : ModItem
     {
@@ -23,7 +23,7 @@ namespace RangerExpansion.Content.Items.Ammo.Darts.Venomous
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 1, 40);
             Item.rare = ItemRarityID.LightRed;
-            Item.shoot = ModContent.ProjectileType<VenomousDartProjectile>();
+            Item.shoot = ModContent.ProjectileType<VenomDartProjectile>();
             Item.shootSpeed = 3;
             Item.ammo = AmmoID.Dart;
         }

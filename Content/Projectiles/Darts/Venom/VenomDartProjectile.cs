@@ -2,9 +2,9 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Projectiles.Darts.Venomous
+namespace RangerExpansion.Content.Projectiles.Darts.Venom
 {
-    class VenomousDartProjectile : ModProjectile
+    class VenomDartProjectile : ModProjectile
     {
         public override void SetDefaults()
         {
