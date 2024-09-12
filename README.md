@@ -10,7 +10,7 @@ All coding by BurningAspect.
 <br>
 All assets by Hat except if noted.
 
-# Other Assets
+# Assets Also By
 
 <ul>
   <li>
