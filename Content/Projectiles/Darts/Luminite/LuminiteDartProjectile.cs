@@ -36,7 +36,7 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
 
             Projectile.velocity *= 1.025f;
 
-            if(Projectile.timeLeft % 30 == 0)
+            if(Projectile.timeLeft % 15 == 0)
             {
                 Projectile.damage += 1;
             }
