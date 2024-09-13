@@ -23,7 +23,7 @@ Upcoming music box tracks by hat.
       <li> Chlorophyte Dart mockup </li>
       <li> Venom Dart mockup </li>
       <li> Luminite Dart </li>
-      <li> Tracker Bullet mockup </li>
+      <li> Tracker Bullet </li>
     </ul>
   </li>
 </ul>
