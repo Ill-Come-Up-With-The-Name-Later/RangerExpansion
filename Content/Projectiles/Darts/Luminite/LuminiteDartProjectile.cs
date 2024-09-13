@@ -15,7 +15,7 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
-            Projectile.timeLeft = 800;
+            Projectile.timeLeft = 400;
             Projectile.alpha = 255;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
@@ -34,6 +34,8 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
                 Projectile.Kill();
                 return;
             }
+
+            Projectile.velocity *= 1.025f;
 
             if (Projectile.timeLeft % 3 == 0)
             {

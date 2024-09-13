@@ -24,7 +24,11 @@ Items: {
 
 	LuminiteDart: {
 		DisplayName: Luminite Dart
-		Tooltip: Darts pass through tiles.
+		Tooltip:
+			'''
+			Darts speed up the longer they 
+			fly and pass through tiles.
+			'''
 	}
 
 	ChlorophyteDart: {
