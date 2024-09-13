@@ -36,7 +36,9 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Tracker
             // Bullets seek out the cursor
             Vector2 cursorPos = Main.MouseWorld;
             Vector2 velocity = cursorPos - Projectile.position;
+
             velocity.Normalize();
+            velocity *= RangerExpansion.DistanceBetween(cursorPos, Projectile.position);
 
             Projectile.velocity = velocity;
             Lighting.AddLight(Projectile.position, 0.0f, 0.45f, 0.45f);
