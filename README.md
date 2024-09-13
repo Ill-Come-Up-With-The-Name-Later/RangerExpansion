@@ -2,6 +2,8 @@
 
 A Terraria mod expanding upon the ranger class.
 <br>
+Calamity mod is required for the mod to work properly.
+<br>
 Open an issue regarding a bug: https://github.com/Ill-Come-Up-With-The-Name-Later/RangerExpansion/issues
 
 # Credits
