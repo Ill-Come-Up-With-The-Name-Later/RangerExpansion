@@ -1,21 +1,54 @@
 Items: {
 	MP5SD6: {
+		DisplayName: MP5SD6
+		Tooltip: 'The US Navy loves it! And so do I!'
 	}
 
 	DuplexRound: {
+		DisplayName: Duplex Bullet
+		Tooltip:
+			'''
+			Shoots two bullets at once.
+			Bullets have significant inaccuracy.
+			'''
 	}
 
 	VenomDart: {
+		DisplayName: Venom Dart
+		Tooltip:
+			'''
+			Applies venom when an
+			enemy is hit.
+			'''
 	}
 
 	LuminiteDart: {
+		DisplayName: Luminite Dart
+		Tooltip:
+			'''
+			Darts speed up the longer they 
+			fly and pass through tiles.
+			'''
 	}
 
 	ChlorophyteDart: {
+		DisplayName: Chlorophyte Dart
+		Tooltip: Bounces off of tiles.
 	}
 
 	TrackerBullet: {
+		DisplayName: Tracker Bullet
+		Tooltip: Bullets follow the cursor.
 	}
 }
 
-Projectiles.DuplexBullet.DisplayName: Duplex Bullet
+Projectiles: {
+	DuplexBullet.DisplayName: Duplex Bullet
+	RedLaser.DisplayName: Red Laser
+	GreenLaser.DisplayName: Green Laser
+	DuplexBulletProjectile.DisplayName: Duplex Bullet Projectile
+	LuminiteDartProjectile.DisplayName: Luminite Dart Projectile
+	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart Projectile
+	VenomDartProjectile.DisplayName: Venom Dart Projectile
+	TrackerBulletProjectile.DisplayName: Tracker Bullet Projectile
+}
