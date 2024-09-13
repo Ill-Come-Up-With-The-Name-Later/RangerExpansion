@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System;
 
 namespace RangerExpansion.Content.Projectiles.Bullets.Tracker
 {
@@ -15,18 +16,18 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Tracker
 
         public override void SetDefaults()
         {
-            Projectile.width = 20;
-            Projectile.height = 2;
+            Projectile.width = 12;
+            Projectile.height = 12;
             Projectile.aiStyle = 1;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
-            Projectile.timeLeft = 1200;
+            Projectile.timeLeft = 1000;
             Projectile.alpha = 255;
-            Projectile.light = 0.5f;
+            Projectile.light = 0.35f;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
-            Projectile.scale = 0.1f;
+            Projectile.scale = 0.5f;
 
             AIType = ProjectileID.ChlorophyteBullet;
         }
@@ -37,11 +38,12 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Tracker
             Vector2 cursorPos = Main.MouseWorld;
             Vector2 velocity = cursorPos - Projectile.position;
 
+            // Normalize the velocity to a direction then multiply it and scale speed with distance
             velocity.Normalize();
-            velocity *= RangerExpansion.DistanceBetween(cursorPos, Projectile.position);
+            velocity *= (float) Math.Atan(RangerExpansion.DistanceBetween(cursorPos, Projectile.position)) * 10;
 
             Projectile.velocity = velocity;
-            Lighting.AddLight(Projectile.position, 0.0f, 0.45f, 0.45f);
+            Lighting.AddLight(Projectile.position, 0.0f, 0.3f, 0.3f);
         }
     }
 }

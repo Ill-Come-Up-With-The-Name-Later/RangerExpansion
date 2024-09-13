@@ -1,7 +1,6 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
-using Microsoft.Xna.Framework;
 
 namespace RangerExpansion.Content.Projectiles.Darts.Luminite
 {
@@ -29,7 +28,7 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
         {
             Player owner = Main.player[Projectile.owner];
 
-            if (!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            if(!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
             {
                 Projectile.Kill();
                 return;
@@ -37,7 +36,12 @@ namespace RangerExpansion.Content.Projectiles.Darts.Luminite
 
             Projectile.velocity *= 1.025f;
 
-            if (Projectile.timeLeft % 3 == 0)
+            if(Projectile.timeLeft % 30 == 0)
+            {
+                Projectile.damage += 1;
+            }
+
+            if(Projectile.timeLeft % 3 == 0)
             {
                 Dust.NewDust(Projectile.position, 2, 2, DustID.Vortex);
             }
