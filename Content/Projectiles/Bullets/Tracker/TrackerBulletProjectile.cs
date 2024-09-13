@@ -22,7 +22,7 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Tracker
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
-            Projectile.timeLeft = 1000;
+            Projectile.timeLeft = 200;
             Projectile.alpha = 255;
             Projectile.light = 0.35f;
             Projectile.ignoreWater = false;
