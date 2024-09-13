@@ -8,9 +8,6 @@ namespace RangerExpansion
 	{
 		// Base path to mod sounds
 		public const string SoundPath = $"{nameof(RangerExpansion)}/Assets/Sounds/";
-
-        // Calamity mod instance
-        private static Mod Calamity = ModLoader.GetMod("CalamityMod");
         
         /// <summary>
         /// Distance between two points
@@ -25,10 +22,5 @@ namespace RangerExpansion
         /// The distance between v1 and v2
         /// </returns>
         public static float DistanceBetween(Vector2 v1, Vector2 v2) => (float) Math.Sqrt(Math.Pow(v2.X - v1.X, 2) + Math.Pow(v2.Y - v1.X, 2));
-
-        public static Mod GetCalamity()
-        {
-            return Calamity;
-        }
     }
 }

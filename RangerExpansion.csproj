@@ -16,5 +16,10 @@
 	  <Folder Include="Content\Items\Accessories\" />
 	  <Folder Include="Content\Projectiles\Arrows\" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="CalamityMod">
+	    <HintPath>..\ModAssemblies\CalamityMod.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 
 </Project>
