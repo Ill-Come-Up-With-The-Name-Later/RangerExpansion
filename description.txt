@@ -1,5 +1,8 @@
-A mod expanding upon the ranger class within the Calamity mod. More Endless Ammo or LuiAFK is recommended for adding infinite ammo pouches.
+A mod expanding upon the ranger class within Vanilla and the Calamity mod. 
+More Endless Ammo or LuiAFK is recommended for adding infinite ammo pouches.
 
 This mod adds more guns, bows, dart guns, ammunition, and accessories. This mod requires Calamity Mod to run.
 
 Work in Progress.
+
+Made by BurningAspect and Hat

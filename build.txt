@@ -1,3 +1,3 @@
-displayName = Ranger+ (Ranger Expansion)
+displayName = Ranger+
 author = BurningAspect, Hat
 version = 0.1
