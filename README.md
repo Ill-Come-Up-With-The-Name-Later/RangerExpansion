@@ -8,7 +8,9 @@ Open an issue regarding a bug: https://github.com/Ill-Come-Up-With-The-Name-Late
 
 All coding by BurningAspect.
 <br>
-All assets by Hat except if noted.
+All assets by hat except if noted.
+<br>
+Upcoming music box tracks by hat.
 
 # Assets Also By
 
