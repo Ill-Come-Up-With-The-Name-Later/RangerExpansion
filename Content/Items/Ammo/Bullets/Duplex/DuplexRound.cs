@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Items.Ammo.Bullets.DuplexBullet
+namespace RangerExpansion.Content.Items.Ammo.Bullets.Duplex
 {
     class DuplexRound : ModItem
     {
@@ -19,7 +19,7 @@ namespace RangerExpansion.Content.Items.Ammo.Bullets.DuplexBullet
             Item.width = 10;
             Item.height = 24;
             Item.maxStack = 9999;
-            Item.knockBack = 2;
+            Item.knockBack = 3;
             Item.consumable = true;
             Item.value = 10;
             Item.rare = ItemRarityID.Green;

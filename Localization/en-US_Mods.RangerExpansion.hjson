@@ -35,6 +35,11 @@ Items: {
 		DisplayName: Chlorophyte Dart
 		Tooltip: Bounces off of tiles.
 	}
+
+	TrackerBullet: {
+		DisplayName: Tracker Bullet
+		Tooltip: Bullets follow the cursor.
+	}
 }
 
 Projectiles: {
@@ -45,4 +50,5 @@ Projectiles: {
 	LuminiteDartProjectile.DisplayName: Luminite Dart Projectile
 	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart Projectile
 	VenomDartProjectile.DisplayName: Venom Dart Projectile
+	TrackerBulletProjectile.DisplayName: Tracker Bullet Projectile
 }
