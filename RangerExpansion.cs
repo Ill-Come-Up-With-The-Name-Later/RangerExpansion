@@ -10,7 +10,7 @@ namespace RangerExpansion
 		public const string SoundPath = $"{nameof(RangerExpansion)}/Assets/Sounds/";
 
         // Calamity mod instance
-        private static Mod Calamity = ModLoader.GetMod("ExampleMod");
+        private static Mod Calamity = ModLoader.GetMod("CalamityMod");
         
         /// <summary>
         /// Distance between two points
