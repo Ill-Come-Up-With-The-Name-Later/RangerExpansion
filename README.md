@@ -18,10 +18,10 @@ Upcoming music box tracks by hat.
   <li>
     BurningAspect
     <ul>
-      <li> Chlorophyte Dart Mockup </li>
-      <li> Venom Dart Mockup </li>
+      <li> Chlorophyte Dart mockup </li>
+      <li> Venom Dart mockup </li>
       <li> Luminite Dart </li>
-      <li> Tracker Bullet Mockup </li>
+      <li> Tracker Bullet mockup </li>
     </ul>
   </li>
 </ul>
