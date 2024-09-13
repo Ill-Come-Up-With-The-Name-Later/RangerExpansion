@@ -34,6 +34,14 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Tracker
 
         public override void AI()
         {
+            Player owner = Main.player[Projectile.owner];
+
+            if(!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            {
+                Projectile.Kill();
+                return;
+            }
+
             // Bullets seek out the cursor
             Vector2 cursorPos = Main.MouseWorld;
             Vector2 velocity = cursorPos - Projectile.position;
