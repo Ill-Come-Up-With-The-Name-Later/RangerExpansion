@@ -1,15 +1,15 @@
-﻿using RangerExpansion.Content.Rarities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Rarities;
 
-namespace RangerExpansion.Content.Items
+namespace UltimateRangerExpansion.Content.Items
 {
     class DeveloperTooltip : GlobalItem
     {
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if(item.rare == ModContent.RarityType<DeveloperRarity>()) // Add tooltip for developer rarity items
+            if (item.rare == ModContent.RarityType<DeveloperRarity>()) // Add tooltip for developer rarity items
             {
                 tooltips.Add(new TooltipLine(Mod, "Tooltip1", "Developer Item"));
             }

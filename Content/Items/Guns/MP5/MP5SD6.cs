@@ -1,11 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
-using RangerExpansion.Content.Rarities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Rarities;
 
-namespace RangerExpansion.Content.Items.Guns.MP5
+namespace UltimateRangerExpansion.Content.Items.Guns.MP5
 {
     class MP5SD6 : ModItem
     {
@@ -32,8 +32,8 @@ namespace RangerExpansion.Content.Items.Guns.MP5
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
             Item.damage = 45;
-            Item.knockBack = 3f; 
-            Item.noMelee = true; 
+            Item.knockBack = 3f;
+            Item.noMelee = true;
 
             // Gun Properties
             Item.shoot = ProjectileID.PurificationPowder;

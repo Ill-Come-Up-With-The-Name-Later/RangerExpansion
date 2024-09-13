@@ -1,9 +1,9 @@
-﻿using RangerExpansion.Content.Projectiles.Darts.Luminite;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Projectiles.Darts.Luminite;
 
-namespace RangerExpansion.Content.Items.Ammo.Darts.Luminite
+namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Luminite
 {
     class LuminiteDart : ModItem
     {

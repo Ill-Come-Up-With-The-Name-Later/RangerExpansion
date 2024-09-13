@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Rarities
+namespace UltimateRangerExpansion.Content.Rarities
 {
     class DeveloperRarity : ModRarity
     {

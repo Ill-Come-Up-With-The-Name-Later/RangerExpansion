@@ -1,9 +1,9 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
-using RangerExpansion.Content.Projectiles.Bullets.Tracker;
+using UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker;
 
-namespace RangerExpansion.Content.Items.Ammo.Bullets.Tracker
+namespace UltimateRangerExpansion.Content.Items.Ammo.Bullets.Tracker
 {
     class TrackerBullet : ModItem
     {

@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
+namespace UltimateRangerExpansion.Content.Projectiles.Darts.Chlorophyte
 {
     class ChlorophyteDartProjectile : ModProjectile
     {
@@ -30,7 +30,7 @@ namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
         {
             Player owner = Main.player[Projectile.owner];
 
-            if(!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            if (!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
             {
                 Projectile.Kill();
                 return;
@@ -45,14 +45,14 @@ namespace RangerExpansion.Content.Projectiles.Darts.Chlorophyte
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             Projectile.penetrate -= 1; // Remove piercing from the projectile when it bounces
-           
-            if(Projectile.penetrate <= 0) // If the projectile cannot pierce anymore, remove it
+
+            if (Projectile.penetrate <= 0) // If the projectile cannot pierce anymore, remove it
             {
                 Projectile.Kill();
                 return true;
             }
 
-            Projectile.velocity *= (float) -(1 + new Random().NextDouble());
+            Projectile.velocity *= (float)-(1 + new Random().NextDouble());
 
             return false;
         }

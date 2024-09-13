@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Projectiles.Darts.Venom
+namespace UltimateRangerExpansion.Content.Projectiles.Darts.Venom
 {
     class VenomDartProjectile : ModProjectile
     {
@@ -27,7 +27,7 @@ namespace RangerExpansion.Content.Projectiles.Darts.Venom
         {
             Player owner = Main.player[Projectile.owner];
 
-            if(!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            if (!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
             {
                 Projectile.Kill();
                 return;

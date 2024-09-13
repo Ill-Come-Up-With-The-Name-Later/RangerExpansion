@@ -1,9 +1,9 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
-using RangerExpansion.Content.Projectiles.Darts.Chlorophyte;
+using UltimateRangerExpansion.Content.Projectiles.Darts.Chlorophyte;
 
-namespace RangerExpansion.Content.Items.Ammo.Darts.Chlorophyte
+namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Chlorophyte
 {
     class ChlorophyteDart : ModItem
     {

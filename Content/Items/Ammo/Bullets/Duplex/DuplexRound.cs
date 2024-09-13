@@ -1,9 +1,9 @@
-﻿using RangerExpansion.Content.Projectiles.Bullets.Duplex;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Projectiles.Bullets.Duplex;
 
-namespace RangerExpansion.Content.Items.Ammo.Bullets.Duplex
+namespace UltimateRangerExpansion.Content.Items.Ammo.Bullets.Duplex
 {
     class DuplexRound : ModItem
     {

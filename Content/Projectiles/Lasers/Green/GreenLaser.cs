@@ -2,7 +2,7 @@
 using Terraria;
 using Microsoft.Xna.Framework;
 
-namespace RangerExpansion.Content.Projectiles.Lasers.Green
+namespace UltimateRangerExpansion.Content.Projectiles.Lasers.Green
 {
     internal class GreenLaser : ModProjectile
     {

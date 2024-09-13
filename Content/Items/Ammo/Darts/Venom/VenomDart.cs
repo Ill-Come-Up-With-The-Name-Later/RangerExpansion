@@ -1,9 +1,9 @@
-﻿using RangerExpansion.Content.Projectiles.Darts.Venom;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Projectiles.Darts.Venom;
 
-namespace RangerExpansion.Content.Items.Ammo.Darts.Venom
+namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Venom
 {
     class VenomDart : ModItem
     {

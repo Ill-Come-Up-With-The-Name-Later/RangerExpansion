@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Projectiles.Lasers.Red
+namespace UltimateRangerExpansion.Content.Projectiles.Lasers.Red
 {
     internal class RedLaser : ModProjectile
     {
@@ -23,7 +23,7 @@ namespace RangerExpansion.Content.Projectiles.Lasers.Red
         }
 
         public override void AI()
-        {   
+        {
             // Stay still
             Projectile.velocity = new Vector2(0, 0);
         }

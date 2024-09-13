@@ -2,13 +2,13 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace RangerExpansion
+namespace UltimateRangerExpansion
 {
-	public class RangerExpansion : Mod
-	{
-		// Base path to mod sounds
-		public const string SoundPath = $"{nameof(RangerExpansion)}/Assets/Sounds/";
-        
+    public class UltimateRangerExpansion : Mod
+    {
+        // Base path to mod sounds
+        public const string SoundPath = $"{nameof(UltimateRangerExpansion)}/Assets/Sounds/";
+
         /// <summary>
         /// Distance between two points
         /// </summary>
@@ -21,6 +21,6 @@ namespace RangerExpansion
         /// <returns>
         /// The distance between v1 and v2
         /// </returns>
-        public static float DistanceBetween(Vector2 v1, Vector2 v2) => (float) Math.Sqrt(Math.Pow(v2.X - v1.X, 2) + Math.Pow(v2.Y - v1.Y, 2));
+        public static float DistanceBetween(Vector2 v1, Vector2 v2) => (float)Math.Sqrt(Math.Pow(v2.X - v1.X, 2) + Math.Pow(v2.Y - v1.Y, 2));
     }
 }

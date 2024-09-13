@@ -3,27 +3,27 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
+namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Duplex
 {
     class DuplexBulletProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5; 
-            ProjectileID.Sets.TrailingMode[Projectile.type] = 0; 
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 12; 
+            Projectile.width = 12;
             Projectile.height = 24;
-            Projectile.aiStyle = 1; 
-            Projectile.friendly = true; 
-            Projectile.hostile = false; 
-            Projectile.DamageType = DamageClass.Ranged; 
+            Projectile.aiStyle = 1;
+            Projectile.friendly = true;
+            Projectile.hostile = false;
+            Projectile.DamageType = DamageClass.Ranged;
             Projectile.timeLeft = 600;
-            Projectile.alpha = 255; 
-            Projectile.light = 0.5f; 
+            Projectile.alpha = 255;
+            Projectile.light = 0.5f;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
 
@@ -34,14 +34,14 @@ namespace RangerExpansion.Content.Projectiles.Bullets.Duplex
         {
             Player owner = Main.player[Projectile.owner];
 
-            if(!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            if (!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
             {
                 Projectile.Kill();
                 return;
             }
 
             // Spawn second projectile with random rotation and rotate original projectile
-            if(Projectile.timeLeft == 599)
+            if (Projectile.timeLeft == 599)
             {
                 Projectile.velocity *= 1.5f;
 
