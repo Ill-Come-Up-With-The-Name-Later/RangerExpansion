@@ -38,7 +38,15 @@ Items: {
 
 	TrackerBullet: {
 		DisplayName: Tracker Bullet
-		Tooltip: Bullets follow the cursor.
+		Tooltip:
+			'''
+			Bullets follow the cursor.
+
+			'It's not a question of how. It's a question of what.
+			If no one told you that bullets flew straight, and I 
+			gave you a gun and told you to hit the target, what 
+			would you do? Let your instincts guide you.'
+			'''
 	}
 }
 
