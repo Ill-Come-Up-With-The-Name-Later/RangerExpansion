@@ -9,7 +9,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Darts.Venom
         public override void SetDefaults()
         {
             Projectile.width = 14;
-            Projectile.height = 24;
+            Projectile.height = 28;
             Projectile.aiStyle = 1;
             Projectile.friendly = true;
             Projectile.hostile = false;

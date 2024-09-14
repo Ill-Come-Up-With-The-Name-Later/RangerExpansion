@@ -17,7 +17,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Venom
             Item.damage = 11;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 14;
-            Item.height = 24;
+            Item.height = 28;
             Item.maxStack = 9999;
             Item.knockBack = 2;
             Item.consumable = true;
