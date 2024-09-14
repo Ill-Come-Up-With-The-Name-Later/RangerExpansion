@@ -37,7 +37,7 @@ Items: {
 	}
 
 	TrackerBullet: {
-		DisplayName: Tracker Bullet
+		DisplayName: Guided Bullet
 		Tooltip:
 			'''
 			Bullets follow the cursor.

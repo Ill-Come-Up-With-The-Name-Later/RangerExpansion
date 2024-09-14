@@ -52,7 +52,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Duplex
                 Projectile.velocity = velocity2;
 
                 Projectile.NewProjectile(owner.GetSource_FromThis(), Projectile.position,
-                    velocity * 0.75f, ProjectileID.Bullet, Projectile.damage, Projectile.knockBack);
+                    velocity * 0.45f, ProjectileID.Bullet, Projectile.damage, Projectile.knockBack);
             }
         }
     }
