@@ -14,7 +14,7 @@ All assets by hat except if noted.
 <br>
 Upcoming music box tracks by hat.
 
-# Assets Also By
+# Some Assets Also By
 
 <ul>
   <li>
@@ -29,3 +29,7 @@ Upcoming music box tracks by hat.
     </ul>
   </li>
 </ul>
+
+Upcoming features:
+<br>
+https://docs.google.com/document/d/1f5T7KsSFs5E0iVDUDkIfhTN2SsowXbr7Bvp0ok6BbHM/edit?usp=sharing
