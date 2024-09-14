@@ -16,7 +16,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Bullets.ArmorPiercing
             Item.damage = 10;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 10;
-            Item.height = 22;
+            Item.height = 24;
             Item.maxStack = 9999;
             Item.knockBack = 3;
             Item.consumable = true;
