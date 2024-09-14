@@ -24,7 +24,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Bullets.Duplex
             Item.value = 10;
             Item.rare = ItemRarityID.Green;
             Item.shoot = ModContent.ProjectileType<DuplexBulletProjectile>();
-            Item.shootSpeed = 22f;
+            Item.shootSpeed = 30f;
             Item.ammo = AmmoID.Bullet;
         }
     }

@@ -23,7 +23,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Bullets.ArmorPiercing
             Item.value = 10;
             Item.rare = ItemRarityID.LightRed;
             Item.shoot = ModContent.ProjectileType<APBulletProjectile>();
-            Item.shootSpeed = 22f;
+            Item.shootSpeed = 30f;
             Item.ammo = AmmoID.Bullet;
             Item.ArmorPenetration = 15;
         }

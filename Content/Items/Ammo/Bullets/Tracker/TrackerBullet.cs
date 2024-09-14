@@ -24,7 +24,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Bullets.Tracker
             Item.value = Item.buyPrice(0, 0, 20, 5);
             Item.rare = ItemRarityID.Lime;
             Item.shoot = ModContent.ProjectileType<TrackerBulletProjectile>();
-            Item.shootSpeed = 15f;
+            Item.shootSpeed = 25f;
             Item.ammo = AmmoID.Bullet;
         }
 
