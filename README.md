@@ -29,7 +29,3 @@ Upcoming music box tracks by hat.
     </ul>
   </li>
 </ul>
-
-Upcoming features:
-<br>
-https://docs.google.com/document/d/1f5T7KsSFs5E0iVDUDkIfhTN2SsowXbr7Bvp0ok6BbHM/edit?usp=sharing
