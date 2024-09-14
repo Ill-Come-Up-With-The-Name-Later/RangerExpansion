@@ -59,7 +59,7 @@ Items: {
 	}
 
 	APBullet: {
-		DisplayName: A.P. Bullet
+		DisplayName: Armor Piercing Bullet
 		Tooltip:
 			'''
 			Bullets penetrate a significant 
