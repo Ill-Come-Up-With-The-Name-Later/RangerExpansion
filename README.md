@@ -24,6 +24,8 @@ Upcoming music box tracks by hat.
       <li> Venom Dart mockup </li>
       <li> Luminite Dart </li>
       <li> Tracker Bullet </li>
+      <li> Hollow Dart </li>
+      <li> Armor Piercing Bullet mockup </li>
     </ul>
   </li>
 </ul>

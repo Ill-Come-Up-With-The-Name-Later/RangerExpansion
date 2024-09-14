@@ -57,6 +57,15 @@ Items: {
 			a way that helps them fly straighter.
 			'''
 	}
+
+	APBullet: {
+		DisplayName: A.P. Bullet
+		Tooltip:
+			'''
+			Bullets penetrate a significant 
+			amount of enemy armor.
+			'''
+	}
 }
 
 Projectiles: {
@@ -69,4 +78,5 @@ Projectiles: {
 	VenomDartProjectile.DisplayName: Venom Dart Projectile
 	TrackerBulletProjectile.DisplayName: Tracker Bullet Projectile
 	HollowDartProjectile.DisplayName: Hollow Dart Projectile
+	APBulletProjectile.DisplayName: A P Bullet Projectile
 }
