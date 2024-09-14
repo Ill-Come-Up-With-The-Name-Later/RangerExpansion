@@ -48,6 +48,15 @@ Items: {
 			would you do? Let your instincts guide you.'
 			'''
 	}
+
+	HollowDart: {
+		DisplayName: Hollow Dart
+		Tooltip:
+			'''
+			Hollow darts catch the air in
+			a way that helps them fly straighter.
+			'''
+	}
 }
 
 Projectiles: {
@@ -59,4 +68,5 @@ Projectiles: {
 	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart Projectile
 	VenomDartProjectile.DisplayName: Venom Dart Projectile
 	TrackerBulletProjectile.DisplayName: Tracker Bullet Projectile
+	HollowDartProjectile.DisplayName: Hollow Dart Projectile
 }

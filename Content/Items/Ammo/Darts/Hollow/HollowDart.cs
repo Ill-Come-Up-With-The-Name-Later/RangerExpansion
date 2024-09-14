@@ -1,11 +1,11 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
-using UltimateRangerExpansion.Content.Projectiles.Darts.Chlorophyte;
+using UltimateRangerExpansion.Content.Projectiles.Darts.Hollow;
 
-namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Chlorophyte
+namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Hollow
 {
-    class ChlorophyteDart : ModItem
+    class HollowDart : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -14,24 +14,24 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Chlorophyte
 
         public override void SetDefaults()
         {
-            Item.damage = 13;
+            Item.damage = 15;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 14;
             Item.height = 24;
             Item.maxStack = 9999;
-            Item.knockBack = 3;
+            Item.knockBack = 4f;
             Item.consumable = true;
-            Item.value = Item.buyPrice(0, 0, 4, 40);
-            Item.rare = ItemRarityID.Lime;
-            Item.shoot = ModContent.ProjectileType<ChlorophyteDartProjectile>();
-            Item.shootSpeed = 7;
+            Item.value = Item.buyPrice(0, 0, 6, 40);
+            Item.rare = ItemRarityID.LightPurple;
+            Item.shoot = ModContent.ProjectileType<HollowDartProjectile>();
+            Item.shootSpeed = 18;
             Item.ammo = AmmoID.Dart;
         }
 
         public override void AddRecipes()
         {
-            CreateRecipe(50)
-                .AddIngredient(ItemID.ChlorophyteBar, 1)
+            CreateRecipe(333)
+                .AddIngredient(ItemID.HallowedBar, 3)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }
