@@ -15,11 +15,7 @@ Items: {
 
 	VenomDart: {
 		DisplayName: Venom Dart
-		Tooltip:
-			'''
-			Applies venom when an
-			enemy is hit.
-			'''
+		Tooltip: Applies venom when an enemy is hit.
 	}
 
 	LuminiteDart: {
@@ -28,6 +24,8 @@ Items: {
 			'''
 			Darts speed up the longer they 
 			fly and pass through tiles.
+			Damage increases as darts go
+			faster.
 			'''
 	}
 
@@ -53,8 +51,8 @@ Items: {
 		DisplayName: Hollow Dart
 		Tooltip:
 			'''
-			Hollow darts catch the air in
-			a way that helps them fly straighter.
+			Hollow darts catch the air in a
+			way that helps them fly straighter.
 			'''
 	}
 
@@ -62,7 +60,7 @@ Items: {
 		DisplayName: Armor Piercing Bullet
 		Tooltip:
 			'''
-			Bullets penetrate a significant 
+			Bullets penetrate a significant
 			amount of enemy armor.
 			'''
 	}

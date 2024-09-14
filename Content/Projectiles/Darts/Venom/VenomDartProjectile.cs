@@ -41,7 +41,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Darts.Venom
 
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
-            target.AddBuff(BuffID.Venom, 30 * 60);
+            target.AddBuff(BuffID.Venom, 15 * 60);
         }
     }
 }
