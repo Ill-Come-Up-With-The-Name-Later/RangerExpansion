@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using UltimateRangerExpansion.Content.Rarities;
@@ -11,7 +12,7 @@ namespace UltimateRangerExpansion.Content.Items
         {
             if (item.rare == ModContent.RarityType<DeveloperRarity>()) // Add tooltip for developer rarity items
             {
-                tooltips.Add(new TooltipLine(Mod, "Tooltip1", "Developer Item"));
+                tooltips.Add(new TooltipLine(Mod, "Tooltip1", "Developer Item") { OverrideColor = Color.Lime }); 
             }
         }
     }
