@@ -78,3 +78,5 @@ Projectiles: {
 	HollowDartProjectile.DisplayName: Hollow Dart Projectile
 	APBulletProjectile.DisplayName: A P Bullet Projectile
 }
+
+Prefixes.Enlarged.DisplayName: Enlarged
