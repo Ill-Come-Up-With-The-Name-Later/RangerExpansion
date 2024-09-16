@@ -79,4 +79,8 @@ Projectiles: {
 	APBulletProjectile.DisplayName: A P Bullet Projectile
 }
 
-Prefixes.Enlarged.DisplayName: Enlarged
+Prefixes: {
+	Enlarged.DisplayName: Enlarged
+	ArmorPiercingTooltip: "{0:+0;-#} armor penetration"
+	Piercing.DisplayName: Piercing
+}
