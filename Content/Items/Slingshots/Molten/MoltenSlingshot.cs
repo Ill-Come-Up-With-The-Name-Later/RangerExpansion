@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using UltimateRangerExpansion.Content.Items.Slingshots.Wooden;
+using UltimateRangerExpansion.Content.Projectiles.Rocks.Molten;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Molten
 {
@@ -25,6 +27,11 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Molten
             Item.crit += 12;
 
             Item.rare = ItemRarityID.Orange;
+        }
+
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            type = ModContent.ProjectileType<MoltenRockProjectile>();
         }
 
         public override Vector2? HoldoutOffset()
