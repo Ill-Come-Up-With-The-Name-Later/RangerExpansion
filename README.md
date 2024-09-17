@@ -20,13 +20,13 @@ Upcoming music box tracks by hat.
   <li>
     BurningAspect
     <ul>
-      <li> Chlorophyte Dart mockup </li>
+      <li> Chlorophyte Dart </li>
       <li> Venom Dart mockup </li>
-      <li> Luminite Dart </li>
+      <li> Luminite Dart mockup </li>
       <li> Guided Bullet </li>
       <li> Hollow Dart mockup </li>
       <li> Armor Piercing Bullet mockup </li>
-      <li> Tracker Bullet Projectile mockup </li>
+      <li> Guided Bullet Projectile mockup </li>
     </ul>
   </li>
 </ul>

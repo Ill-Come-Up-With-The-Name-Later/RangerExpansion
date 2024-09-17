@@ -66,7 +66,7 @@ Items: {
 	}
 
 	TheStorm: {
-		Tooltip: "'The calm before the storm…'"
+		Tooltip: "'The calm before the stormï¿½'"
 		DisplayName: The Storm
 	}
 
@@ -77,6 +77,61 @@ Items: {
 
 	WoodSlingshot: {
 		DisplayName: Wooden Slingshot
+		Tooltip: ""
+	}
+
+	CopperSlingshot: {
+		DisplayName: Copper Slingshot
+		Tooltip: ""
+	}
+
+	CrimtaneSlingshot: {
+		DisplayName: Crimtane Slingshot
+		Tooltip: ""
+	}
+
+	GoldSlingshot: {
+		DisplayName: Gold Slingshot
+		Tooltip: ""
+	}
+
+	IronSlingshot: {
+		DisplayName: Iron Slingshot
+		Tooltip: ""
+	}
+
+	LeadSlingshot: {
+		DisplayName: Lead Slingshot
+		Tooltip: ""
+	}
+
+	MoltenSlingshot: {
+		DisplayName: Molten Slingshot
+		Tooltip: ""
+	}
+
+	NightmareSlingshot: {
+		DisplayName: Nightmare Slingshot
+		Tooltip: ""
+	}
+
+	PlatinumSlingshot: {
+		DisplayName: Platinum Slingshot
+		Tooltip: ""
+	}
+
+	SilverSlingshot: {
+		DisplayName: Silver Slingshot
+		Tooltip: ""
+	}
+
+	TinSlingshot: {
+		DisplayName: Tin Slingshot
+		Tooltip: ""
+	}
+
+	TungstenSlingshot: {
+		DisplayName: Tungsten Slingshot
 		Tooltip: ""
 	}
 }
