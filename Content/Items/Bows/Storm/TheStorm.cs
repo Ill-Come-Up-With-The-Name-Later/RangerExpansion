@@ -21,8 +21,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             Item.rare = ItemRarityID.Yellow;
 
             // Use Properties
-            Item.useTime = 18;
-            Item.useAnimation = 18;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
@@ -82,6 +82,11 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             }
 
             return false;
+        }
+
+        public override Vector2? HoldoutOffset()
+        {
+            return new Vector2(-3, 0);
         }
 
         public override void AddRecipes()

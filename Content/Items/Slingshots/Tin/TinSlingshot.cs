@@ -23,6 +23,8 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Tin
             Item.shootSpeed += 2;
 
             Item.crit += 2;
+
+            Item.value += 100;
         }
 
         public override Vector2? HoldoutOffset()

@@ -23,6 +23,8 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Lead
             Item.shootSpeed += 4;
 
             Item.crit += 4;
+
+            Item.value += 500;
         }
 
         public override Vector2? HoldoutOffset()

@@ -23,6 +23,8 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Tungsten
             Item.shootSpeed += 6;
 
             Item.crit += 6;
+
+            Item.value += 1500;
         }
 
         public override Vector2? HoldoutOffset()

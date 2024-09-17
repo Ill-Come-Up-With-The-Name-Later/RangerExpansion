@@ -26,6 +26,8 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Nightmare
             Item.crit += 10;
 
             Item.rare = ItemRarityID.Blue;
+
+            Item.value += 3000;
         }
 
         public override Vector2? HoldoutOffset()

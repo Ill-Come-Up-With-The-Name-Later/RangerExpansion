@@ -34,7 +34,7 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Wooden
             Item.noMelee = true;
 
             // Slingshot Properties
-            Item.shootSpeed = 9f;
+            Item.shootSpeed = 8f;
             Item.useAmmo = ModContent.ItemType<Rock>();
             Item.shoot = ModContent.ProjectileType<RockProjectile>();
 
