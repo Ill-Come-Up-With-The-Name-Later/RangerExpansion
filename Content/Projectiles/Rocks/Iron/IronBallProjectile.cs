@@ -1,0 +1,28 @@
+﻿using Terraria;
+using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Projectiles.Rocks.Stone;
+
+namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Iron
+{
+    class IronBallProjectile : ModProjectile
+    {
+        public override void SetDefaults()
+        {
+            Projectile.CloneDefaults(ModContent.ProjectileType<RockProjectile>());    
+        }
+
+        public override void AI()
+        {
+            Player owner = Main.player[Projectile.owner];
+
+            if (!(Main.myPlayer == owner.whoAmI)) // Prevent some potential odd behavior
+            {
+                Projectile.Kill();
+                return;
+            }
+
+            Projectile.velocity.Y += 0.08f;
+            Projectile.rotation += 2;
+        }
+    }
+}
