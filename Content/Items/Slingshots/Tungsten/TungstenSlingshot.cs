@@ -5,7 +5,7 @@ using UltimateRangerExpansion.Content.Items.Slingshots.Wooden;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Tungsten
 {
-    class TungstenSlingshot : ModItem
+    class TungstenSlingshot : ModItem, ISlingShot
     {
         public override void SetStaticDefaults()
         {

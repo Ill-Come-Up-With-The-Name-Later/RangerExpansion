@@ -5,7 +5,7 @@ using UltimateRangerExpansion.Content.Items.Slingshots.Nightmare;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Crimtane
 {
-    class CrimtaneSlingshot : ModItem
+    class CrimtaneSlingshot : ModItem, ISlingShot
     {
         public override void SetStaticDefaults()
         {

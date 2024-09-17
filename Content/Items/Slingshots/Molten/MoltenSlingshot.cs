@@ -7,7 +7,7 @@ using UltimateRangerExpansion.Content.Projectiles.Rocks.Molten;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Molten
 {
-    class MoltenSlingshot : ModItem
+    class MoltenSlingshot : ModItem, ISlingShot
     {
         public override void SetStaticDefaults()
         {

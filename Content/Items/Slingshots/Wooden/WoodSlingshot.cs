@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Wooden
 {
-    class WoodSlingshot : ModItem
+    class WoodSlingshot : ModItem, ISlingShot
     {
         public override void SetStaticDefaults()
         {

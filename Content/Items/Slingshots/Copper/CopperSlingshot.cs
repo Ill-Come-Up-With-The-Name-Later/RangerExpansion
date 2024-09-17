@@ -5,7 +5,7 @@ using UltimateRangerExpansion.Content.Items.Slingshots.Tin;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Copper
 {
-    class CopperSlingshot : ModItem
+    class CopperSlingshot : ModItem, ISlingShot
     {
         public override void SetStaticDefaults()
         {

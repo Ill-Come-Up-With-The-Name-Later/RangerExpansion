@@ -29,8 +29,9 @@ namespace UltimateRangerExpansion.Content.Modifiers
 
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            damageMult *= 1.1f;
-            shootSpeedMult *= 1.2f;
+            damageMult *= 0.95f;
+            shootSpeedMult *= 1.15f;
+            useTimeMult *= 1.1f;
         }
 
         public override void Apply(Item item)

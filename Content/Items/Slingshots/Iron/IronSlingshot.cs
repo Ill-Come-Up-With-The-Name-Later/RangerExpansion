@@ -5,7 +5,7 @@ using UltimateRangerExpansion.Content.Items.Slingshots.Lead;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Iron
 {
-    class IronSlingshot : ModItem
+    class IronSlingshot : ModItem, ISlingShot
     {
         public override void SetStaticDefaults()
         {

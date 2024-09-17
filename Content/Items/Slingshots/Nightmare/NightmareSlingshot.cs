@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Nightmare
 {
-    class NightmareSlingshot : ModItem
+    class NightmareSlingshot : ModItem, ISlingShot
     {
         public override void SetStaticDefaults()
         {

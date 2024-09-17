@@ -178,4 +178,5 @@ Prefixes: {
 	Enlarged.DisplayName: Enlarged
 	ArmorPiercingTooltip: "{0:+0;-#} armor penetration"
 	Piercing.DisplayName: Piercing
+	Clockwork.DisplayName: Clockwork
 }
