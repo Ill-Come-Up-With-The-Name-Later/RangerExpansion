@@ -29,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Molten
 
             if(Projectile.timeLeft % 3 == 0)
             {
-                Dust.NewDust(Projectile.position, 1, 1, DustID.FlameBurst, 10, 10);
+                Dust.NewDust(Projectile.position, 1, 1, DustID.FlameBurst, Projectile.velocity.X * 2, Projectile.velocity.Y * 2);
             }
 
             Projectile.velocity.Y += 0.08f;
