@@ -66,8 +66,18 @@ Items: {
 	}
 
 	TheStorm: {
-		Tooltip: ""
+		Tooltip: "'The calm before the storm…'"
 		DisplayName: The Storm
+	}
+
+	Rock: {
+		DisplayName: Rock
+		Tooltip: ""
+	}
+
+	WoodSlingshot: {
+		DisplayName: Wooden Slingshot
+		Tooltip: ""
 	}
 }
 
@@ -82,6 +92,7 @@ Projectiles: {
 	TrackerBulletProjectile.DisplayName: Tracker Bullet Projectile
 	HollowDartProjectile.DisplayName: Hollow Dart Projectile
 	APBulletProjectile.DisplayName: A P Bullet Projectile
+	RockProjectile.DisplayName: Rock Projectile
 }
 
 Prefixes: {

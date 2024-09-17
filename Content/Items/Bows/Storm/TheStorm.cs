@@ -8,6 +8,11 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
 {
     class TheStorm : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            Item.ResearchUnlockCount = 1;
+        }
+
         public override void SetDefaults()
         {
             // Common Properties

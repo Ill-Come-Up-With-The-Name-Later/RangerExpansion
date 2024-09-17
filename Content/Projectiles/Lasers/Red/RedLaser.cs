@@ -14,7 +14,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Lasers.Red
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.timeLeft = 600;
-            Projectile.alpha = 255;
+            Projectile.alpha = 0;
             Projectile.light = 0.2f;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
