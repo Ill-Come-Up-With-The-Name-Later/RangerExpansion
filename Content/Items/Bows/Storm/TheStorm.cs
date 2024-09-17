@@ -21,8 +21,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             Item.rare = ItemRarityID.Yellow;
 
             // Use Properties
-            Item.useTime = 12;
-            Item.useAnimation = 12;
+            Item.useTime = 18;
+            Item.useAnimation = 18;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
