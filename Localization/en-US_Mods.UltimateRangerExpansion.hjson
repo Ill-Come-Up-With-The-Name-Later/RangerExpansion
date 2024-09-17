@@ -149,6 +149,11 @@ Items: {
 		Tooltip: ""
 		DisplayName: Ceramic Ball
 	}
+
+	DangerPainting: {
+		Tooltip: ""
+		DisplayName: Danger
+	}
 }
 
 Projectiles: {

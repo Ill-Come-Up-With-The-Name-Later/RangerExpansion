@@ -7,6 +7,9 @@
 	<PropertyGroup>
 		
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Content\Tiles\Paintings\Danger\DangerPaintingTile.png" />
+	</ItemGroup>
 
 	<!-- References -->
 	<ItemGroup>
