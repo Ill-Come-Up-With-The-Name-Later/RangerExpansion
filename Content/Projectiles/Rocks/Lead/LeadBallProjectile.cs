@@ -21,7 +21,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Lead
                 return;
             }
 
-            Projectile.velocity.Y += 0.09f;
+            Projectile.velocity.Y += 0.1f;
             Projectile.rotation += 2;
         }
     }

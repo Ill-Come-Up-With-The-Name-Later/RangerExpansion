@@ -29,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Stone
                 return;
             }
 
-            Projectile.velocity.Y += 0.05f;
+            Projectile.velocity.Y += 0.075f;
             Projectile.rotation += 2;
         }
     }

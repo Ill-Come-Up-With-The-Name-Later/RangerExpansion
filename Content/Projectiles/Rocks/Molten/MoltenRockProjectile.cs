@@ -32,7 +32,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Molten
                 Dust.NewDust(Projectile.position, 1, 1, DustID.FlameBurst, Projectile.velocity.X * 0.75f, Projectile.velocity.Y * 0.75f);
             }
 
-            Projectile.velocity.Y += 0.08f;
+            Projectile.velocity.Y += 0.09f;
             Projectile.rotation += 2;
         }
     }

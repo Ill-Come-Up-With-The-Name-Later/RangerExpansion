@@ -24,7 +24,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Ceramic
                 return;
             }
 
-            Projectile.velocity.Y += 0.065f;
+            Projectile.velocity.Y += 0.075f;
             Projectile.rotation += 2;
         }
     }

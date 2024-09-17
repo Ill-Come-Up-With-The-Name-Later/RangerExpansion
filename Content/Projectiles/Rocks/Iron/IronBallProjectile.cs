@@ -21,7 +21,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Iron
                 return;
             }
 
-            Projectile.velocity.Y += 0.08f;
+            Projectile.velocity.Y += 0.1f;
             Projectile.rotation += 2;
         }
     }

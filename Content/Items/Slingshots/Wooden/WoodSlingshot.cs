@@ -22,8 +22,8 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Wooden
             Item.rare = ItemRarityID.White;
 
             // Use Properties
-            Item.useTime = 25;
-            Item.useAnimation = 25;
+            Item.useTime = 40;
+            Item.useAnimation = 40;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
@@ -34,7 +34,7 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Wooden
             Item.noMelee = true;
 
             // Slingshot Properties
-            Item.shootSpeed = 10f;
+            Item.shootSpeed = 9f;
             Item.useAmmo = ModContent.ItemType<Rock>();
             Item.shoot = ModContent.ProjectileType<RockProjectile>();
 
