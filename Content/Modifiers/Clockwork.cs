@@ -28,7 +28,7 @@ namespace UltimateRangerExpansion.Content.Modifiers
 
         public override IEnumerable<TooltipLine> GetTooltipLines(Item item)
         {
-            yield return new TooltipLine(Mod, "Clockwork", "Fires a bust of three shots.") { IsModifier = true };
+            yield return new TooltipLine(Mod, "Clockwork", "Fires a burst of three shots.") { IsModifier = true };
         }
 
         public override void Apply(Item item)
