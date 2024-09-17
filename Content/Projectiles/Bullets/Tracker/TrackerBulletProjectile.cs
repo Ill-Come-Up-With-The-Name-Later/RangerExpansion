@@ -52,6 +52,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker
 
             Projectile.velocity = velocity;
             Lighting.AddLight(Projectile.position, 0.0f, 0.3f, 0.3f);
+
+            Projectile.rotation += 2;
         }
     }
 }

@@ -26,6 +26,7 @@ Upcoming music box tracks by hat.
       <li> Guided Bullet </li>
       <li> Hollow Dart mockup </li>
       <li> Armor Piercing Bullet mockup </li>
+      <li> Tracker Bullet Projectile mockup </li>
     </ul>
   </li>
 </ul>
