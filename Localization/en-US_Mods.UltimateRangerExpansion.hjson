@@ -67,7 +67,7 @@ Items: {
 
 	TheStorm: {
 		Tooltip: "'The calm before the storm�'"
-		DisplayName: The Storm
+		DisplayName: Hurricane
 	}
 
 	Rock: {
@@ -134,6 +134,21 @@ Items: {
 		DisplayName: Tungsten Slingshot
 		Tooltip: ""
 	}
+
+	LeadBall: {
+		Tooltip: ""
+		DisplayName: Lead Ball
+	}
+
+	IronBall: {
+		Tooltip: ""
+		DisplayName: Iron Ball
+	}
+
+	CeramicBall: {
+		Tooltip: ""
+		DisplayName: Ceramic Ball
+	}
 }
 
 Projectiles: {
@@ -148,6 +163,9 @@ Projectiles: {
 	HollowDartProjectile.DisplayName: Hollow Dart Projectile
 	APBulletProjectile.DisplayName: A P Bullet Projectile
 	RockProjectile.DisplayName: Rock Projectile
+	LeadBallProjectile.DisplayName: Lead Ball Projectile
+	IronBallProjectile.DisplayName: Iron Ball Projectile
+	CeramicBallProjectile.DisplayName: Ceramic Ball Projectile
 }
 
 Prefixes: {
