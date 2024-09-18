@@ -4,6 +4,7 @@ using Terraria;
 using UltimateRangerExpansion.Content.Projectiles.Rocks.Stone;
 using UltimateRangerExpansion.Content.Items.Ammo.Rocks.Stone;
 using Microsoft.Xna.Framework;
+using UltimateRangerExpansion.Content.DamageClasses;
 
 namespace UltimateRangerExpansion.Content.Items.Slingshots.Wooden
 {
@@ -28,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Wooden
             Item.autoReuse = true;
 
             // Weapon Properties
-            Item.DamageType = DamageClass.Ranged;
+            Item.DamageType = ModContent.GetInstance<SlingshotRanger>();
             Item.damage = 3;
             Item.knockBack = 3.2f;
             Item.noMelee = true;

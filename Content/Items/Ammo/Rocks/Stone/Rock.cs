@@ -1,5 +1,6 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.DamageClasses;
 using UltimateRangerExpansion.Content.Projectiles.Rocks.Stone;
 
 namespace UltimateRangerExpansion.Content.Items.Ammo.Rocks.Stone
@@ -14,7 +15,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Rocks.Stone
         public override void SetDefaults()
         {
             Item.damage = 1;
-            Item.DamageType = DamageClass.Ranged;
+            Item.DamageType = ModContent.GetInstance<SlingshotRanger>();
             Item.width = 16;
             Item.height = 14;
             Item.maxStack = 9999;

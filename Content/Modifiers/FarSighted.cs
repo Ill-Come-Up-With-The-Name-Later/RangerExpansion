@@ -1,11 +1,12 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.DamageClasses;
 
 namespace UltimateRangerExpansion.Content.Modifiers
 {
-    class Enlarged : ModPrefix
+    class FarSighted : ModPrefix
     {
-        public override PrefixCategory Category => PrefixCategory.AnyWeapon;
+        public override PrefixCategory Category => PrefixCategory.Custom;
 
         public override float RollChance(Item item)
         {
@@ -14,7 +15,7 @@ namespace UltimateRangerExpansion.Content.Modifiers
 
         public override bool CanRoll(Item item)
         {
-            return true;
+            return item.DamageType == ModContent.GetInstance<SlingshotRanger>();
         }
 
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
