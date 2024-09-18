@@ -1,34 +1,33 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
-using UltimateRangerExpansion.Content.DamageClasses;
 
-namespace UltimateRangerExpansion.Content.Modifiers
+namespace UltimateRangerExpansion.Content.Modifiers.AllWeapons
 {
-    class NearSighted : ModPrefix
+    class Enlarged : ModPrefix
     {
-        public override PrefixCategory Category => PrefixCategory.Ranged;
+        public override PrefixCategory Category => PrefixCategory.AnyWeapon;
 
         public override float RollChance(Item item)
         {
-            return 5f;
+            return 4f;
         }
 
         public override bool CanRoll(Item item)
         {
-            return item.DamageType == ModContent.GetInstance<SlingshotRanger>();
+            return true;
         }
 
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            useTimeMult *= 0.75f;
-            shootSpeedMult *= 0.66f;
-            critBonus = 7;
-            damageMult = 1.1f;
+            damageMult = 1.6f;
+            scaleMult = 1.7f;
+            useTimeMult = 1.7f;
+            critBonus = 10;
         }
 
         public override void ModifyValue(ref float valueMult)
         {
-            valueMult *= 1.1f;
+            valueMult *= 1.2f;
         }
     }
 }

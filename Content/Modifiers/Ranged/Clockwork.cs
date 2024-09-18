@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace UltimateRangerExpansion.Content.Modifiers
+namespace UltimateRangerExpansion.Content.Modifiers.Ranged
 {
     class Clockwork : ModPrefix
     {
@@ -16,7 +16,7 @@ namespace UltimateRangerExpansion.Content.Modifiers
 
         public override bool CanRoll(Item item)
         {
-            if (item.useAnimation / 3 == item.useTime || item.consumeAmmoOnLastShotOnly) 
+            if (item.useAnimation / 3 == item.useTime || item.consumeAmmoOnLastShotOnly)
                 return false;
 
             if (item.type == ItemID.Phantasm)

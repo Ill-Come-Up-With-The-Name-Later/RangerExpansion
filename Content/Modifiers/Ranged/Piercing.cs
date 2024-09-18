@@ -3,7 +3,7 @@ using Terraria;
 using System.Collections.Generic;
 using Terraria.Localization;
 
-namespace UltimateRangerExpansion.Content.Modifiers
+namespace UltimateRangerExpansion.Content.Modifiers.Ranged
 {
     class Piercing : ModPrefix
     {

@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using UltimateRangerExpansion.Content.DamageClasses;
 
-namespace UltimateRangerExpansion.Content.Modifiers
+namespace UltimateRangerExpansion.Content.Modifiers.Slingshot
 {
     class FarSighted : ModPrefix
     {

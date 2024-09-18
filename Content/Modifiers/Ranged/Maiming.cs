@@ -1,15 +1,15 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace UltimateRangerExpansion.Content.Modifiers
+namespace UltimateRangerExpansion.Content.Modifiers.Ranged
 {
-    class Enlarged : ModPrefix
+    class Maiming : ModPrefix
     {
-        public override PrefixCategory Category => PrefixCategory.AnyWeapon;
+        public override PrefixCategory Category => PrefixCategory.Ranged;
 
         public override float RollChance(Item item)
         {
-            return 4f;
+            return 3f;
         }
 
         public override bool CanRoll(Item item)
@@ -19,15 +19,15 @@ namespace UltimateRangerExpansion.Content.Modifiers
 
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            damageMult = 1.6f;
-            scaleMult = 1.7f;
-            useTimeMult = 1.7f;
-            critBonus = 10;
+            damageMult = 1.5f;
+            critBonus += 20;
+            shootSpeedMult *= 3;
+            useTimeMult *= 1.33f;
         }
 
         public override void ModifyValue(ref float valueMult)
         {
-            valueMult *= 1.2f;
+            valueMult *= 1.44f;
         }
     }
 }
