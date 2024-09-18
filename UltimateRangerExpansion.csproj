@@ -14,8 +14,8 @@
 	<!-- References -->
 	<ItemGroup>
 	  <Folder Include="Assets\Sounds\" />
+	  <Folder Include="Content\Items\Accessories\ClockworkGear\" />
 	  <Folder Include="Content\Items\Ammo\Arrows\" />
-	  <Folder Include="Content\Items\Accessories\" />
 	  <Folder Include="Content\Projectiles\Arrows\" />
 	</ItemGroup>
 	<ItemGroup>

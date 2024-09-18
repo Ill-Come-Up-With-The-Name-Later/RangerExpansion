@@ -66,7 +66,7 @@ Items: {
 	}
 
 	TheStorm: {
-		Tooltip: "'The calm before the storm�'"
+		Tooltip: "'The calm before the storm...'"
 		DisplayName: Hurricane
 	}
 
