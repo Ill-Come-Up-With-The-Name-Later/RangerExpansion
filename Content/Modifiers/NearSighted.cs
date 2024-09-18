@@ -4,7 +4,7 @@ using UltimateRangerExpansion.Content.DamageClasses;
 
 namespace UltimateRangerExpansion.Content.Modifiers
 {
-    class FarSighted : ModPrefix
+    class NearSighted : ModPrefix
     {
         public override PrefixCategory Category => PrefixCategory.Ranged;
 
@@ -20,15 +20,15 @@ namespace UltimateRangerExpansion.Content.Modifiers
 
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            useTimeMult *= 1.1f;
-            shootSpeedMult *= 1.4f;
+            useTimeMult *= 0.75f;
+            shootSpeedMult *= 0.66f;
             critBonus = 7;
-            damageMult = 1.25f;
+            damageMult = 1.1f;
         }
 
         public override void ModifyValue(ref float valueMult)
         {
-            valueMult *= 1.2f;
+            valueMult *= 1.1f;
         }
     }
 }

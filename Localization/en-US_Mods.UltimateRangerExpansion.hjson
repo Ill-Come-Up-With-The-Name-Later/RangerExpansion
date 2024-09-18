@@ -180,4 +180,8 @@ Prefixes: {
 	Piercing.DisplayName: Piercing
 	Clockwork.DisplayName: Clockwork
 	Maiming.DisplayName: Maiming
+	FarSighted.DisplayName: Far-Sighted
+	NearSighted.DisplayName: Near-Sighted
 }
+
+DamageClasses.SlingshotRanger.DisplayName: ranged damage
