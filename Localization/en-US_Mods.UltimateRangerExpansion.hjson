@@ -182,6 +182,8 @@ Prefixes: {
 	Maiming.DisplayName: Maiming
 	FarSighted.DisplayName: Far-Sighted
 	NearSighted.DisplayName: Near-Sighted
+	QuickHand.DisplayName: Quick-Handed
+	Steady.DisplayName: Steady
 }
 
 DamageClasses.SlingshotRanger.DisplayName: ranged damage
