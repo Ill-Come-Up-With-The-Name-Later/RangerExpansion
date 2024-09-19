@@ -184,6 +184,10 @@ Prefixes: {
 	NearSighted.DisplayName: Near-Sighted
 	QuickHand.DisplayName: Quick-Handed
 	Steady.DisplayName: Steady
+	Elastic.DisplayName: Elastic
+	Focused.DisplayName: Focused
+	Deadeye.DisplayName: Deadeye's
+	Ballistic.DisplayName: Ballistic
 }
 
 DamageClasses.SlingshotRanger.DisplayName: ranged damage

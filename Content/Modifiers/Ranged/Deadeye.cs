@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace UltimateRangerExpansion.Content.Modifiers.Ranged
 {
-    class Maiming : ModPrefix
+    class Deadeye : ModPrefix
     {
         public override PrefixCategory Category => PrefixCategory.Ranged;
 
@@ -19,15 +19,13 @@ namespace UltimateRangerExpansion.Content.Modifiers.Ranged
 
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            damageMult = 1.5f;
-            critBonus += 20;
-            shootSpeedMult *= 3;
-            useTimeMult *= 1.33f;
+            critBonus = 15;
+            damageMult *= 0.95f;
         }
 
         public override void ModifyValue(ref float valueMult)
         {
-            valueMult *= 1.275f;
+            valueMult *= 1.15f;
         }
     }
 }
