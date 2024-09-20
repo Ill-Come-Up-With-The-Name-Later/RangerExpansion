@@ -53,7 +53,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
                 num2 = player.Center.Y - 200f;
             }
 
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < 5; j++)
             {
                 position = player.Center + new Vector2((0f - Main.rand.Next(0, 250)) * player.direction, -600f);
                 position.Y -= 100 * j;
@@ -74,10 +74,6 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
                 val2 = val3 * center.Length();
                 velocity.X = val2.X;
                 velocity.Y = val2.Y + Main.rand.Next(-40, 41) * 0.01f;
-                Projectile.NewProjectile(source, position, velocity, type, damage, knockback, player.whoAmI, 0f, num2);
-                Vector2 val4 = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), MathHelper.ToRadians(10f));
-                velocity.X = val4.X;
-                velocity.Y = val4.Y;
                 Projectile.NewProjectile(source, position, velocity, type, damage, knockback, player.whoAmI, 0f, num2);
             }
 
