@@ -154,6 +154,16 @@ Items: {
 		Tooltip: ""
 		DisplayName: Danger
 	}
+
+	SpacePistol: {
+		Tooltip: ""
+		DisplayName: Space Pistole
+	}
+
+	SunshineBow: {
+		Tooltip: ""
+		DisplayName: Sunshine
+	}
 }
 
 Projectiles: {
