@@ -5,7 +5,7 @@
 
 	<!-- General -->
 	<PropertyGroup>
-		
+	  <Platforms>AnyCPU;ARM64;x86</Platforms>
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="Content\Tiles\Paintings\Danger\DangerPaintingTile.png" />
@@ -16,12 +16,8 @@
 	  <Folder Include="Assets\Sounds\" />
 	  <Folder Include="Content\Items\Accessories\" />
 	  <Folder Include="Content\Items\Ammo\Arrows\" />
+	  <Folder Include="Content\Items\Global\" />
 	  <Folder Include="Content\Projectiles\Arrows\" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Reference Include="CalamityMod">
-	    <HintPath>..\ModAssemblies\CalamityMod.dll</HintPath>
-	  </Reference>
 	</ItemGroup>
 
 </Project>

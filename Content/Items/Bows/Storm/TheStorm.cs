@@ -21,8 +21,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             Item.rare = ItemRarityID.Yellow;
 
             // Use Properties
-            Item.useTime = 15;
-            Item.useAnimation = 15;
+            Item.useTime = 16;
+            Item.useAnimation = 16;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
@@ -33,7 +33,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             Item.noMelee = true;
 
             // Bow Properties
-            Item.shootSpeed = 15f;
+            Item.shootSpeed = 13f;
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
