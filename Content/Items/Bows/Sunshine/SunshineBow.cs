@@ -57,14 +57,14 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
         {
             Vector2 playerPos = player.Center;
 
-            for(int i = 0; i < 8; i ++) // Fire a projectile every 45 degrees from 0 to 360
+            for(int i = 0; i < 8; i++) // Fire a projectile every 45 degrees from 0 to 360
             {
                 float angle = i * 45;
 
                 float angleCos = (float)Math.Cos(MathHelper.ToRadians(angle));
                 float angleSin = (float)Math.Sin(MathHelper.ToRadians(angle));
 
-                float projX = playerPos.X + (65 * angleCos);
+                float projX = playerPos.X + (75 * angleCos);
                 float projY = playerPos.Y - (75 * angleSin);
 
                 Vector2 projPos = new(projX, projY);
