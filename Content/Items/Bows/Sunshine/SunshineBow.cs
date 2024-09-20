@@ -69,10 +69,12 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
 
                 Vector2 projPos = new(projX, projY);
                 
+                /*
                 if(projY > playerPos.Y) // Make projectiles converge
                     velocity.Y = -1;
                 else if(projY < playerPos.Y)
                     velocity.Y = 1;
+                */
 
                 Projectile projectile = Main.projectile[Projectile.NewProjectile(source, projPos, velocity, type, damage, knockback)];
                 projectile.tileCollide = false;
