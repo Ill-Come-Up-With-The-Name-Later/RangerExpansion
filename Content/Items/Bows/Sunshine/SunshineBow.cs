@@ -64,10 +64,16 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
                 float angleCos = (float)Math.Cos(MathHelper.ToRadians(angle));
                 float angleSin = (float)Math.Sin(MathHelper.ToRadians(angle));
 
-                float projX = playerPos.X + (75 * angleCos);
-                float projY = playerPos.Y - (75 * angleSin);
+                float projX = playerPos.X + (65 * angleCos);
+                float projY = playerPos.Y - (65 * angleSin);
 
                 Vector2 projPos = new(projX, projY);
+                
+                if(projY > playerPos.Y) // Make projectiles converge
+                    velocity.Y = -1;
+                else if(projY < playerPos.Y)
+                    velocity.Y = 1;
+
                 Projectile projectile = Main.projectile[Projectile.NewProjectile(source, projPos, velocity, type, damage, knockback)];
                 projectile.tileCollide = false;
 
