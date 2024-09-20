@@ -64,8 +64,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
                 float angleCos = (float)Math.Cos(MathHelper.ToRadians(angle));
                 float angleSin = (float)Math.Sin(MathHelper.ToRadians(angle));
 
-                float projX = playerPos.X + (65 * angleCos);
-                float projY = playerPos.Y - (65 * angleSin);
+                float projX = playerPos.X + (45 * angleCos);
+                float projY = playerPos.Y - (45 * angleSin);
 
                 Vector2 projPos = new(projX, projY);
                 
