@@ -38,6 +38,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
+            Item.crit = 11;
+
             Item.value = Item.buyPrice(0, 40, 20, 50);
 
             Item.UseSound = SoundID.Item5;

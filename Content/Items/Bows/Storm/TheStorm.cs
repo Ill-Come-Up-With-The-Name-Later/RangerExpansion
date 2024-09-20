@@ -32,6 +32,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             Item.knockBack = 5f;
             Item.noMelee = true;
 
+            Item.crit = 5;
+
             // Bow Properties
             Item.shootSpeed = 13f;
             Item.useAmmo = AmmoID.Arrow;
