@@ -9,6 +9,9 @@ namespace UltimateRangerExpansion
         // Base path to mod sounds
         public const string SoundPath = $"{nameof(UltimateRangerExpansion)}/Assets/Sounds/";
 
+        // Calamity mod
+        public static readonly Mod Calamity = ModLoader.GetMod("CalamityMod");
+
         /// <summary>
         /// Distance between two points
         /// </summary>

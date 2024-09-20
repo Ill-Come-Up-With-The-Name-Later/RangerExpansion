@@ -45,16 +45,6 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
             Item.UseSound = SoundID.Item5;
         }
 
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-               .AddIngredient(ItemID.SoulofFlight, 5)
-               .AddIngredient(ItemID.FragmentSolar, 10)
-               .AddIngredient(ItemID.Phantasm)
-               .AddTile(TileID.LunarCraftingStation)
-               .Register();
-        }
-
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             Vector2 playerPos = player.Center;
@@ -98,6 +88,16 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
             }
 
             return false;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+               .AddIngredient(ItemID.SoulofFlight, 5)
+               .AddIngredient(ItemID.FragmentSolar, 18)
+               .AddIngredient(UltimateRangerExpansion.Calamity.Find<ModItem>("EssenceofSunlight").Type)
+               .AddTile(TileID.LunarCraftingStation)
+               .Register();
         }
     }
 }

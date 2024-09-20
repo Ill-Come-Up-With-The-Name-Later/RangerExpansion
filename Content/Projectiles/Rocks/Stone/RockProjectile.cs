@@ -17,6 +17,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rocks.Stone
             Projectile.alpha = 0;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
+            Projectile.scale = 0.65f;
         }
 
         public override void AI()
