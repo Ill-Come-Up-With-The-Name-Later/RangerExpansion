@@ -29,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 54;
+            Item.damage = 64;
             Item.knockBack = 5f;
             Item.noMelee = true;
 
