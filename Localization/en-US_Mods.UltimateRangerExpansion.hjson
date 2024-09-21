@@ -188,6 +188,16 @@ Projectiles: {
 	CeramicBallProjectile.DisplayName: Ceramic Ball Projectile
 	MoltenRockProjectile.DisplayName: Molten Rock Projectile
 	CopperBowProjectile.DisplayName: Copper Bow Projectile
+	TsunamiProjectile.DisplayName: Tsunami Projectile
+	TendonBowProjectile.DisplayName: Tendon Bow Projectile
+	ShadowflameBowProjectile.DisplayName: Shadowflame Bow Projectile
+	PhantasmProjectile.DisplayName: Phantasm Projectile
+	MoltenFuryProjectile.DisplayName: Molten Fury Projectile
+	EventideProjectile.DisplayName: Eventide Projectile
+	DemonBowProjectile.DisplayName: Demon Bow Projectile
+	DaedalusBowProjectile.DisplayName: Daedalus Bow Projectile
+	BeesKneesProjectile.DisplayName: Bees Knees Projectile
+	AerialBaneProjectile.DisplayName: Aerial Bane Projectile
 }
 
 Prefixes: {

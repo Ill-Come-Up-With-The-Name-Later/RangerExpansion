@@ -66,6 +66,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.AerialBane
                     ProjectileID.DD2BetsyArrow, Projectile.damage, Projectile.knockBack,
                     player.whoAmI)]; // Change the projectile type depending on the bow
 
+                projectile.usesLocalNPCImmunity = true;
                 projectile.tileCollide = false;
             }
         }

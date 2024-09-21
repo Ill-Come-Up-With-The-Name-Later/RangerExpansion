@@ -66,10 +66,11 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Phantasm
                 {
                     Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), 
                         Projectile.Center - new Vector2(0, i * 4), velocity,
-                        ProjectileID.PhantasmArrow, Projectile.damage, Projectile.knockBack,
+                        ProjectileID.MoonlordArrow, Projectile.damage, Projectile.knockBack,
                         player.whoAmI)]; // Change the projectile type depending on the bow
 
                     projectile.tileCollide = false;
+                    projectile.usesLocalNPCImmunity = true;
                 }
                 
             }

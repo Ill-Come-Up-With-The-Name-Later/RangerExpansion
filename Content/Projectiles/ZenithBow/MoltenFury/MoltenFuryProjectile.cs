@@ -67,6 +67,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.MoltenFury
                     player.whoAmI)]; // Change the projectile type depending on the bow
 
                 projectile.tileCollide = false;
+                projectile.usesLocalNPCImmunity = true;
             }
         }
     }

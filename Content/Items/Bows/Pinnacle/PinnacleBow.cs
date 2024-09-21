@@ -33,15 +33,15 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 12;
-            Item.useAnimation = 12;
+            Item.useTime = 18;
+            Item.useAnimation = 18;
             Item.reuseDelay = 18;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 100;
+            Item.damage = 190;
             Item.knockBack = 5.5f;
             Item.noMelee = true;
 

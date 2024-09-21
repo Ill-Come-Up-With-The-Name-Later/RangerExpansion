@@ -14,7 +14,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
             Projectile.height = 32;
 
             Projectile.aiStyle = 0;
-            Projectile.friendly = false;
+            Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.timeLeft = 18;
@@ -74,6 +74,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
                     player.whoAmI)]; // Change the projectile type depending on the bow
 
                 projectile.tileCollide = false;
+                projectile.usesLocalNPCImmunity = true;
             }
         }
     }
