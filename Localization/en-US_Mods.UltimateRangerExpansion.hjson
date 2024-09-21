@@ -164,6 +164,11 @@ Items: {
 		Tooltip: ""
 		DisplayName: Sunshine
 	}
+
+	PinnacleBow: {
+		DisplayName: Pinnacle
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -182,6 +187,7 @@ Projectiles: {
 	IronBallProjectile.DisplayName: Iron Ball Projectile
 	CeramicBallProjectile.DisplayName: Ceramic Ball Projectile
 	MoltenRockProjectile.DisplayName: Molten Rock Projectile
+	CopperBowProjectile.DisplayName: Copper Bow Projectile
 }
 
 Prefixes: {
