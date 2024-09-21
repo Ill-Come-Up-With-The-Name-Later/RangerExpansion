@@ -61,6 +61,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Phantasm
             {
                 // Shoot at the cursor
                 Vector2 velocity = mousePos - Projectile.Center;
+                velocity.Normalize();
+                velocity *= 17;
 
                 for (int i = -1; i <= 2; i++)
                 {
@@ -69,7 +71,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Phantasm
                         ProjectileID.MoonlordArrow, Projectile.damage, Projectile.knockBack,
                         player.whoAmI)]; // Change the projectile type depending on the bow
 
-                    projectile.tileCollide = false;
                     projectile.usesLocalNPCImmunity = true;
                 }
                 

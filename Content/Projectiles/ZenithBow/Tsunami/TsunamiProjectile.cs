@@ -61,15 +61,16 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami
             {
                 // Shoot at the cursor
                 Vector2 velocity = mousePos - Projectile.Center;
+                velocity.Normalize();
+                velocity *= 17;
 
-                for(int i = -2; i <= 2; i++)
+                for (int i = -2; i <= 2; i++)
                 {
                     Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), 
                         Projectile.Center - new Vector2(0, i * 8), velocity,
                     ProjectileID.WoodenArrowFriendly, Projectile.damage, Projectile.knockBack,
                     player.whoAmI)]; // Change the projectile type depending on the bow
 
-                    projectile.tileCollide = false;
                     projectile.usesLocalNPCImmunity = true;
                 }
             }

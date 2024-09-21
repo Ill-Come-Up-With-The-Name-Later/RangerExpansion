@@ -106,7 +106,33 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 }
             }
 
-            for(int i = -1; i < 2; i++) // Also shoot three arrows
+            for (int k = 0; k < 360; k++)
+            {
+                float dustAngle = k;
+
+                float dustCos = (float)Math.Cos(MathHelper.ToRadians(dustAngle));
+                float dustSin = (float)Math.Sin(MathHelper.ToRadians(dustAngle));
+
+                float dustX = playerPos.X + (40 * dustCos);
+                float dustY = playerPos.Y - (40 * dustSin);
+
+                Vector2 dustLoc = new(dustX, dustY);
+                Dust dust = Main.dust[Dust.NewDust(dustLoc, 1, 1, DustID.TintableDustLighted, 0 , 0,
+                    newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)))];
+
+                dust.noGravity = true;
+
+                float dustX2 = playerPos.X + (100 * dustCos);
+                float dustY2 = playerPos.Y - (100 * dustSin);
+
+                Vector2 dustLoc2 = new(dustX2, dustY2);
+                Dust dust2 = Main.dust[Dust.NewDust(dustLoc2, 1, 1, DustID.TintableDustLighted, 0, 0,
+                    newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)))];
+
+                dust2.noGravity = true;
+            }
+
+            for (int i = -1; i < 2; i++) // Also shoot three arrows
             {
                 Projectile.NewProjectile(source, position - new Vector2(0, i * 7), velocity, type, damage, knockback);
             }
@@ -120,7 +146,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             {
                 num2 = player.Center.Y - 200f;
             }
-
+            
             for (int j = 0; j < 8; j++)
             {
                 position = player.Center + new Vector2((0f - Main.rand.Next(0, 250)) * player.direction, -600f);

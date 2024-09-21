@@ -61,13 +61,14 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.AerialBane
             {
                 // Shoot at the cursor
                 Vector2 velocity = mousePos - Projectile.Center;
+                velocity.Normalize();
+                velocity *= 17;
 
                 Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity,
                     ProjectileID.DD2BetsyArrow, Projectile.damage, Projectile.knockBack,
                     player.whoAmI)]; // Change the projectile type depending on the bow
 
                 projectile.usesLocalNPCImmunity = true;
-                projectile.tileCollide = false;
             }
         }
     }

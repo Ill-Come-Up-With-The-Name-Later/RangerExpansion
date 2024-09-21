@@ -68,12 +68,13 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
             {
                 // Shoot at the cursor
                 Vector2 velocity = mousePos - Projectile.Center;
+                velocity.Normalize();
+                velocity *= 17;
 
                 Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity, 
                     ProjectileID.WoodenArrowFriendly, Projectile.damage, Projectile.knockBack, 
                     player.whoAmI)]; // Change the projectile type depending on the bow
 
-                projectile.tileCollide = false;
                 projectile.usesLocalNPCImmunity = true;
             }
         }

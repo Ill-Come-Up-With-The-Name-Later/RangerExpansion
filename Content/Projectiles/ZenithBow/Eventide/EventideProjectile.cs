@@ -61,13 +61,18 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Eventide
             {
                 // Shoot at the cursor
                 Vector2 velocity = mousePos - Projectile.Center;
+                velocity.Normalize();
+                velocity *= 17;
 
-                Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity,
+                for (int i = -2; i <= 2; i++)
+                {
+                    Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(),
+                        Projectile.Center - new Vector2(0, i * 5), velocity,
                     ProjectileID.FairyQueenRangedItemShot, Projectile.damage, Projectile.knockBack,
                     player.whoAmI)]; // Change the projectile type depending on the bow
 
-                projectile.tileCollide = false;
-                projectile.usesLocalNPCImmunity = true;
+                    projectile.usesLocalNPCImmunity = true;
+                }
             }
         }
     }
