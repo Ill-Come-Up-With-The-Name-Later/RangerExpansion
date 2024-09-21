@@ -198,6 +198,9 @@ Prefixes: {
 	Focused.DisplayName: Focused
 	Deadeye.DisplayName: Deadeye's
 	Ballistic.DisplayName: Ballistic
+	Tactical.DisplayName: Tactical
+	Heavy.DisplayName: Heavy
+	Crippling.DisplayName: Crippling
 }
 
 DamageClasses.SlingshotRanger.DisplayName: ranged damage
