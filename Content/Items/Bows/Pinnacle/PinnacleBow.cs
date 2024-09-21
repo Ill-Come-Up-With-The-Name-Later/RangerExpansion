@@ -14,6 +14,7 @@ using UltimateRangerExpansion.Content.Projectiles.ZenithBow.DaedalusBow;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Eventide;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.AerialBane;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami;
+using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Phantasm;
 
 namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 {
@@ -71,6 +72,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 ModContent.ProjectileType<EventideProjectile>(),
                 ModContent.ProjectileType<AerialBaneProjectile>(),
                 ModContent.ProjectileType<TsunamiProjectile>(),
+                ModContent.ProjectileType<PhantasmProjectile>(),
             ];
 
             for (int i = 0; i < 6; i++) // Fire a projectile every 60 degrees from 0 to 360
