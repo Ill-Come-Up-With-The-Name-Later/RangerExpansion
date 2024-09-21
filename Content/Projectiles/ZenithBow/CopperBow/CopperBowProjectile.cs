@@ -17,7 +17,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
             Projectile.friendly = false;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
-            Projectile.timeLeft = 90;
+            Projectile.timeLeft = 18;
             Projectile.alpha = 0;
             Projectile.light = 0.6f;
             Projectile.ignoreWater = true;
@@ -35,14 +35,14 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
             }
 
             // Hide other projectiles of the same type
-            if(Projectile.timeLeft == 89)
+            if(Projectile.timeLeft == 17)
             {
                 for (int i = 0; i < Main.projectile.Length; i++)
                 {
                     Projectile projectile = Main.projectile[i];
 
                     if (projectile.type == Type && projectile.whoAmI != Projectile.whoAmI && projectile.owner == Projectile.owner
-                        && projectile.timeLeft < 88)
+                        && projectile.timeLeft < 16)
                     {
                         projectile.hide = true;
                     }
@@ -64,7 +64,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
 
             Projectile.rotation = direction.ToRotation();
 
-            if (Projectile.timeLeft % 30 == 0) // Shoot every 30 ticks
+            if (Projectile.timeLeft % 6 == 0) // Shoot every 30 ticks
             {
                 // Shoot at the cursor
                 Vector2 velocity = mousePos - Projectile.Center;

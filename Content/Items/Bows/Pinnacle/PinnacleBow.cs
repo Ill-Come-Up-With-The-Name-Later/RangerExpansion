@@ -35,7 +35,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             // Use Properties
             Item.useTime = 12;
             Item.useAnimation = 12;
-            Item.reuseDelay = 12;
+            Item.reuseDelay = 18;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 

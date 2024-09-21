@@ -28,14 +28,14 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.TendonBow
             }
 
             // Hide other projectiles of the same type
-            if (Projectile.timeLeft == 89)
+            if (Projectile.timeLeft == 17)
             {
                 for (int i = 0; i < Main.projectile.Length; i++)
                 {
                     Projectile projectile = Main.projectile[i];
 
                     if (projectile.type == Type && projectile.whoAmI != Projectile.whoAmI && projectile.owner == Projectile.owner
-                        && projectile.timeLeft < 88)
+                        && projectile.timeLeft < 16)
                     {
                         projectile.hide = true;
                     }
@@ -57,7 +57,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.TendonBow
 
             Projectile.rotation = direction.ToRotation();
 
-            if (Projectile.timeLeft % 30 == 0) // Shoot every 30 ticks
+            if (Projectile.timeLeft % 6 == 0) // Shoot every 6 ticks
             {
                 // Shoot at the cursor
                 Vector2 velocity = mousePos - Projectile.Center;

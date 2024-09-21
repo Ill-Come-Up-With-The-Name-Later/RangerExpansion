@@ -181,7 +181,7 @@ Projectiles: {
 	VenomDartProjectile.DisplayName: Venom Dart Projectile
 	TrackerBulletProjectile.DisplayName: Tracker Bullet Projectile
 	HollowDartProjectile.DisplayName: Hollow Dart Projectile
-	APBulletProjectile.DisplayName: A P Bullet Projectile
+	APBulletProjectile.DisplayName: AP Bullet Projectile
 	RockProjectile.DisplayName: Rock Projectile
 	LeadBallProjectile.DisplayName: Lead Ball Projectile
 	IronBallProjectile.DisplayName: Iron Ball Projectile
