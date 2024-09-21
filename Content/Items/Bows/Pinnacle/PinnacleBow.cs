@@ -106,15 +106,15 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 }
             }
 
-            for (int k = 0; k < 360; k++)
+            for (int k = 0; k < 360; k++) // Draw two circles of dust particles
             {
                 float dustAngle = k;
 
                 float dustCos = (float)Math.Cos(MathHelper.ToRadians(dustAngle));
                 float dustSin = (float)Math.Sin(MathHelper.ToRadians(dustAngle));
 
-                float dustX = playerPos.X + (40 * dustCos);
-                float dustY = playerPos.Y - (40 * dustSin);
+                float dustX = playerPos.X + (45 * dustCos);
+                float dustY = playerPos.Y - (45 * dustSin);
 
                 Vector2 dustLoc = new(dustX, dustY);
                 Dust dust = Main.dust[Dust.NewDust(dustLoc, 1, 1, DustID.TintableDustLighted, 0 , 0,
@@ -122,8 +122,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
                 dust.noGravity = true;
 
-                float dustX2 = playerPos.X + (100 * dustCos);
-                float dustY2 = playerPos.Y - (100 * dustSin);
+                float dustX2 = playerPos.X + (130 * dustCos);
+                float dustY2 = playerPos.Y - (130 * dustSin);
 
                 Vector2 dustLoc2 = new(dustX2, dustY2);
                 Dust dust2 = Main.dust[Dust.NewDust(dustLoc2, 1, 1, DustID.TintableDustLighted, 0, 0,
