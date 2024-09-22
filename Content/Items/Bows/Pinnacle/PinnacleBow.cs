@@ -16,6 +16,7 @@ using UltimateRangerExpansion.Content.Projectiles.ZenithBow.AerialBane;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Phantasm;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Pinnacle;
+using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Marrow;
 
 namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 {
@@ -34,14 +35,15 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 19;
-            Item.useAnimation = 19;
+            Item.useTime = 21;
+            Item.useAnimation = 21;
+            Item.reuseDelay = 21;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 180;
+            Item.damage = 190;
             Item.knockBack = 5f;
             Item.noMelee = true;
 
@@ -64,9 +66,10 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             int[] BowProjectiles = [
                 ModContent.ProjectileType<CopperBowProjectile>(),
                 ModContent.ProjectileType<BeesKneesProjectile>(),
-                ModContent.ProjectileType<MoltenFuryProjectile>(),
                 ModContent.ProjectileType<DemonBowProjectile>(),
                 ModContent.ProjectileType<TendonBowProjectile>(),
+                ModContent.ProjectileType<MoltenFuryProjectile>(),
+                ModContent.ProjectileType<MarrowProjectile>(),
                 ModContent.ProjectileType<ShadowflameBowProjectile>(),
                 ModContent.ProjectileType<DaedalusBowProjectile>(),
                 ModContent.ProjectileType<EventideProjectile>(),
@@ -74,6 +77,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 ModContent.ProjectileType<TsunamiProjectile>(),
                 ModContent.ProjectileType<PhantasmProjectile>(),
                 ModContent.ProjectileType<PinnacleProjectile>(),
+               
             ];
 
             for(int i = 0; i < 6; i++)
@@ -150,6 +154,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 .AddIngredient(ItemID.MoltenFury)
                 .AddIngredient(ItemID.TendonBow)
                 .AddIngredient(ItemID.ShadowFlameBow)
+                .AddIngredient(ItemID.Marrow)
                 .AddIngredient(ItemID.DaedalusStormbow)
                 .AddIngredient(ItemID.FairyQueenRangedItem)
                 .AddIngredient(ItemID.DD2BetsyBow)
@@ -164,6 +169,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 .AddIngredient(ItemID.MoltenFury)
                 .AddIngredient(ItemID.DemonBow)
                 .AddIngredient(ItemID.ShadowFlameBow)
+                .AddIngredient(ItemID.Marrow)
                 .AddIngredient(ItemID.DaedalusStormbow)
                 .AddIngredient(ItemID.FairyQueenRangedItem)
                 .AddIngredient(ItemID.DD2BetsyBow)
