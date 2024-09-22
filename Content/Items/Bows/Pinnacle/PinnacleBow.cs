@@ -89,6 +89,14 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 projVelocity.Normalize();
                 projVelocity *= Item.shootSpeed;
 
+                Projectile flame = Main.projectile[Projectile.NewProjectile(source, bow.Center, new Vector2(0, 0), 
+                    ProjectileID.MoonlordTurret, 0, 0, Main.myPlayer)];
+
+                flame.alpha = 66;
+                flame.aiStyle = 0;
+                flame.timeLeft = Item.useTime * 2;
+                flame.scale = 1.75f;
+
                 Projectile.NewProjectile(source, bow.Center, projVelocity, type, damage, knockback, Main.myPlayer);
             }
 
