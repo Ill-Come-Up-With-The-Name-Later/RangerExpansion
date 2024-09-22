@@ -34,7 +34,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Pinnacle
             // Spawn dust particles
             if (Projectile.timeLeft % 3 == 0)
             {
-                Dust.NewDust(Projectile.position, 1, 1, DustID.TintableDustLighted, -Projectile.velocity.X / 3, -Projectile.velocity.Y / 3,
+                Dust.NewDust(Projectile.Center, 1, 1, DustID.TintableDustLighted, -Projectile.velocity.X / 3, -Projectile.velocity.Y / 3,
                         newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)));
             }
 
