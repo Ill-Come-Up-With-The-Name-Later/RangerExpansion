@@ -34,14 +34,14 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 17;
-            Item.useAnimation = 17;
+            Item.useTime = 19;
+            Item.useAnimation = 19;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 190;
+            Item.damage = 180;
             Item.knockBack = 5f;
             Item.noMelee = true;
 
@@ -50,7 +50,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
-            Item.crit = 19;
+            Item.crit = 10;
 
             Item.value = Item.buyPrice(1, 32, 25, 24);
 
@@ -78,7 +78,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
             for(int i = 0; i < 6; i++)
             {
-                Vector2 shootPos = player.Center + new Vector2(new Random().Next(-300, 300), -new Random().Next(0, 350));
+                Vector2 shootPos = player.Center + new Vector2(new Random().Next(-650, 650), -new Random().Next(0, 350));
                 int bowPojectile = Main.rand.Next(BowProjectiles);
 
                 Projectile bow = Main.projectile[Projectile.NewProjectile(source, shootPos, velocity, 
@@ -94,7 +94,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
             for (int i = -2; i <= 2; i++)
             {
-                Projectile.NewProjectile(source, position - new Vector2(0, i * 4), velocity, type, damage, knockback, Main.myPlayer);
+                Projectile.NewProjectile(source, position - new Vector2(0, i * 8), velocity, type, damage, knockback, Main.myPlayer);
             }
 
             // Rain arrows from the sky
