@@ -199,6 +199,7 @@ Projectiles: {
 	BeesKneesProjectile.DisplayName: Bees Knees Projectile
 	AerialBaneProjectile.DisplayName: Aerial Bane Projectile
 	PinnacleProjectile.DisplayName: Pinnacle Projectile
+	MarrowProjectile.DisplayName: Marrow Projectile
 }
 
 Prefixes: {

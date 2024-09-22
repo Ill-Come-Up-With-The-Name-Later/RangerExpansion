@@ -29,13 +29,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.MoltenFury
 
             Projectile.alpha += 255 / CopperBowProjectile.lifeSpan;
 
-            // Spawn dust particles
-            if (Projectile.timeLeft % 3 == 0)
-            {
-                Dust.NewDust(Projectile.Center, 1, 1, DustID.TintableDustLighted, -Projectile.velocity.X / 3, -Projectile.velocity.Y / 3,
-                        newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)));
-            }
-
             Projectile.velocity = Vector2.Zero;
 
             // Rotate projectile to face the mouse
