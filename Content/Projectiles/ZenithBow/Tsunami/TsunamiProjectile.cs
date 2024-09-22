@@ -36,6 +36,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami
                         newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)));
             }
 
+            Projectile.velocity = Vector2.Zero;
+
             // Rotate projectile to face the mouse
             Vector2 mousePos = Main.MouseWorld;
             Vector2 direction = mousePos - Projectile.position;
