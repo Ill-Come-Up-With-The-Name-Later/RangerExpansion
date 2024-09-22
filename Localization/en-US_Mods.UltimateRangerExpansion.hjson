@@ -198,6 +198,7 @@ Projectiles: {
 	DaedalusBowProjectile.DisplayName: Daedalus Bow Projectile
 	BeesKneesProjectile.DisplayName: Bees Knees Projectile
 	AerialBaneProjectile.DisplayName: Aerial Bane Projectile
+	PinnacleProjectile.DisplayName: Pinnacle Projectile
 }
 
 Prefixes: {

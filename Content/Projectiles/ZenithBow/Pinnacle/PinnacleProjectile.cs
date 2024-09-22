@@ -1,33 +1,22 @@
-﻿using Terraria.ID;
+﻿using System;
+using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow;
 using Microsoft.Xna.Framework;
-using System;
 
-namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
+namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Pinnacle
 {
-    class CopperBowProjectile : ModProjectile
+    class PinnacleProjectile : ModProjectile
     {
-        public static readonly int lifeSpan = 300;
+        public override string Texture => $"{nameof(UltimateRangerExpansion)}/Content/Items/Bows/Pinnacle/PinnacleBow";
 
         public override void SetDefaults()
         {
-            Projectile.width = 16;
-            Projectile.height = 32;
+            Projectile.CloneDefaults(ModContent.ProjectileType<CopperBowProjectile>());
 
-            Projectile.aiStyle = 0;
-            Projectile.friendly = true;
-            Projectile.hostile = false;
-            Projectile.DamageType = DamageClass.Ranged;
-            Projectile.timeLeft = lifeSpan;
-            Projectile.alpha = 0;
-            Projectile.light = 0.6f;
-            Projectile.ignoreWater = true;
-            Projectile.tileCollide = false;
-            Projectile.penetrate = 1;
-            Projectile.extraUpdates = 6;
-
-            Projectile.damage = 50;
+            Projectile.width = 28;
+            Projectile.height = 46;
         }
 
         public override void AI()
@@ -40,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
                 return;
             }
 
-            Projectile.alpha += 255 / lifeSpan;
+            Projectile.alpha += 255 / CopperBowProjectile.lifeSpan;
 
             // Spawn dust particles
             if (Projectile.timeLeft % 3 == 0)

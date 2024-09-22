@@ -15,6 +15,7 @@ using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Eventide;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.AerialBane;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Phantasm;
+using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Pinnacle;
 
 namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 {
@@ -28,20 +29,19 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
         public override void SetDefaults()
         {
             // Common Properties
-            Item.width = 32;
-            Item.height = 54;
+            Item.width = 28;
+            Item.height = 46;
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 15;
-            Item.useAnimation = 15;
-            Item.reuseDelay = 15;
+            Item.useTime = 17;
+            Item.useAnimation = 17;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 210;
+            Item.damage = 190;
             Item.knockBack = 5f;
             Item.noMelee = true;
 
@@ -73,6 +73,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 ModContent.ProjectileType<AerialBaneProjectile>(),
                 ModContent.ProjectileType<TsunamiProjectile>(),
                 ModContent.ProjectileType<PhantasmProjectile>(),
+                ModContent.ProjectileType<PinnacleProjectile>(),
             ];
 
             for(int i = 0; i < 6; i++)
@@ -106,7 +107,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 num2 = player.Center.Y - 200f;
             }
             
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < 5; j++)
             {
                 position = player.Center + new Vector2((0f - Main.rand.Next(0, 250)) * player.direction, -600f);
                 position.Y -= 100 * j;
