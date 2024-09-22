@@ -89,20 +89,20 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 projVelocity.Normalize();
                 projVelocity *= Item.shootSpeed;
 
-                Projectile flame = Main.projectile[Projectile.NewProjectile(source, bow.Center, new Vector2(0, 0), 
+                Projectile portal = Main.projectile[Projectile.NewProjectile(source, bow.Center, new Vector2(0, 0), 
                     ProjectileID.MoonlordTurret, 0, 0, Main.myPlayer)];
 
-                flame.alpha = 66;
-                flame.aiStyle = 0;
-                flame.timeLeft = Item.useTime * 2;
-                flame.scale = 1.75f;
+                portal.alpha = 66;
+                portal.aiStyle = 0;
+                portal.timeLeft = Item.useTime * 2;
+                portal.scale = 1.75f;
 
                 Projectile.NewProjectile(source, bow.Center, projVelocity, type, damage, knockback, Main.myPlayer);
             }
 
-            for (int i = -2; i <= 2; i++)
+            for (int i = -1; i <= 1; i++)
             {
-                Projectile.NewProjectile(source, position - new Vector2(0, i * 8), velocity, type, damage, knockback, Main.myPlayer);
+                Projectile.NewProjectile(source, position - new Vector2(0, i * 9), velocity, type, damage, knockback, Main.myPlayer);
             }
 
             // Rain arrows from the sky
