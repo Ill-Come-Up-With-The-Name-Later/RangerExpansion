@@ -96,9 +96,9 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                     ProjectileID.MoonlordTurret, 0, 0, Main.myPlayer)];
 
                 portal.alpha = 66;
-                portal.aiStyle = 0;
                 portal.timeLeft = Item.useTime * 2;
                 portal.scale = 1.75f;
+                portal.aiStyle = ProjAIStyleID.FallingStar;
 
                 Projectile.NewProjectile(source, bow.Center, projVelocity, type, damage, knockback, Main.myPlayer);
             }
