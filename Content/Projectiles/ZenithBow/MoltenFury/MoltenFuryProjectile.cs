@@ -36,8 +36,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.MoltenFury
                         newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)));
             }
 
-            Projectile.velocity = player.velocity; // Keep projectile near player
-
             // Rotate projectile to face the mouse
             Vector2 mousePos = Main.MouseWorld;
             Vector2 direction = mousePos - Projectile.position;
