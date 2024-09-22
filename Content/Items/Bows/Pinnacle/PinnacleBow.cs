@@ -35,26 +35,26 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 21;
-            Item.useAnimation = 21;
-            Item.reuseDelay = 21;
+            Item.useTime = 20;
+            Item.useAnimation = 20;
+            Item.reuseDelay = 20;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
             Item.damage = 190;
-            Item.knockBack = 5f;
+            Item.knockBack = 5.5f;
             Item.noMelee = true;
 
             // Bow Properties
-            Item.shootSpeed = 22;
+            Item.shootSpeed = 21;
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
-            Item.crit = 10;
+            Item.crit = 12;
 
-            Item.value = Item.buyPrice(1, 32, 25, 24);
+            Item.value = Item.buyPrice(1, 40, 65, 60);
 
             Item.UseSound = SoundID.Item5;
         }
@@ -77,7 +77,6 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 ModContent.ProjectileType<TsunamiProjectile>(),
                 ModContent.ProjectileType<PhantasmProjectile>(),
                 ModContent.ProjectileType<PinnacleProjectile>(),
-               
             ];
 
             for(int i = 0; i < 6; i++)
