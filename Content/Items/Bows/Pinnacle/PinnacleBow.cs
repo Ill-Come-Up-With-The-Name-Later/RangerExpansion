@@ -77,7 +77,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
             for(int i = 0; i < 6; i++)
             {
-                Vector2 shootPos = player.Center + new Vector2(new Random().Next(-200, 200), -new Random().Next(0, 200));
+                Vector2 shootPos = player.Center + new Vector2(new Random().Next(-300, 300), -new Random().Next(0, 350));
                 int bowPojectile = Main.rand.Next(BowProjectiles);
 
                 Projectile bow = Main.projectile[Projectile.NewProjectile(source, shootPos, velocity, 
