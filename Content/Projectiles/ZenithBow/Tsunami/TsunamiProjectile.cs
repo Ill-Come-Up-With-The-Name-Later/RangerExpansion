@@ -27,20 +27,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami
                 return;
             }
 
-            // Hide other projectiles of the same type
-            if (Projectile.timeLeft == 17)
-            {
-                for (int i = 0; i < Main.projectile.Length; i++)
-                {
-                    Projectile projectile = Main.projectile[i];
-
-                    if (projectile.type == Type && projectile.whoAmI != Projectile.whoAmI && projectile.owner == Projectile.owner
-                        && projectile.timeLeft < 16)
-                    {
-                        projectile.hide = true;
-                    }
-                }
-            }
+            Projectile.alpha += 255 / CopperBowProjectile.lifeSpan;
 
             // Spawn dust particles
             if (Projectile.timeLeft % 3 == 0)
@@ -56,24 +43,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami
             Vector2 direction = mousePos - Projectile.position;
 
             Projectile.rotation = direction.ToRotation();
-
-            if (Projectile.timeLeft % 6 == 0) // Shoot every 6 ticks
-            {
-                // Shoot at the cursor
-                Vector2 velocity = mousePos - Projectile.Center;
-                velocity.Normalize();
-                velocity *= 17;
-
-                for (int i = -2; i <= 2; i++)
-                {
-                    Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), 
-                        Projectile.Center - new Vector2(0, i * 8), velocity,
-                    ProjectileID.WoodenArrowFriendly, Projectile.damage, Projectile.knockBack,
-                    player.whoAmI)]; // Change the projectile type depending on the bow
-
-                    projectile.usesLocalNPCImmunity = true;
-                }
-            }
         }
     }
 }

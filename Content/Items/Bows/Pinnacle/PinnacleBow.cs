@@ -33,24 +33,24 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 18;
-            Item.useAnimation = 18;
-            Item.reuseDelay = 18;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
+            Item.reuseDelay = 15;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 190;
-            Item.knockBack = 5.5f;
+            Item.damage = 210;
+            Item.knockBack = 5f;
             Item.noMelee = true;
 
             // Bow Properties
-            Item.shootSpeed = 28f;
+            Item.shootSpeed = 22;
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
-            Item.crit = 17;
+            Item.crit = 19;
 
             Item.value = Item.buyPrice(1, 32, 25, 24);
 
@@ -75,66 +75,25 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 ModContent.ProjectileType<PhantasmProjectile>(),
             ];
 
-            for (int i = 0; i < 6; i++) // Fire a projectile every 60 degrees from 0 to 360
+            for(int i = 0; i < 6; i++)
             {
-                float angle = i * 60;
+                Vector2 shootPos = player.Center + new Vector2(new Random().Next(-200, 200), -new Random().Next(0, 200));
+                int bowPojectile = Main.rand.Next(BowProjectiles);
 
-                float angleCos = (float)Math.Cos(MathHelper.ToRadians(angle));
-                float angleSin = (float)Math.Sin(MathHelper.ToRadians(angle));
+                Projectile bow = Main.projectile[Projectile.NewProjectile(source, shootPos, velocity, 
+                    bowPojectile, damage, knockback, Main.myPlayer)];
 
-                float projX = playerPos.X + (65 * angleCos);
-                float projY = playerPos.Y - (65 * angleSin);
+                Vector2 mousePos = Main.MouseWorld;
+                Vector2 projVelocity = mousePos - bow.Center;
+                projVelocity.Normalize();
+                projVelocity *= Item.shootSpeed;
 
-                Vector2 projPos = new(projX, projY);
-
-                Projectile projectile = Main.projectile[Projectile.NewProjectile(source, projPos, new Vector2(0, 0), 
-                    Main.rand.Next(BowProjectiles), 0, 0)];
-
-                for (int k = 0; k < 12; k++) // Draw dust every 30 degrees
-                {
-                    float dustAngle = k * 30;
-
-                    float dustCos = (float)Math.Cos(MathHelper.ToRadians(dustAngle));
-                    float dustSin = (float)Math.Sin(MathHelper.ToRadians(dustAngle));
-
-                    float dustX = projPos.X + (2 * dustCos);
-                    float dustY = projPos.Y - (2 * dustSin);
-
-                    Vector2 dustLoc = new(dustX, dustY);
-                    Dust.NewDust(dustLoc, 1, 1, DustID.TintableDustLighted, -projectile.velocity.X / 3, -projectile.velocity.Y / 3, 
-                        newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)));
-                }
+                Projectile.NewProjectile(source, bow.Center, projVelocity, type, damage, knockback, Main.myPlayer);
             }
 
-            for (int k = 0; k < 360; k++) // Draw two circles of dust particles
+            for (int i = -2; i <= 2; i++)
             {
-                float dustAngle = k;
-
-                float dustCos = (float)Math.Cos(MathHelper.ToRadians(dustAngle));
-                float dustSin = (float)Math.Sin(MathHelper.ToRadians(dustAngle));
-
-                float dustX = playerPos.X + (45 * dustCos);
-                float dustY = playerPos.Y - (45 * dustSin);
-
-                Vector2 dustLoc = new(dustX, dustY);
-                Dust dust = Main.dust[Dust.NewDust(dustLoc, 1, 1, DustID.TintableDustLighted, 0 , 0,
-                    newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)))];
-
-                dust.noGravity = true;
-
-                float dustX2 = playerPos.X + (130 * dustCos);
-                float dustY2 = playerPos.Y - (130 * dustSin);
-
-                Vector2 dustLoc2 = new(dustX2, dustY2);
-                Dust dust2 = Main.dust[Dust.NewDust(dustLoc2, 1, 1, DustID.TintableDustLighted, 0, 0,
-                    newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)))];
-
-                dust2.noGravity = true;
-            }
-
-            for (int i = -1; i < 2; i++) // Also shoot three arrows
-            {
-                Projectile.NewProjectile(source, position - new Vector2(0, i * 7), velocity, type, damage, knockback);
+                Projectile.NewProjectile(source, position - new Vector2(0, i * 4), velocity, type, damage, knockback, Main.myPlayer);
             }
 
             // Rain arrows from the sky

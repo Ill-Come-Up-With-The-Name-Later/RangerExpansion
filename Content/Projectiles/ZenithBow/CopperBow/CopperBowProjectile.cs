@@ -8,20 +8,26 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
 {
     class CopperBowProjectile : ModProjectile
     {
+        public static readonly int lifeSpan = 240;
+
         public override void SetDefaults()
         {
             Projectile.width = 16;
             Projectile.height = 32;
 
             Projectile.aiStyle = 0;
-            Projectile.friendly = true;
+            Projectile.friendly = false;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
-            Projectile.timeLeft = 18;
+            Projectile.timeLeft = lifeSpan;
             Projectile.alpha = 0;
             Projectile.light = 0.6f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
+            Projectile.penetrate = 1;
+            Projectile.extraUpdates = 6;
+
+            Projectile.damage = 50;
         }
 
         public override void AI()
@@ -34,28 +40,15 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
                 return;
             }
 
-            // Hide other projectiles of the same type
-            if(Projectile.timeLeft == 17)
-            {
-                for (int i = 0; i < Main.projectile.Length; i++)
-                {
-                    Projectile projectile = Main.projectile[i];
-
-                    if (projectile.type == Type && projectile.whoAmI != Projectile.whoAmI && projectile.owner == Projectile.owner
-                        && projectile.timeLeft < 16)
-                    {
-                        projectile.hide = true;
-                    }
-                }
-            }
+            Projectile.alpha += 255 / lifeSpan;
 
             // Spawn dust particles
-            if(Projectile.timeLeft % 3 == 0)
+            if (Projectile.timeLeft % 3 == 0)
             {
                 Dust.NewDust(Projectile.position, 1, 1, DustID.TintableDustLighted, -Projectile.velocity.X / 3, -Projectile.velocity.Y / 3,
                         newColor: new Color(new Random().Next(0, 255), new Random().Next(0, 255), new Random().Next(0, 255)));
             }
-            
+
             Projectile.velocity = player.velocity; // Keep projectile near player
 
             // Rotate projectile to face the mouse
@@ -63,20 +56,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.CopperBow
             Vector2 direction = mousePos - Projectile.position;
 
             Projectile.rotation = direction.ToRotation();
-
-            if (Projectile.timeLeft % 6 == 0) // Shoot every 30 ticks
-            {
-                // Shoot at the cursor
-                Vector2 velocity = mousePos - Projectile.Center;
-                velocity.Normalize();
-                velocity *= 17;
-
-                Projectile projectile = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity, 
-                    ProjectileID.WoodenArrowFriendly, Projectile.damage, Projectile.knockBack, 
-                    player.whoAmI)]; // Change the projectile type depending on the bow
-
-                projectile.usesLocalNPCImmunity = true;
-            }
         }
     }
 }
