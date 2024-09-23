@@ -23,7 +23,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 {
     class PinnacleBow : ModItem
     {
-        readonly int seekDistance = 900;
+        readonly int seekDistance = 1100;
 
         public override void SetStaticDefaults()
         {
@@ -122,8 +122,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                     int ProjectileType = BowProjectiles.IndexOf(bowProjectile) switch
                     {
                         1 => ProjectileID.BeeArrow,
-                        2 => ProjectileID.UnholyArrow,
-                        3 => ProjectileID.UnholyArrow,
+                        2 => ProjectileID.CursedArrow,
+                        3 => ProjectileID.IchorArrow,
                         4 => ProjectileID.FireArrow,
                         5 => ProjectileID.BoneArrow,
                         6 => ProjectileID.ShadowFlameArrow,
@@ -149,7 +149,10 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
             // Rain arrows from the sky
             Vector2 center;
-            Vector2 val = Main.screenPosition + new Vector2(Main.mouseX, Main.mouseY);
+            Vector2 val = UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance) == null ?
+                    Main.MouseWorld : UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance).position;
+
+            NPC closest = UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance);
 
             float num2 = val.Y;
             if (num2 > player.Center.Y - 200f)
@@ -178,6 +181,10 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 val2 = val3 * center.Length();
                 velocity.X = val2.X;
                 velocity.Y = val2.Y + Main.rand.Next(-40, 41) * 0.01f;
+
+                if (closest != null)
+                    velocity *= 1 + closest.velocity.Length();
+
                 Projectile.NewProjectile(source, position, velocity, type, damage, knockback, player.whoAmI, 0f, num2);
             }
 
