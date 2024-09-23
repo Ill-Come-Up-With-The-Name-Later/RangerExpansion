@@ -171,7 +171,7 @@ Items: {
 			'''
 			Calls forth the previous
 			bows to fire their projectiles.
-			The effect only works with wooden 
+			Special arrows only replace wooden 
 			arrows.
 			'''
 	}

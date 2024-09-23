@@ -49,7 +49,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.noMelee = true;
 
             // Bow Properties
-            Item.shootSpeed = 21;
+            Item.shootSpeed = 28;
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
@@ -58,6 +58,16 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             Item.value = Item.buyPrice(1, 40, 65, 60);
 
             Item.UseSound = SoundID.Item5;
+        }
+
+        public override bool CanConsumeAmmo(Item ammo, Player player)
+        {
+            return new Random().Next(0, 100) >= 80;
+        }
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            tooltips.Add(new TooltipLine(Mod, "ammo", "80% chance to save ammo"));
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
