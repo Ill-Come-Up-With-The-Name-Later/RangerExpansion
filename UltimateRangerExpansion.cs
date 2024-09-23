@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace UltimateRangerExpansion
@@ -25,5 +26,40 @@ namespace UltimateRangerExpansion
         /// The distance between v1 and v2
         /// </returns>
         public static float DistanceBetween(Vector2 v1, Vector2 v2) => (float) Math.Sqrt(Math.Pow(v2.X - v1.X, 2) + Math.Pow(v2.Y - v1.Y, 2));
+
+        /// <summary>
+        /// Finds the NPC closest to a position
+        /// </summary>
+        /// <param name="position">
+        /// The center position
+        /// </param>
+        /// <param name="searchDist">
+        /// The maximum distance from position to search
+        /// </param>
+        /// <returns>
+        /// Closest NPC within searchDist or null if
+        /// none exist
+        /// </returns>
+        public static NPC? ClosestNPC(Vector2 position, float searchDist)
+        {
+            NPC? closest = null;
+            float maxDist = searchDist;
+
+            foreach (NPC npc in Main.ActiveNPCs)
+            {
+                if (npc.CanBeChasedBy())
+                {
+                    float dist = DistanceBetween(position, npc.position);
+
+                    if (dist < maxDist)
+                    {
+                        closest = npc;
+                        maxDist = dist;
+                    }
+                }
+            }
+
+            return closest;
+        }
     }
 }

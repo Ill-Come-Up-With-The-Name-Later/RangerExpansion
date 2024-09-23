@@ -23,6 +23,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 {
     class PinnacleBow : ModItem
     {
+        readonly int seekDistance = 600;
+
         public override void SetStaticDefaults()
         {
             Item.ResearchUnlockCount = 1;
@@ -90,20 +92,24 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 ModContent.ProjectileType<PinnacleProjectile>(),
             ];
 
-            for(int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 Vector2 shootPos = playerPos + new Vector2(new Random().Next(-650, 650), -new Random().Next(0, 350));
                 int bowProjectile = BowProjectiles[new Random().Next(0, BowProjectiles.Count)];
 
-                Projectile bow = Main.projectile[Projectile.NewProjectile(source, shootPos, velocity, 
+                Projectile bow = Main.projectile[Projectile.NewProjectile(source, shootPos, velocity,
                     bowProjectile, damage, knockback, Main.myPlayer)];
 
-                Vector2 mousePos = Main.MouseWorld;
-                Vector2 projVelocity = mousePos - bow.Center;
+                Vector2 aimPos = UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance) == null ?
+                    Main.MouseWorld : UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance).position;
+
+                Vector2 projVelocity = aimPos - bow.Center;
                 projVelocity.Normalize();
                 projVelocity *= Item.shootSpeed;
 
-                Projectile portal = Main.projectile[Projectile.NewProjectile(source, bow.Center, new Vector2(0, 0), 
+                bow.rotation = projVelocity.ToRotation();
+
+                Projectile portal = Main.projectile[Projectile.NewProjectile(source, bow.Center, new Vector2(0, 0),
                     ProjectileID.MoonlordTurret, 0, 0, Main.myPlayer)];
 
                 portal.alpha = 66;
@@ -129,7 +135,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                     };
 
                     Projectile.NewProjectile(source, bow.Center, projVelocity, ProjectileType, damage, knockback, Main.myPlayer);
-                } 
+                }
                 else
                 {
                     Projectile.NewProjectile(source, bow.Center, projVelocity, type, damage, knockback, Main.myPlayer);
@@ -150,7 +156,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
             {
                 num2 = player.Center.Y - 200f;
             }
-            
+
             for (int j = 0; j < 6; j++)
             {
                 position = player.Center + new Vector2((0f - Main.rand.Next(0, 250)) * player.direction, -600f);
