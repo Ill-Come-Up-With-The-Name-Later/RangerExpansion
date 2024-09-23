@@ -126,7 +126,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 }
             }
 
-            for (int i = -1; i <= 1; i++)
+            for (int i = -2; i <= 2; i++)
             {
                 Projectile.NewProjectile(source, position - new Vector2(0, i * 9), velocity, type, damage, knockback, Main.myPlayer);
             }
@@ -141,7 +141,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 num2 = player.Center.Y - 200f;
             }
             
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < 6; j++)
             {
                 position = player.Center + new Vector2((0f - Main.rand.Next(0, 250)) * player.direction, -600f);
                 position.Y -= 100 * j;
