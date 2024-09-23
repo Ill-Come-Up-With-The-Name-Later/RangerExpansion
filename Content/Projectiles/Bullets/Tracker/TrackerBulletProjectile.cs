@@ -12,6 +12,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker
         {
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+            Main.projFrames[Projectile.type] = 2;
         }
 
         public override void SetDefaults()
@@ -23,11 +24,11 @@ namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.timeLeft = 200;
-            Projectile.alpha = 255;
+            Projectile.alpha = 0;
             Projectile.light = 0.35f;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
-            Projectile.scale = 0.5f;
+            Projectile.scale = 0.75f;
 
             AIType = ProjectileID.ChlorophyteBullet;
         }
@@ -41,6 +42,11 @@ namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker
                 Projectile.Kill();
                 return;
             }
+
+            // Increment projectile frames and make sure that it doesn't go above
+            // the number of frames in the projectile animation
+            if(++Projectile.frame >= Main.projFrames[Projectile.type])
+                Projectile.frame = 0;
 
             // Bullets seek out the cursor
             Vector2 cursorPos = Main.MouseWorld;
