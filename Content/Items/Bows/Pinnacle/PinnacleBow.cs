@@ -17,6 +17,7 @@ using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Tsunami;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Phantasm;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Pinnacle;
 using UltimateRangerExpansion.Content.Projectiles.ZenithBow.Marrow;
+using System.Collections.Generic;
 
 namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 {
@@ -63,7 +64,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
         {
             Vector2 playerPos = player.Center;
 
-            int[] BowProjectiles = [
+            List<int> BowProjectiles = [
                 ModContent.ProjectileType<CopperBowProjectile>(),
                 ModContent.ProjectileType<BeesKneesProjectile>(),
                 ModContent.ProjectileType<DemonBowProjectile>(),
@@ -81,11 +82,11 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
             for(int i = 0; i < 6; i++)
             {
-                Vector2 shootPos = player.Center + new Vector2(new Random().Next(-650, 650), -new Random().Next(0, 350));
-                int bowPojectile = Main.rand.Next(BowProjectiles);
+                Vector2 shootPos = playerPos + new Vector2(new Random().Next(-650, 650), -new Random().Next(0, 350));
+                int bowProjectile = BowProjectiles[new Random().Next(0, BowProjectiles.Count)];
 
                 Projectile bow = Main.projectile[Projectile.NewProjectile(source, shootPos, velocity, 
-                    bowPojectile, damage, knockback, Main.myPlayer)];
+                    bowProjectile, damage, knockback, Main.myPlayer)];
 
                 Vector2 mousePos = Main.MouseWorld;
                 Vector2 projVelocity = mousePos - bow.Center;
@@ -100,7 +101,28 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 portal.scale = 1.75f;
                 portal.aiStyle = ProjAIStyleID.FallingStar;
 
-                Projectile.NewProjectile(source, bow.Center, projVelocity, type, damage, knockback, Main.myPlayer);
+                if (type == ProjectileID.WoodenArrowFriendly)
+                {
+                    int ProjectileType = BowProjectiles.IndexOf(bowProjectile) switch
+                    {
+                        1 => ProjectileID.BeeArrow,
+                        2 => ProjectileID.UnholyArrow,
+                        3 => ProjectileID.UnholyArrow,
+                        4 => ProjectileID.FlamingArrow,
+                        5 => ProjectileID.BoneArrow,
+                        6 => ProjectileID.ShadowFlameArrow,
+                        8 => ProjectileID.FairyQueenRangedItemShot,
+                        9 => ProjectileID.DD2BetsyArrow,
+                        11 => ProjectileID.PhantasmArrow,
+                        _ => type
+                    };
+
+                    Projectile.NewProjectile(source, bow.Center, projVelocity, ProjectileType, damage, knockback, Main.myPlayer);
+                } 
+                else
+                {
+                    Projectile.NewProjectile(source, bow.Center, projVelocity, type, damage, knockback, Main.myPlayer);
+                }
             }
 
             for (int i = -1; i <= 1; i++)

@@ -66,8 +66,8 @@ Items: {
 	}
 
 	TheStorm: {
-		Tooltip: "'The calm before the storm...'"
 		DisplayName: Hurricane
+		Tooltip: "'The calm before the storm...'"
 	}
 
 	Rock: {
@@ -136,38 +136,44 @@ Items: {
 	}
 
 	LeadBall: {
-		Tooltip: ""
 		DisplayName: Lead Ball
+		Tooltip: ""
 	}
 
 	IronBall: {
-		Tooltip: ""
 		DisplayName: Iron Ball
+		Tooltip: ""
 	}
 
 	CeramicBall: {
-		Tooltip: ""
 		DisplayName: Ceramic Ball
+		Tooltip: ""
 	}
 
 	DangerPainting: {
-		Tooltip: ""
 		DisplayName: Danger
+		Tooltip: ""
 	}
 
 	SpacePistol: {
-		Tooltip: ""
 		DisplayName: Space Pistole
+		Tooltip: ""
 	}
 
 	SunshineBow: {
-		Tooltip: ""
 		DisplayName: Sunshine
+		Tooltip: ""
 	}
 
 	PinnacleBow: {
 		DisplayName: Pinnacle
-		Tooltip: ""
+		Tooltip:
+			'''
+			Calls forth the previous
+			bows to fire their projectiles.
+			The effect only works with wooden 
+			arrows.
+			'''
 	}
 }
 
