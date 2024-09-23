@@ -23,7 +23,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 {
     class PinnacleBow : ModItem
     {
-        readonly int seekDistance = 600;
+        readonly int seekDistance = 900;
 
         public override void SetStaticDefaults()
         {
