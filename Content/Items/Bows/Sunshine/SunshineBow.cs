@@ -22,19 +22,19 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 12;
-            Item.useAnimation = 12;
+            Item.useTime = 10;
+            Item.useAnimation = 10;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 64;
-            Item.knockBack = 5f;
+            Item.damage = 70;
+            Item.knockBack = 6f;
             Item.noMelee = true;
 
             // Bow Properties
-            Item.shootSpeed = 20f;
+            Item.shootSpeed = 21f;
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
@@ -45,6 +45,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
             Item.UseSound = SoundID.Item5;
         }
 
+        /*
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             Vector2 playerPos = player.Center;
@@ -60,13 +61,11 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
                 float projY = playerPos.Y - (45 * angleSin);
 
                 Vector2 projPos = new(projX, projY);
-                
-                /*
+            
                 if(projY > playerPos.Y) // Make projectiles converge
                     velocity.Y = -1;
                 else if(projY < playerPos.Y)
                     velocity.Y = 1;
-                */
 
                 Projectile projectile = Main.projectile[Projectile.NewProjectile(source, projPos, velocity, type, damage, knockback)];
                 projectile.tileCollide = false;
@@ -89,6 +88,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
 
             return false;
         }
+        */
 
         public override void AddRecipes()
         {
