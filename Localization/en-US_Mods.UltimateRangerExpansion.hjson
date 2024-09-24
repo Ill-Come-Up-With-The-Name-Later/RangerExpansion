@@ -225,6 +225,13 @@ Prefixes: {
 	Tactical.DisplayName: Tactical
 	Heavy.DisplayName: Heavy
 	Crippling.DisplayName: Crippling
+	Balanced.DisplayName: Balanced
+	Damaging.DisplayName: Damaging
+	Hefty.DisplayName: Hefty
+	Precise.DisplayName: Precise
+	QuickDraw.DisplayName: Quick-Draw
+	Reinforced.DisplayName: Reinforced
+	Sharpshooter.DisplayName: Sharpshooter's
 }
 
 DamageClasses.SlingshotRanger.DisplayName: ranged damage

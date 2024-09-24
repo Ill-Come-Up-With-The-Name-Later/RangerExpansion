@@ -22,11 +22,8 @@ Upcoming music box tracks by hat.
     <ul>
       <li> Chlorophyte Dart </li>
       <li> Venom Dart </li>
-      <li> Luminite Dart mockup </li>
-      <li> Guided Bullet </li>
+      <li> Guided Bullet Item </li>
       <li> Hollow Dart </li>
-      <li> Armor Piercing Bullet mockup </li>
-      <li> Guided Bullet Projectile mockup </li>
       <li> Molten Rock Projectile </li>
     </ul>
   </li>

@@ -1,33 +1,34 @@
-﻿using Terraria;
+﻿using Terraria.ID;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace UltimateRangerExpansion.Content.Modifiers.AllWeapons
+namespace UltimateRangerExpansion.Content.Modifiers.Bow
 {
-    class Enlarged : ModPrefix
+    class QuickDraw : ModPrefix
     {
-        public override PrefixCategory Category => PrefixCategory.AnyWeapon;
+        public override PrefixCategory Category => PrefixCategory.Ranged;
 
         public override float RollChance(Item item)
         {
-            return 2f;
+            return 3f;
         }
 
         public override bool CanRoll(Item item)
         {
-            return true;
+            if (item.useAmmo == AmmoID.Arrow)
+                return true;
+
+            return false;
         }
 
         public override void SetStats(ref float damageMult, ref float knockbackMult, ref float useTimeMult, ref float scaleMult, ref float shootSpeedMult, ref float manaMult, ref int critBonus)
         {
-            damageMult = 1.6f;
-            scaleMult = 1.7f;
-            useTimeMult = 1.7f;
-            critBonus = 10;
+            useTimeMult *= 0.85f;
         }
 
         public override void ModifyValue(ref float valueMult)
         {
-            valueMult *= 1.2f;
+            valueMult *= 1.15f;
         }
     }
 }

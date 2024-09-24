@@ -95,7 +95,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Sunshine
             CreateRecipe()
                .AddIngredient(ItemID.SoulofFlight, 5)
                .AddIngredient(ItemID.FragmentSolar, 18)
-               .AddIngredient(UltimateRangerExpansion.Calamity.Find<ModItem>("EssenceofSunlight").Type)
+               .AddIngredient(UltimateRangerExpansion.Calamity.Find<ModItem>("CoreofSunlight").Type)
                .AddTile(TileID.LunarCraftingStation)
                .Register();
         }
