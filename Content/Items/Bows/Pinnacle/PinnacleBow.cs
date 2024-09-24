@@ -183,7 +183,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 velocity.Y = val2.Y + Main.rand.Next(-40, 41) * 0.01f;
 
                 if (closest != null)
-                    velocity *= 1 + closest.velocity.Length();
+                    velocity.X += closest.velocity.X;
 
                 Projectile.NewProjectile(source, position, velocity, type, damage, knockback, player.whoAmI, 0f, num2);
             }
