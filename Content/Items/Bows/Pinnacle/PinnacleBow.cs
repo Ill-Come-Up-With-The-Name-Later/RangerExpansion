@@ -46,7 +46,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 190;
+            Item.damage = 200;
             Item.knockBack = 5.5f;
             Item.noMelee = true;
 
