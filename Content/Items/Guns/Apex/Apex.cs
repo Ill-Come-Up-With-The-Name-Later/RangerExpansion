@@ -27,16 +27,16 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 2;
-            Item.useAnimation = 6;
-            Item.reuseDelay = 6;
+            Item.useTime = 3;
+            Item.useAnimation = 9;
+            Item.reuseDelay = 9;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
             Item.consumeAmmoOnLastShotOnly = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 270;
+            Item.damage = 300;
             Item.knockBack = 4f;
             Item.noMelee = true;
             Item.crit = 12;
@@ -62,20 +62,20 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             {
                 case 1:
                     Item.damage = 300;
-                    Item.useTime = 2;
-                    Item.useAnimation = 6;
-                    Item.reuseDelay = 6;
+                    Item.useTime = 3;
+                    Item.useAnimation = 9;
+                    Item.reuseDelay = 9;
                     Item.consumeAmmoOnLastShotOnly = true;
                     break;
                 case 2:
                     Item.damage = 120;
-                    Item.useTime = 2;
-                    Item.useAnimation = 2;
-                    Item.reuseDelay = 2;
+                    Item.useTime = 4;
+                    Item.useAnimation = 4;
+                    Item.reuseDelay = 4;
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 3:
-                    Item.damage = 400;
+                    Item.damage = 370;
                     Item.useTime = 2;
                     Item.useAnimation = 2;
                     Item.reuseDelay = 2;
