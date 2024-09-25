@@ -36,7 +36,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 110;
+            Item.damage = 270;
             Item.knockBack = 4f;
             Item.noMelee = true;
 
@@ -60,7 +60,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             switch (mode)
             {
                 case 1:
-                    Item.damage = 190;
+                    Item.damage = 270;
                     Item.useTime = 2;
                     Item.useAnimation = 6;
                     Item.reuseDelay = 6;
@@ -74,7 +74,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 3:
-                    Item.damage = 225;
+                    Item.damage = 300;
                     Item.useTime = 2;
                     Item.useAnimation = 2;
                     Item.reuseDelay = 2;
