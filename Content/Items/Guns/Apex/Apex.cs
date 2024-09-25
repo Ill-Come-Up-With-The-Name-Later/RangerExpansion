@@ -39,6 +39,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             Item.damage = 270;
             Item.knockBack = 4f;
             Item.noMelee = true;
+            Item.crit = 12;
 
             // Gun Properties
             Item.shoot = ProjectileID.PurificationPowder;
@@ -60,7 +61,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             switch (mode)
             {
                 case 1:
-                    Item.damage = 270;
+                    Item.damage = 300;
                     Item.useTime = 2;
                     Item.useAnimation = 6;
                     Item.reuseDelay = 6;
@@ -74,7 +75,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 3:
-                    Item.damage = 300;
+                    Item.damage = 400;
                     Item.useTime = 2;
                     Item.useAnimation = 2;
                     Item.reuseDelay = 2;
