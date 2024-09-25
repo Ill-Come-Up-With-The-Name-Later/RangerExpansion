@@ -49,11 +49,16 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             Item.value = Item.buyPrice(1, 25, 60, 40);
         }
 
-        public override void RightClick(Player player)
+        public override bool CanReforge()
+        {
+            return false;
+        }
+
+        public override bool AltFunctionUse(Player player)
         {
             mode++;
 
-            if (mode > 3)
+            if (mode > modeDesc.Count)
             {
                 mode = 1;
             }
@@ -82,6 +87,8 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
             }
+
+            return false;
         }
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
