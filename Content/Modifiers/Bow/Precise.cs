@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace UltimateRangerExpansion.Content.Modifiers.Bow
 {
-    internal class Precise : ModPrefix
+    class Precise : ModPrefix
     {
         public override PrefixCategory Category => PrefixCategory.Ranged;
 
