@@ -175,6 +175,11 @@ Items: {
 			arrows.
 			'''
 	}
+
+	Apex: {
+		DisplayName: Apex
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
