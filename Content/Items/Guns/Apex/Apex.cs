@@ -60,18 +60,21 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             switch (mode)
             {
                 case 1:
+                    Item.damage = 190;
                     Item.useTime = 2;
                     Item.useAnimation = 6;
                     Item.reuseDelay = 6;
                     Item.consumeAmmoOnLastShotOnly = true;
                     break;
                 case 2:
+                    Item.damage = 120;
                     Item.useTime = 2;
                     Item.useAnimation = 2;
                     Item.reuseDelay = 2;
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 3:
+                    Item.damage = 225;
                     Item.useTime = 2;
                     Item.useAnimation = 2;
                     Item.reuseDelay = 2;
