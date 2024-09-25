@@ -49,7 +49,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             Item.value = Item.buyPrice(1, 25, 60, 40);
         }
 
-        public override bool AltFunctionUse(Player player)
+        public override void RightClick(Player player)
         {
             mode++;
 
@@ -82,8 +82,6 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
             }
-
-            return false;
         }
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
