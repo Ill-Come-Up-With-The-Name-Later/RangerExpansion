@@ -14,7 +14,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Rocks.Stone
 
         public override void SetDefaults()
         {
-            Item.damage = 1;
+            Item.damage = 2;
             Item.DamageType = ModContent.GetInstance<SlingshotRanger>();
             Item.width = 16;
             Item.height = 14;
