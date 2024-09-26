@@ -94,7 +94,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 5:
-                    goto case 1;
+                    goto case 2;
             }
 
             return false;
