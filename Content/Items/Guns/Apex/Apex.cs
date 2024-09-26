@@ -27,16 +27,16 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             Item.rare = ItemRarityID.Red;
 
             // Use Properties
-            Item.useTime = 3;
-            Item.useAnimation = 9;
-            Item.reuseDelay = 9;
+            Item.useTime = 2;
+            Item.useAnimation = 6;
+            Item.reuseDelay = 6;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
             Item.consumeAmmoOnLastShotOnly = true;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 300;
+            Item.damage = 400;
             Item.knockBack = 4f;
             Item.noMelee = true;
             Item.crit = 12;
@@ -68,13 +68,13 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             {
                 case 1:
                     Item.damage = 400;
-                    Item.useTime = 3;
-                    Item.useAnimation = 9;
-                    Item.reuseDelay = 9;
+                    Item.useTime = 2;
+                    Item.useAnimation = 6;
+                    Item.reuseDelay = 6;
                     Item.consumeAmmoOnLastShotOnly = true;
                     break;
                 case 2:
-                    Item.damage = 190;
+                    Item.damage = 200;
                     Item.useTime = 4;
                     Item.useAnimation = 4;
                     Item.reuseDelay = 4;
@@ -98,7 +98,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     goto case 3;
             }
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Dust.NewDust(player.position, 2, 5, DustID.TintableDustLighted, newColor: new Color(new Random().Next(0, 255),
                         new Random().Next(0, 255), new Random().Next(0, 255)));
@@ -125,7 +125,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             {
                 position = Main.MouseWorld;
 
-                for(int i = 0; i < 5; i++)
+                for(int i = 0; i < 15; i++)
                 {
                     Dust.NewDust(Main.MouseWorld, 1, 1, DustID.TintableDustLighted, newColor: new Color(new Random().Next(0, 255),
                     new Random().Next(0, 255), new Random().Next(0, 255)));
@@ -139,7 +139,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
         {
             if(mode == 2)
             {
-                float numberProjectiles = 5 + Main.rand.Next(3);
+                float numberProjectiles = 6 + Main.rand.Next(7);
                 float rotation = MathHelper.ToRadians(20);
 
                 position += Vector2.Normalize(velocity) * 20f;
@@ -162,7 +162,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
 
             if(mode == 3)
             {
-                if(new Random().Next(0, 3) == 1) 
+                if(new Random().Next(0, 2) == 1) 
                     Projectile.NewProjectile(source, position, velocity, ProjectileID.VortexBeaterRocket, damage, knockback);
             }
 
