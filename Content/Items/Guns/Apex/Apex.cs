@@ -12,7 +12,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
     class Apex : ModItem
     {
         private int mode = 1;
-        private readonly List<string> modeDesc = ["Burst Fire", "Shotgun", "Single Shot", "Sniper"];
+        private readonly List<string> modeDesc = ["Burst Fire", "Shotgun", "Rapid Fire", "Sniper", "Seeking"];
 
         public override void SetStaticDefaults()
         {
@@ -66,7 +66,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             switch (mode)
             {
                 case 1:
-                    Item.damage = 300;
+                    Item.damage = 375;
                     Item.useTime = 3;
                     Item.useAnimation = 9;
                     Item.reuseDelay = 9;
@@ -80,7 +80,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 3:
-                    Item.damage = 370;
+                    Item.damage = 390;
                     Item.useTime = 2;
                     Item.useAnimation = 2;
                     Item.reuseDelay = 2;
@@ -93,6 +93,8 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.reuseDelay = 40;
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
+                case 5:
+                    goto case 1;
             }
 
             return false;
@@ -110,6 +112,11 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             if(mode == 4)
             {
                 type = ProjectileID.BulletHighVelocity;
+            }
+
+            if(mode == 5)
+            {
+                type = ProjectileID.ChlorophyteBullet;
             }
 
             SoundEngine.PlaySound(SoundID.Item11, position); // Play sound every shot
