@@ -125,22 +125,25 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                 position += Vector2.Normalize(velocity) * 20f;
                 velocity *= 0.33f;
 
-                for (int i = 0; i < numberProjectiles; i++)
+                for (int i = 0; i < numberProjectiles; i++) // Fire off random spread
                 {
                     Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+                    Vector2 bubbleVelocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+                    bubbleVelocity.Normalize();
+                    bubbleVelocity *= 6;
 
                     Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
-                    Projectile.NewProjectile(source, position, velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1)),
-                        ProjectileID.Xenopopper, damage, knockback);
+                    Projectile.NewProjectile(source, position, bubbleVelocity, ProjectileID.Xenopopper, damage / 5, knockback);
                 }
 
-                Projectile.NewProjectile(source, position, velocity, ProjectileID.BlackBolt, damage, knockback);
+                Projectile.NewProjectile(source, position, velocity, ProjectileID.BlackBolt, damage / 2, knockback);
                 return false;
             }
 
             if(mode == 3)
             {
-                Projectile.NewProjectile(source, position, velocity, ProjectileID.VortexBeater, damage, knockback);
+                if(new Random().Next(0, 3) == 1) 
+                    Projectile.NewProjectile(source, position, velocity, ProjectileID.VortexBeaterRocket, damage, knockback);
             }
 
             return true;
