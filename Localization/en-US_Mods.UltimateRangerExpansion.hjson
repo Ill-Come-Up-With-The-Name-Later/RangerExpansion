@@ -178,7 +178,11 @@ Items: {
 
 	Apex: {
 		DisplayName: Apex
-		Tooltip: ""
+		Tooltip:
+			'''
+			Right-Click to swap between
+			different modes.
+			'''
 	}
 }
 

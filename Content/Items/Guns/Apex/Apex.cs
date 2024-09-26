@@ -135,5 +135,40 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             tooltips.Add(new TooltipLine(Mod, "mode", $"Mode: {mode} ({modeDesc[mode - 1]})") { OverrideColor = Color.Green });
             tooltips.Add(new TooltipLine(Mod, "ammo", "80% chance to save ammo"));
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ItemID.Boomstick)
+                .AddIngredient(ItemID.Musket)
+                .AddIngredient(ItemID.PhoenixBlaster)
+                .AddIngredient(ItemID.OnyxBlaster)
+                .AddIngredient(ItemID.Uzi)
+                .AddIngredient(ItemID.Megashark)
+                .AddIngredient(ItemID.VenusMagnum)
+                .AddIngredient(ItemID.TacticalShotgun)
+                .AddIngredient(ItemID.SniperRifle)
+                .AddIngredient(ItemID.Xenopopper)
+                .AddIngredient(ItemID.VortexBeater)
+                .AddIngredient(ItemID.SDMG)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.Boomstick)
+                .AddIngredient(ItemID.TheUndertaker)
+                .AddIngredient(ItemID.PhoenixBlaster)
+                .AddIngredient(ItemID.OnyxBlaster)
+                .AddIngredient(ItemID.Uzi)
+                .AddIngredient(ItemID.Megashark)
+                .AddIngredient(ItemID.VenusMagnum)
+                .AddIngredient(ItemID.TacticalShotgun)
+                .AddIngredient(ItemID.SniperRifle)
+                .AddIngredient(ItemID.Xenopopper)
+                .AddIngredient(ItemID.VortexBeater)
+                .AddIngredient(ItemID.SDMG)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
+        }
     }
 }
