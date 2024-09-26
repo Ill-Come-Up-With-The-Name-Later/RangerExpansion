@@ -40,6 +40,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             Item.knockBack = 4f;
             Item.noMelee = true;
             Item.crit = 12;
+            Item.ArmorPenetration = 15;
 
             // Gun Properties
             Item.shoot = ProjectileID.PurificationPowder;
@@ -66,28 +67,28 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             switch (mode)
             {
                 case 1:
-                    Item.damage = 375;
+                    Item.damage = 400;
                     Item.useTime = 3;
                     Item.useAnimation = 9;
                     Item.reuseDelay = 9;
                     Item.consumeAmmoOnLastShotOnly = true;
                     break;
                 case 2:
-                    Item.damage = 120;
+                    Item.damage = 190;
                     Item.useTime = 4;
                     Item.useAnimation = 4;
                     Item.reuseDelay = 4;
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 3:
-                    Item.damage = 390;
+                    Item.damage = 400;
                     Item.useTime = 2;
                     Item.useAnimation = 2;
                     Item.reuseDelay = 2;
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 4:
-                    Item.damage = 2500;
+                    Item.damage = 2700;
                     Item.useTime = 40;
                     Item.useAnimation = 40;
                     Item.reuseDelay = 40;
@@ -95,6 +96,12 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     break;
                 case 5:
                     goto case 3;
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                Dust.NewDust(player.position, 2, 5, DustID.TintableDustLighted, newColor: new Color(new Random().Next(0, 255),
+                        new Random().Next(0, 255), new Random().Next(0, 255)));
             }
 
             return false;
@@ -117,6 +124,12 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             if(mode == 5)
             {
                 position = Main.MouseWorld;
+
+                for(int i = 0; i < 5; i++)
+                {
+                    Dust.NewDust(Main.MouseWorld, 1, 1, DustID.TintableDustLighted, newColor: new Color(new Random().Next(0, 255),
+                    new Random().Next(0, 255), new Random().Next(0, 255)));
+                }
             }
 
             SoundEngine.PlaySound(SoundID.Item11, position); // Play sound every shot
