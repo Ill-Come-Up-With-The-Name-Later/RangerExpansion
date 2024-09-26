@@ -87,7 +87,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
                 case 4:
-                    Item.damage = 2200;
+                    Item.damage = 2500;
                     Item.useTime = 40;
                     Item.useAnimation = 40;
                     Item.reuseDelay = 40;
@@ -163,7 +163,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            tooltips.Add(new TooltipLine(Mod, "mode", $"Mode: {mode} ({modeDesc[mode - 1]})") { OverrideColor = Color.Green });
+            tooltips.Add(new TooltipLine(Mod, "mode", $"Mode: {mode} [{modeDesc[mode - 1]}]") { OverrideColor = Color.LightBlue });
             tooltips.Add(new TooltipLine(Mod, "ammo", "80% chance to save ammo"));
         }
 
