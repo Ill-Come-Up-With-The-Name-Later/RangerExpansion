@@ -12,7 +12,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
     class Apex : ModItem
     {
         private int mode = 1;
-        private readonly List<string> modeDesc = ["Burst Fire", "Shotgun", "Single Shot"];
+        private readonly List<string> modeDesc = ["Burst Fire", "Shotgun", "Single Shot", "Sniper"];
 
         public override void SetStaticDefaults()
         {
@@ -86,6 +86,13 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Item.reuseDelay = 2;
                     Item.consumeAmmoOnLastShotOnly = false;
                     break;
+                case 4:
+                    Item.damage = 2200;
+                    Item.useTime = 40;
+                    Item.useAnimation = 40;
+                    Item.reuseDelay = 40;
+                    Item.consumeAmmoOnLastShotOnly = false;
+                    break;
             }
 
             return false;
@@ -98,6 +105,11 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                 // Rotate projectile randomy
                 float rotation = MathHelper.ToRadians(5);
                 velocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+            }
+
+            if(mode == 4)
+            {
+                type = ProjectileID.BulletHighVelocity;
             }
 
             SoundEngine.PlaySound(SoundID.Item11, position); // Play sound every shot
@@ -116,10 +128,19 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                 for (int i = 0; i < numberProjectiles; i++)
                 {
                     Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
+
                     Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
+                    Projectile.NewProjectile(source, position, velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1)),
+                        ProjectileID.Xenopopper, damage, knockback);
                 }
 
+                Projectile.NewProjectile(source, position, velocity, ProjectileID.BlackBolt, damage, knockback);
                 return false;
+            }
+
+            if(mode == 3)
+            {
+                Projectile.NewProjectile(source, position, velocity, ProjectileID.VortexBeater, damage, knockback);
             }
 
             return true;
@@ -148,6 +169,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                 .AddIngredient(ItemID.VenusMagnum)
                 .AddIngredient(ItemID.TacticalShotgun)
                 .AddIngredient(ItemID.SniperRifle)
+                .AddIngredient(ItemID.ChainGun)
                 .AddIngredient(ItemID.Xenopopper)
                 .AddIngredient(ItemID.VortexBeater)
                 .AddIngredient(ItemID.SDMG)
@@ -164,6 +186,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                 .AddIngredient(ItemID.VenusMagnum)
                 .AddIngredient(ItemID.TacticalShotgun)
                 .AddIngredient(ItemID.SniperRifle)
+                .AddIngredient(ItemID.ChainGun)
                 .AddIngredient(ItemID.Xenopopper)
                 .AddIngredient(ItemID.VortexBeater)
                 .AddIngredient(ItemID.SDMG)
