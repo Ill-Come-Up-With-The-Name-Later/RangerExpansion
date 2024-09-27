@@ -44,9 +44,9 @@ namespace UltimateRangerExpansion.Content.Items.Guns.VortexDartGun
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
             float numberProjectiles = 2;
-			float rotation = MathHelper.ToRadians(9);
+			float rotation = MathHelper.ToRadians(4);
 
-			position += Vector2.Normalize(velocity) * 9f;
+			position += Vector2.Normalize(velocity) * 10f;
 			velocity *= 0.33f; 
 
 			for (int i = 0; i < numberProjectiles; i++) {
