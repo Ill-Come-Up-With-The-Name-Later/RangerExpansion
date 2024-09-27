@@ -184,6 +184,16 @@ Items: {
 			different modes.
 			'''
 	}
+
+	VortexDartRifle: {
+		DisplayName: Vortex Dart Rifle
+		Tooltip: ""
+	}
+
+	StellarBlaster: {
+		DisplayName: Stellar Blaster
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
