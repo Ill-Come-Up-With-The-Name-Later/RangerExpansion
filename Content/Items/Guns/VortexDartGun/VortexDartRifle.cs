@@ -32,21 +32,22 @@ namespace UltimateRangerExpansion.Content.Items.Guns.VortexDartGun
             Item.damage = 55;
             Item.knockBack = 3f;
             Item.noMelee = true;
+            Item.crit = 10;
 
             // Gun Properties
             Item.shoot = ProjectileID.PurificationPowder;
-            Item.shootSpeed = 19f;
+            Item.shootSpeed = 25f;
             Item.useAmmo = AmmoID.Dart;
 
-            Item.value = Item.buyPrice(0, 15, 20, 50);
+            Item.value = Item.buyPrice(0, 35, 20, 50);
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
             float numberProjectiles = 2;
-			float rotation = MathHelper.ToRadians(15);
+			float rotation = MathHelper.ToRadians(9);
 
-			position += Vector2.Normalize(velocity) * 15f;
-			velocity *= 0.5f; 
+			position += Vector2.Normalize(velocity) * 9f;
+			velocity *= 0.33f; 
 
 			for (int i = 0; i < numberProjectiles; i++) {
 				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1)));
@@ -55,5 +56,13 @@ namespace UltimateRangerExpansion.Content.Items.Guns.VortexDartGun
 
 			return false;
 		}
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ItemID.FragmentVortex, 18)
+                .AddTile(TileID.LunarCraftingStation)
+                .Register();
+        }
     }
 }

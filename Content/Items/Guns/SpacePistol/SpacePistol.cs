@@ -17,6 +17,8 @@ namespace UltimateRangerExpansion.Content.Items.Guns.SpacePistol
             Item.width = 36;
             Item.height = 24;
 
+            Item.crit = 2;
+
             Item.DamageType = DamageClass.Ranged;
         }
 

@@ -31,13 +31,23 @@ namespace UltimateRangerExpansion.Content.Items.Guns.UpgradedStarShooter
             Item.damage = 750;
             Item.knockBack = 6f;
             Item.noMelee = true;
+            Item.crit = 10;
 
             // Gun Properties
             Item.shoot = ProjectileID.SuperStar;
-            Item.shootSpeed = 18f;
+            Item.shootSpeed = 22f;
             Item.useAmmo = AmmoID.FallenStar;
 
             Item.value = Item.buyPrice(0, 45, 20, 50);
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ItemID.SuperStarCannon)
+                .AddIngredient(ItemID.FragmentVortex, 18)
+                .AddTile(TileID.LunarCraftingStation)
+                .Register();
         }
     }
 }

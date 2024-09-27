@@ -34,6 +34,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.MP5
             Item.damage = 45;
             Item.knockBack = 3f;
             Item.noMelee = true;
+            Item.crit = 7;
 
             // Gun Properties
             Item.shoot = ProjectileID.PurificationPowder;
