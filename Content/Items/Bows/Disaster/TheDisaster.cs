@@ -19,7 +19,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Disaster
             // Common Properties
             Item.width = 30;
             Item.height = 62;
-            Item.rare = ItemRarityID.Yellow;
+            Item.rare = ItemRarityID.Red;
 
             // Use Properties
             Item.useTime = 16;

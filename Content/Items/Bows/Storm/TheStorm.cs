@@ -18,7 +18,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             // Common Properties
             Item.width = 30;
             Item.height = 62;
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ItemRarityID.Yellow;
 
             // Use Properties
             Item.useTime = 16;
