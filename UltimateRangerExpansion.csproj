@@ -8,6 +8,7 @@
 	  <Platforms>AnyCPU;ARM64;x86</Platforms>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Content\Items\Bows\Disaster\TheDisaster.png" />
 	  <None Remove="Content\Tiles\Paintings\Danger\DangerPaintingTile.png" />
 	</ItemGroup>
 

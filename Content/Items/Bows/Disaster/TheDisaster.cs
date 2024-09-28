@@ -1,12 +1,13 @@
-﻿using Terraria.ID;
-using Terraria.ModLoader;
+﻿using Terraria.DataStructures;
+using Terraria.ID;
 using Terraria;
+using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using Terraria.DataStructures;
+using UltimateRangerExpansion.Content.Items.Bows.Storm;
 
-namespace UltimateRangerExpansion.Content.Items.Bows.Storm
+namespace UltimateRangerExpansion.Content.Items.Bows.Disaster
 {
-    class TheStorm : ModItem
+    class TheDisaster : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -18,7 +19,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
             // Common Properties
             Item.width = 30;
             Item.height = 62;
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ItemRarityID.Yellow;
 
             // Use Properties
             Item.useTime = 16;
@@ -28,18 +29,18 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 45;
-            Item.knockBack = 5f;
+            Item.damage = 60;
+            Item.knockBack = 5.5f;
             Item.noMelee = true;
 
-            Item.crit = 5;
+            Item.crit = 8;
 
             // Bow Properties
-            Item.shootSpeed = 13f;
+            Item.shootSpeed = 18f;
             Item.useAmmo = AmmoID.Arrow;
             Item.shoot = ProjectileID.WoodenArrowFriendly;
 
-            Item.value = Item.buyPrice(0, 25, 20, 50);
+            Item.value = Item.buyPrice(0, 45, 20, 50);
 
             Item.UseSound = SoundID.Item5;
         }
@@ -55,7 +56,7 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
                 num2 = player.Center.Y - 200f;
             }
 
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < 8; j++)
             {
                 position = player.Center + new Vector2((0f - Main.rand.Next(0, 250)) * player.direction, -600f);
                 position.Y -= 100 * j;
@@ -90,9 +91,10 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Storm
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.DaedalusStormbow)
-                .AddIngredient(ItemID.Tsunami)
-                .AddTile(TileID.MythrilAnvil)
+                .AddIngredient(ModContent.ItemType<TheStorm>())
+                .AddIngredient(ItemID.Phantasm)
+                .AddIngredient(ItemID.LunarBar, 11)
+                .AddTile(TileID.LunarCraftingStation)
                 .Register();
         }
     }

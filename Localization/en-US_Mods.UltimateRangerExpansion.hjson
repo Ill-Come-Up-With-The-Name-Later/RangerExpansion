@@ -66,7 +66,7 @@ Items: {
 	}
 
 	TheStorm: {
-		DisplayName: Hurricane
+		DisplayName: Storm
 		Tooltip: "'The calm before the storm...'"
 	}
 
@@ -193,6 +193,15 @@ Items: {
 	StellarBlaster: {
 		DisplayName: Stellar Blaster
 		Tooltip: ""
+	}
+
+	TheDisaster: {
+		DisplayName: The Disaster
+		Tooltip: 
+			'''
+			'…And the disaster after 
+			the panic.'
+			'''
 	}
 }
 
