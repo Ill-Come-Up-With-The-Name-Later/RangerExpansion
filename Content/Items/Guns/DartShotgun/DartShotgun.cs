@@ -50,7 +50,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.DartShotgun
             float rotation = MathHelper.ToRadians(14);
 
             position += Vector2.Normalize(velocity) * 15f;
-            velocity *= 0.2f;
+            velocity *= 0.5f;
 
             for (int i = 0; i < numberProjectiles; i++) // Fire off random spread
             {

@@ -47,7 +47,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.VortexDartGun
 			float rotation = MathHelper.ToRadians(4);
 
 			position += Vector2.Normalize(velocity) * 10f;
-			velocity *= 0.33f; 
+			velocity *= 0.5f; 
 
 			for (int i = 0; i < numberProjectiles; i++) {
 				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1)));
