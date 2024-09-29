@@ -156,7 +156,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                     Projectile.NewProjectile(source, position, bubbleVelocity, ProjectileID.Xenopopper, damage / 5, knockback);
                 }
 
-                Projectile.NewProjectile(source, position, velocity, ProjectileID.BlackBolt, damage / 2, knockback);
+                Projectile.NewProjectile(source, position, velocity, ProjectileID.BlackBolt, damage, knockback);
                 return false;
             }
 

@@ -203,6 +203,31 @@ Items: {
 			the panic.'
 			'''
 	}
+
+	Awp: {
+		DisplayName: AWP
+		Tooltip: "'BANG! You're dead.'"
+	}
+
+	Strikemaster: {
+		DisplayName: Strikemaster
+		Tooltip: "'Two strikes, you're dead.'"
+	}
+
+	VortexScattergun: {
+		DisplayName: Vortex Scattergun
+		Tooltip: "'Shotgun from space!!!'"
+	}
+
+	DartShotgun: {
+		DisplayName: Dart Shotgun
+		Tooltip: ""
+	}
+
+	StarShotgun: {
+		DisplayName: Fallen Star Shotgun
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
