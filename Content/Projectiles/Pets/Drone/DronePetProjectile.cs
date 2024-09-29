@@ -1,7 +1,6 @@
 ﻿using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using UltimateRangerExpansion.Content.Buffs.DronePet;
 using Microsoft.Xna.Framework;
 
 namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
@@ -29,6 +28,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
             Projectile.height = 26;
 
             Projectile.damage = 250;
+            Projectile.minion = true;
 
             AIType = ProjectileID.ZephyrFish;
         }
@@ -50,6 +50,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 
             if(attackTarget != -1)
             {
+                Player player = Main.player[Projectile.owner];
                 NPC targetNPC = Main.npc[attackTarget];
 
                 Vector2 enemyPos = targetNPC.position;
@@ -59,11 +60,17 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 
                 if (Projectile.ai[1] % 80 == 0)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, velocity, ProjectileID.RocketI, Projectile.damage, 2);
+                    if (Main.myPlayer == player.whoAmI)
+                    {
+                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_None(), Projectile.Center,
+                            velocity, ProjectileID.RocketI, Projectile.damage, 2, Owner: Main.myPlayer)];
+
+                        proj.netUpdate = true;
+                    }
                 }
             }
 
-            int frameSpeed = 20;
+            int frameSpeed = 5;
             Projectile.frameCounter++;
 
             if (Projectile.frameCounter >= frameSpeed)

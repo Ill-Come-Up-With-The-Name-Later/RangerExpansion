@@ -1,9 +1,7 @@
-﻿using Terraria.DataStructures;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 using UltimateRangerExpansion.Content.Buffs.DronePet;
 using UltimateRangerExpansion.Content.Projectiles.Pets.Drone;
-using Microsoft.Xna.Framework;
 using UltimateRangerExpansion.Content.Rarities;
 using Terraria.ID;
 
