@@ -206,7 +206,12 @@ Items: {
 
 	Awp: {
 		DisplayName: AWP
-		Tooltip: "'BANG! You're dead.'"
+		Tooltip:
+			'''
+			Shoots a powerful, high velocity bullet
+			Right click to zoom out
+			'BANG! You're dead.'
+			'''
 	}
 
 	Strikemaster: {
