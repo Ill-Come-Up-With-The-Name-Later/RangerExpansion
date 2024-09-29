@@ -24,7 +24,7 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Molten
             Item.useAnimation -= 18;
             Item.shootSpeed += 12;
 
-            Item.crit += 12;
+            Item.crit += 7;
 
             Item.rare = ItemRarityID.Orange;
 

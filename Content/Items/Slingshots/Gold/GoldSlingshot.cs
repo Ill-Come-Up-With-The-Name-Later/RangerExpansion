@@ -22,7 +22,7 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Gold
             Item.useAnimation -= 12;
             Item.shootSpeed += 8;
 
-            Item.crit += 8;
+            Item.crit += 5;
 
             Item.value += 2000;
         }

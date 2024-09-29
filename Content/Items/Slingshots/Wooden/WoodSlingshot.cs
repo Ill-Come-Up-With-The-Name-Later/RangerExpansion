@@ -34,7 +34,7 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Wooden
             Item.knockBack = 3.2f;
             Item.noMelee = true;
 
-            Item.crit = 3;
+            Item.crit = 1;
 
             // Slingshot Properties
             Item.shootSpeed = 8f;

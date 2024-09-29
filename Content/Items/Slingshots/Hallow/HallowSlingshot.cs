@@ -1,12 +1,11 @@
-﻿using Terraria.ID;
+﻿using Microsoft.Xna.Framework;
+using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria;
 using UltimateRangerExpansion.Content.Items.Slingshots.Wooden;
-using Microsoft.Xna.Framework;
 
-namespace UltimateRangerExpansion.Content.Items.Slingshots.Nightmare
+namespace UltimateRangerExpansion.Content.Items.Slingshots.Hallow
 {
-    class NightmareSlingshot : ModItem, ISlingShot
+    internal class HallowSlingshot : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -17,17 +16,17 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Nightmare
         {
             Item.CloneDefaults(ModContent.ItemType<WoodSlingshot>());
 
-            Item.damage = 15;
+            Item.damage = 40;
 
-            Item.useTime -= 15;
-            Item.useAnimation -= 15;
-            Item.shootSpeed += 10;
+            Item.useTime -= 22;
+            Item.useAnimation -= 22;
+            Item.shootSpeed += 16;
 
-            Item.crit += 6;
+            Item.crit += 10;
 
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ItemRarityID.LightPurple;
 
-            Item.value += 3000;
+            Item.value += 100000;
         }
 
         public override Vector2? HoldoutOffset()
@@ -38,7 +37,7 @@ namespace UltimateRangerExpansion.Content.Items.Slingshots.Nightmare
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.DemoniteBar, 5)
+                .AddIngredient(ItemID.HallowedBar, 5)
                 .AddIngredient(ItemID.Silk)
                 .AddTile(TileID.Anvils)
                 .Register();

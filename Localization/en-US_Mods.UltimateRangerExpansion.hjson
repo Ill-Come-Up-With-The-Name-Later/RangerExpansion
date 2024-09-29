@@ -233,6 +233,16 @@ Items: {
 		DisplayName: Fallen Star Shotgun
 		Tooltip: ""
 	}
+
+	PearlwoodSlingshot: {
+		DisplayName: Pearlwood Slingshot
+		Tooltip: ""
+	}
+
+	HallowSlingshot: {
+		DisplayName: Hallowed Slingshot
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
