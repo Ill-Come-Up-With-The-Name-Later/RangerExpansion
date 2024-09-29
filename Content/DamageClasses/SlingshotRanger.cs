@@ -1,5 +1,4 @@
-﻿using Terraria;
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
 
 namespace UltimateRangerExpansion.Content.DamageClasses
 {
@@ -20,11 +19,6 @@ namespace UltimateRangerExpansion.Content.DamageClasses
         public override bool GetEffectInheritance(DamageClass damageClass)
         {
             return damageClass == DamageClass.Ranged;
-        }
-
-        public override void SetDefaultStats(Player player)
-        {
-            player.GetCritChance<SlingshotRanger>() += 4;
         }
     }
 }
