@@ -216,7 +216,7 @@ Items: {
 
 	Strikemaster: {
 		DisplayName: Strikemaster
-		Tooltip: "'Two strikes, you're dead.'"
+		Tooltip: "'Three strikes, you're dead.'"
 	}
 
 	VortexScattergun: {
@@ -241,6 +241,11 @@ Items: {
 
 	HallowSlingshot: {
 		DisplayName: Hallowed Slingshot
+		Tooltip: ""
+	}
+
+	DronePetSummon: {
+		DisplayName: Drone Controller
 		Tooltip: ""
 	}
 }
@@ -274,6 +279,7 @@ Projectiles: {
 	AerialBaneProjectile.DisplayName: Aerial Bane Projectile
 	PinnacleProjectile.DisplayName: Pinnacle Projectile
 	MarrowProjectile.DisplayName: Marrow Projectile
+	DronePetProjectile.DisplayName: Drone Pet Projectile
 }
 
 Prefixes: {
@@ -303,3 +309,10 @@ Prefixes: {
 }
 
 DamageClasses.SlingshotRanger.DisplayName: ranged damage
+
+Buffs: {
+	DronePetBuff: {
+		Description: Mods.UltimateRangerExpansion.Buffs.DronePetBuff.Description
+		DisplayName: Drone Pet Buff
+	}
+}
