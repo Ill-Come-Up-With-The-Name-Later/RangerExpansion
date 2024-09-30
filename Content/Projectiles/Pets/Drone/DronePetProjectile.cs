@@ -60,31 +60,33 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 
                 float maxRotation = MathHelper.ToRadians(5);
 
-                if (Projectile.ai[1] % 70 == 0)
+                if (Projectile.ai[1] % 45 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
                         Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
-                            ProjectileID.RocketI, 300, 7, Main.myPlayer)];
+                            ProjectileID.RocketI, 600, 7, Main.myPlayer)];
 
                         proj.netUpdate = true;
                         proj.usesLocalNPCImmunity = true;
-                        proj.ArmorPenetration = 10;
+                        proj.ArmorPenetration = 15;
                     }
                 }
 
-                if (Projectile.ai[1] % 15 == 0)
+                if (Projectile.ai[1] % 18 == 0 ||
+                    Projectile.ai[1] % 29 == 0 ||
+                    Projectile.ai[1] % 41 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
                         Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
-                            ProjectileID.Bullet, 60, 3, Main.myPlayer)];
+                            ProjectileID.Bullet, 100, 3, Main.myPlayer)];
 
                         proj.netUpdate = true;
                         proj.usesLocalNPCImmunity = true;
-                        proj.ArmorPenetration = 10;
+                        proj.ArmorPenetration = 50;
                     }
                 }
             }
