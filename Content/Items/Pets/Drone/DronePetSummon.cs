@@ -18,8 +18,8 @@ namespace UltimateRangerExpansion.Content.Items.Pets.Drone
         {
             Item.CloneDefaults(ItemID.ZephyrFish);
 
-            Item.width = 10;
-            Item.height = 10;
+            Item.width = 32;
+            Item.height = 32;
 
             Item.damage = 250;
             Item.DamageType = DamageClass.Ranged;
