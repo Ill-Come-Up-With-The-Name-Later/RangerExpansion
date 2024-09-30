@@ -21,6 +21,9 @@ namespace UltimateRangerExpansion.Content.Items.Pets.Drone
             Item.width = 10;
             Item.height = 10;
 
+            Item.damage = 250;
+            Item.DamageType = DamageClass.Ranged;
+
             Item.rare = ModContent.RarityType<DeveloperRarity>();
 
             Item.value = Item.buyPrice(1, 0, 0, 0);

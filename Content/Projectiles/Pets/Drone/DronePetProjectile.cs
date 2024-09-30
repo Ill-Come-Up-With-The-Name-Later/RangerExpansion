@@ -27,7 +27,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
             Projectile.width = 58;
             Projectile.height = 26;
 
-            Projectile.damage = 250;
+            Projectile.damage = 50;
             Projectile.minion = true;
 
             AIType = ProjectileID.ZephyrFish;
@@ -60,10 +60,10 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 
                 if (Projectile.ai[1] % 80 == 0)
                 {
-                    if (Main.myPlayer == player.whoAmI)
+                    if (Main.myPlayer == Projectile.owner)
                     {
-                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_None(), Projectile.Center,
-                            velocity, ProjectileID.RocketI, Projectile.damage, 2, Owner: Main.myPlayer)];
+                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
+                            velocity, ProjectileID.RocketI, 250, 2, Main.myPlayer)];
 
                         proj.netUpdate = true;
                     }
