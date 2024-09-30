@@ -56,37 +56,37 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                 Vector2 enemyPos = targetNPC.Center;
                 Vector2 velocity = enemyPos - Projectile.Center;
                 velocity.Normalize();
-                velocity *= 28;
+                velocity *= 30;
 
-                float maxRotation = MathHelper.ToRadians(5);
+                float maxRotation = MathHelper.ToRadians(2);
 
-                if (Projectile.ai[1] % 45 == 0)
+                if (Projectile.ai[1] % 40 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
                         Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
-                            ProjectileID.RocketI, 600, 7, Main.myPlayer)];
+                            ProjectileID.RocketI, 750, 7, Main.myPlayer)];
 
                         proj.netUpdate = true;
                         proj.usesLocalNPCImmunity = true;
-                        proj.ArmorPenetration = 15;
+                        proj.ArmorPenetration = 25;
                     }
                 }
 
-                if (Projectile.ai[1] % 18 == 0 ||
-                    Projectile.ai[1] % 29 == 0 ||
-                    Projectile.ai[1] % 41 == 0)
+                if (Projectile.ai[1] % 16 == 0 ||
+                    Projectile.ai[1] % 25 == 0 ||
+                    Projectile.ai[1] % 34 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
                         Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
-                            ProjectileID.Bullet, 100, 3, Main.myPlayer)];
+                            ProjectileID.Bullet, 125, 3, Main.myPlayer)];
 
                         proj.netUpdate = true;
                         proj.usesLocalNPCImmunity = true;
-                        proj.ArmorPenetration = 50;
+                        proj.ArmorPenetration = 75;
                     }
                 }
             }
