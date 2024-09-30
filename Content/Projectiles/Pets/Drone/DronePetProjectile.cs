@@ -56,24 +56,21 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                 Vector2 enemyPos = targetNPC.Center;
                 Vector2 velocity = enemyPos - Projectile.Center;
                 velocity.Normalize();
-                velocity *= 24;
+                velocity *= 28;
 
                 float maxRotation = MathHelper.ToRadians(5);
 
-                if (Projectile.ai[1] % 90 == 0)
+                if (Projectile.ai[1] % 70 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
-                        for(int i = 0; i < 3; i++ )
-                        {
-                            Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
-                            velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)), 
-                            ProjectileID.RocketI, 275, 7, Main.myPlayer)];
+                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
+                            velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
+                            ProjectileID.RocketI, 300, 7, Main.myPlayer)];
 
-                            proj.netUpdate = true;
-                            proj.usesLocalNPCImmunity = true;
-                            proj.ArmorPenetration = 10;
-                        }
+                        proj.netUpdate = true;
+                        proj.usesLocalNPCImmunity = true;
+                        proj.ArmorPenetration = 10;
                     }
                 }
 
@@ -81,16 +78,13 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
-                        for (int i = 0; i < 6; i++)
-                        {
-                            Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
+                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
-                            ProjectileID.Bullet, 45, 3, Main.myPlayer)];
+                            ProjectileID.Bullet, 60, 3, Main.myPlayer)];
 
-                            proj.netUpdate = true;
-                            proj.usesLocalNPCImmunity = true;
-                            proj.ArmorPenetration = 10;
-                        }
+                        proj.netUpdate = true;
+                        proj.usesLocalNPCImmunity = true;
+                        proj.ArmorPenetration = 10;
                     }
                 }
             }
