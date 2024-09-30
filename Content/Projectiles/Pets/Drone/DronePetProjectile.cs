@@ -58,25 +58,35 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                 velocity.Normalize();
                 velocity *= 24;
 
-                if (Projectile.ai[1] % 120 == 0)
+                float maxRotation = MathHelper.ToRadians(5);
+
+                if (Projectile.ai[1] % 90 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
-                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
-                            velocity, ProjectileID.RocketI, 250, 2, Main.myPlayer)];
+                        for(int i = 0; i < 3; i++ )
+                        {
+                            Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
+                            velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)), 
+                            ProjectileID.RocketI, 275, 7, Main.myPlayer)];
 
-                        proj.netUpdate = true;
+                            proj.netUpdate = true;
+                        }
                     }
                 }
 
-                if (Projectile.ai[1] % 40 == 0)
+                if (Projectile.ai[1] % 15 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
-                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
-                            velocity, ProjectileID.Bullet, 30, 2, Main.myPlayer)];
+                        for (int i = 0; i < 6; i++)
+                        {
+                            Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
+                            velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
+                            ProjectileID.Bullet, 45, 3, Main.myPlayer)];
 
-                        proj.netUpdate = true;
+                            proj.netUpdate = true;
+                        }
                     }
                 }
             }
