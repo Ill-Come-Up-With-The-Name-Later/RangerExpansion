@@ -245,7 +245,7 @@ Items: {
 	}
 
 	DronePetSummon: {
-		DisplayName: Drone Controller
+		DisplayName: Remote Controller
 		Tooltip: ""
 	}
 }

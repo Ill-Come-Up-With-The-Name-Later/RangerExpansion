@@ -53,17 +53,28 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                 Player player = Main.player[Projectile.owner];
                 NPC targetNPC = Main.npc[attackTarget];
 
-                Vector2 enemyPos = targetNPC.position;
+                Vector2 enemyPos = targetNPC.Center;
                 Vector2 velocity = enemyPos - Projectile.Center;
                 velocity.Normalize();
-                velocity *= 20;
+                velocity *= 24;
 
-                if (Projectile.ai[1] % 80 == 0)
+                if (Projectile.ai[1] % 120 == 0)
                 {
                     if (Main.myPlayer == Projectile.owner)
                     {
                         Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity, ProjectileID.RocketI, 250, 2, Main.myPlayer)];
+
+                        proj.netUpdate = true;
+                    }
+                }
+
+                if (Projectile.ai[1] % 40 == 0)
+                {
+                    if (Main.myPlayer == Projectile.owner)
+                    {
+                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
+                            velocity, ProjectileID.Bullet, 30, 2, Main.myPlayer)];
 
                         proj.netUpdate = true;
                     }
