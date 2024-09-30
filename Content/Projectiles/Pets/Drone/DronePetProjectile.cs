@@ -71,6 +71,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                             ProjectileID.RocketI, 275, 7, Main.myPlayer)];
 
                             proj.netUpdate = true;
+                            proj.usesLocalNPCImmunity = true;
+                            proj.ArmorPenetration = 10;
                         }
                     }
                 }
@@ -86,6 +88,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                             ProjectileID.Bullet, 45, 3, Main.myPlayer)];
 
                             proj.netUpdate = true;
+                            proj.usesLocalNPCImmunity = true;
+                            proj.ArmorPenetration = 10;
                         }
                     }
                 }
