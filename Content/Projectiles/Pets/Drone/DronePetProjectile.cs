@@ -89,6 +89,20 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                         proj.ArmorPenetration = 75;
                     }
                 }
+
+                if (Projectile.ai[1] % 180 == 0)
+                {
+                    if (Main.myPlayer == Projectile.owner)
+                    {
+                        Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
+                            velocity,
+                            ProjectileID.BulletHighVelocity, 1500, 3, Main.myPlayer)];
+
+                        proj.netUpdate = true;
+                        proj.usesLocalNPCImmunity = true;
+                        proj.ArmorPenetration = 75;
+                    }
+                }
             }
 
             int frameSpeed = 5;
