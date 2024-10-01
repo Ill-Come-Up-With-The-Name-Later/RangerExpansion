@@ -66,7 +66,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
                     {
                         Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity.RotatedByRandom(MathHelper.Lerp(-maxRotation, maxRotation, 1)),
-                            ProjectileID.RocketI, 750, 7, Main.myPlayer)];
+                            ProjectileID.RocketIII, 750, 7, Main.myPlayer)];
 
                         proj.netUpdate = true;
                         proj.usesLocalNPCImmunity = true;

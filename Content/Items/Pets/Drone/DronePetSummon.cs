@@ -47,6 +47,9 @@ namespace UltimateRangerExpansion.Content.Items.Pets.Drone
                 .AddIngredient(ItemID.LunarBar, 10)
                 .AddIngredient(ItemID.SoulofFlight, 15)
                 .AddIngredient(ItemID.FragmentVortex, 5)
+                .AddIngredient(ItemID.RocketLauncher)
+                .AddIngredient(ItemID.ClockworkAssaultRifle)
+                .AddIngredient(ItemID.SniperRifle)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }
