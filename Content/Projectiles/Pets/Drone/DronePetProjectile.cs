@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using UltimateRangerExpansion.Content.Buffs.DronePet;
 
 namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 {
@@ -27,6 +28,9 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
             Projectile.width = 58;
             Projectile.height = 26;
 
+            Projectile.damage = 50;
+            Projectile.minion = true;
+
             AIType = ProjectileID.ZephyrFish;
         }
 
@@ -44,10 +48,17 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 
             int attackTarget = -1;
             Projectile.Minion_FindTargetInRange(attackRange, ref attackTarget, false);
+            Player player = Main.player[Projectile.owner];
+
+            if (!player.HasBuff(ModContent.BuffType<DronePetBuff>()))
+            {
+                Projectile.Kill();
+                return;
+            }
 
             if(attackTarget != -1)
             {
-                Player player = Main.player[Projectile.owner];
+                
                 NPC targetNPC = Main.npc[attackTarget];
 
                 Vector2 enemyPos = targetNPC.Center;
