@@ -312,7 +312,7 @@ DamageClasses.SlingshotRanger.DisplayName: ranged damage
 
 Buffs: {
 	DronePetBuff: {
-		Description: Mods.UltimateRangerExpansion.Buffs.DronePetBuff.Description
-		DisplayName: Drone Pet Buff
+		DisplayName: Drone
+		Description: A drone now fights with you.
 	}
 }

@@ -27,9 +27,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
             Projectile.width = 58;
             Projectile.height = 26;
 
-            Projectile.damage = 50;
-            Projectile.minion = true;
-
             AIType = ProjectileID.ZephyrFish;
         }
 
