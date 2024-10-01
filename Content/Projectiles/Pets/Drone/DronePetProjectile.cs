@@ -7,7 +7,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 {
     class DronePetProjectile : ModProjectile
     {
-        readonly int attackRange = 1000;
+        readonly int attackRange = 1250;
 
         public override void SetStaticDefaults()
         {
