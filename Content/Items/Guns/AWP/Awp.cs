@@ -29,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.AWP
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 320;
+            Item.damage = 350;
             Item.knockBack = 7f;
             Item.noMelee = true;
             Item.crit = 10;

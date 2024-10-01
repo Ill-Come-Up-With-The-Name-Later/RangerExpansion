@@ -21,7 +21,6 @@ namespace UltimateRangerExpansion.Content.Items.Pets.Drone
             Item.width = 32;
             Item.height = 32;
 
-            Item.damage = 250;
             Item.DamageType = DamageClass.Ranged;
 
             Item.rare = ModContent.RarityType<DeveloperRarity>();
@@ -40,6 +39,16 @@ namespace UltimateRangerExpansion.Content.Items.Pets.Drone
             }
 
             return true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ItemID.LunarBar, 10)
+                .AddIngredient(ItemID.SoulofFlight, 15)
+                .AddIngredient(ItemID.FragmentVortex, 5)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
         }
     }
 }
