@@ -64,7 +64,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
         {
             velocity = new(1, 0);
             velocity = velocity.RotatedBy(UltimateRangerExpansion.LaunchAngle(position, target, vel * 60, gravity));
-            velocity *= v;
+            velocity *= vel;
         }
     }
 }
