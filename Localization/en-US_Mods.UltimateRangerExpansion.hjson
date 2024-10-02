@@ -251,7 +251,7 @@ Items: {
 
 	MissileLauncher: {
 		DisplayName: Ballistic Missile Launcher
-		Tooltip: 
+		Tooltip:
 			'''
 			Right-Click in the world
 			to set target.

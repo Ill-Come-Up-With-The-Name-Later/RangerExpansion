@@ -26,12 +26,12 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile
             Projectile.penetrate = -1;
             Projectile.DamageType = DamageClass.Ranged;
 
-            Projectile.timeLeft = 1200;
+            Projectile.timeLeft = 2400;
         }
 
         public override void AI()
         {
-            Projectile.velocity.Y += 1 / 2;
+            Projectile.velocity.Y += 1;
 
             if (Projectile.owner == Main.myPlayer && Projectile.timeLeft <= 3)
             {
