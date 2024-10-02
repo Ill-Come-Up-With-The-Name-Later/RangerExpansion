@@ -11,7 +11,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
     class MissileLauncher : ModItem
     {
         Vector2 target = Vector2.Zero;
-        readonly float shootSpeed = 30;
+        readonly float shootSpeed = 10;
         readonly float gravity = 10;
 
         public override void SetStaticDefaults()
@@ -63,24 +63,29 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
+            float x = target.X - position.X;
+            float y = target.Y - position.Y;
+
             float discriminant = (float) 
                 (Math.Pow(shootSpeed, 4) 
-                - gravity * ((gravity * target.X * target.X)
-                + (2 * target.Y * shootSpeed * shootSpeed)));
+                - gravity * ((gravity * x * x)
+                + (2 * y * shootSpeed * shootSpeed)));
 
-            if(discriminant < 0)
+            Main.NewText($"Discriminant: {discriminant}");
+
+            if (discriminant < 0)
                 return;
 
             float root = (float)Math.Sqrt(discriminant);
-            float angle = (shootSpeed * shootSpeed - root) / (gravity * target.X);
-
-            if (player.direction == -1)
-                angle = 180 - angle;
+            float angle = (float)Math.Atan((shootSpeed * shootSpeed - root) / (gravity * x));
 
             velocity = new(1, 0);
 
-            if (player.direction == -1)
+            if (target.X < player.position.X)
+            {
+                angle = 180 - angle;
                 velocity *= -1;
+            }
             
             velocity.RotatedBy(angle);
             velocity.Normalize();

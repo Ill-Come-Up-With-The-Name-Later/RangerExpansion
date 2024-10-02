@@ -24,6 +24,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile
             Projectile.friendly = true;
             Projectile.penetrate = -1;
             Projectile.DamageType = DamageClass.Ranged;
+
+            Projectile.timeLeft = 300;
         }
 
         public override void AI()
