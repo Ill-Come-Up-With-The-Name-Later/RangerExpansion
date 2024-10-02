@@ -93,8 +93,10 @@ namespace UltimateRangerExpansion
             if (start.X == end.X)
                 if (end.Y < start.Y)
                     return (float)((3 * Math.PI) / 2);
-                else
+                else if (end.Y > start.Y)
                     return (float)(Math.PI / 2);
+                else
+                    return 0;
 
             float x = (float)((start.X - end.X) * -1 * scaling);
             float y = (float)((start.Y - end.Y) * -1 * scaling);
