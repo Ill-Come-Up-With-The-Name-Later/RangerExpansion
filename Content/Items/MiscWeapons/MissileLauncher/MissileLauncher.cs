@@ -83,7 +83,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
             if (target.X < player.position.X)
             {
-                angle = 180 - angle;
+                angle = (float)(Math.PI - angle);
                 velocity *= -1;
             }
             
