@@ -31,7 +31,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile
 
         public override void AI()
         {
-            Projectile.velocity.Y += 1 / 3;
+            Projectile.velocity.Y += 1;
 
             if (Projectile.owner == Main.myPlayer && Projectile.timeLeft <= 3)
             {

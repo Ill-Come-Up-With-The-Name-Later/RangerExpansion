@@ -10,8 +10,8 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
     class MissileLauncher : ModItem
     {
         Vector2 target = Vector2.Zero;
-        readonly float vel = 20;
-        readonly float gravity = 20;
+        readonly float vel = 60;
+        readonly float gravity = 60;
 
         public override void SetStaticDefaults()
         {
@@ -34,7 +34,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 25000;
+            Item.damage = 2500;
             Item.knockBack = 8f;
             Item.noMelee = true;
             Item.crit = 12;
@@ -63,7 +63,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             velocity = new(1, 0);
-            velocity = velocity.RotatedBy(UltimateRangerExpansion.LaunchAngle(position, target, vel * 60, gravity));
+            velocity = velocity.RotatedBy(UltimateRangerExpansion.LaunchAngle(position, target, vel * 60, gravity, 0.25f));
             velocity *= vel;
         }
     }
