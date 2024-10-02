@@ -250,7 +250,7 @@ Items: {
 	}
 
 	MissileLauncher: {
-		DisplayName: Missile Launcher
+		DisplayName: Ballistic Missile Launcher
 		Tooltip: Right-Click to set target.
 	}
 }
