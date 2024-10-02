@@ -10,8 +10,6 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
     class MissileLauncher : ModItem
     {
         Vector2 target = Vector2.Zero;
-        readonly float v = 20; // Initial velocity
-        readonly float gravity = 20; // Amount of gravity in units / second
 
         public override void SetStaticDefaults()
         {
@@ -62,6 +60,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
+           
             velocity = new(1, 0);
             velocity = velocity.RotatedBy(UltimateRangerExpansion.LaunchAngle(position, target, v * 60, gravity));
             velocity *= v;
