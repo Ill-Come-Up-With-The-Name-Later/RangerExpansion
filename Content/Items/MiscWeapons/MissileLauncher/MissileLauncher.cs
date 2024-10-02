@@ -41,7 +41,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
             // Gun Properties
             Item.shoot = ModContent.ProjectileType<BallisticMissile>();
-            Item.shootSpeed = v;
+            Item.shootSpeed = vel;
             Item.useAmmo = AmmoID.Rocket;
 
             Item.value = Item.buyPrice(0, 55, 10, 50);
