@@ -11,7 +11,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
     {
         Vector2 target = Vector2.Zero;
         readonly float vel = 60;
-        readonly float gravity = 60;
+        readonly float gravity = 30;
 
         public override void SetStaticDefaults()
         {
