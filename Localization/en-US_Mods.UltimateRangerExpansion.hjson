@@ -248,6 +248,11 @@ Items: {
 		DisplayName: Remote Controller
 		Tooltip: ""
 	}
+
+	MissileLauncher: {
+		DisplayName: Missile Launcher
+		Tooltip: Right-Click to set target.
+	}
 }
 
 Projectiles: {
@@ -280,6 +285,7 @@ Projectiles: {
 	PinnacleProjectile.DisplayName: Pinnacle Projectile
 	MarrowProjectile.DisplayName: Marrow Projectile
 	DronePetProjectile.DisplayName: Drone Pet Projectile
+	BallisticMissile.DisplayName: Ballistic Missile
 }
 
 Prefixes: {
