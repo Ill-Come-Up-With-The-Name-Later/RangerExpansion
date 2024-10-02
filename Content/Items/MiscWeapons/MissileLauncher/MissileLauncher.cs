@@ -67,9 +67,9 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
             float y = target.Y - position.Y;
 
             float discriminant = (float) 
-                Math.Abs((Math.Pow(v, 4) 
+                (Math.Pow(v, 4) 
                 - (gravity * ((gravity * x * x)
-                + (2 * y * v * v)))));
+                + (2 * y * v * v))));
 
             Main.NewText($"Discriminant: {discriminant}");
 
