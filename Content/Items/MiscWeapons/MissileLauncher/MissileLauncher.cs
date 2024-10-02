@@ -4,15 +4,14 @@ using Terraria;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile;
-using System;
 
 namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 {
     class MissileLauncher : ModItem
     {
         Vector2 target = Vector2.Zero;
-        readonly float v = 10; // Initial velocity
-        readonly float gravity = 10; // Amount of gravity in units / second
+        readonly float v = 20; // Initial velocity
+        readonly float gravity = 20; // Amount of gravity in units / second
 
         public override void SetStaticDefaults()
         {
@@ -63,32 +62,8 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            float x = target.X - position.X;
-            float y = target.Y - position.Y;
-
-            float discriminant = (float) 
-                (Math.Pow(v, 4) 
-                - (gravity * ((gravity * x * x)
-                + (2 * y * v * v))));
-
-            Main.NewText($"Discriminant: {discriminant}");
-
-            if (discriminant < 0)
-                return;
-
-            float root = (float)Math.Sqrt(discriminant);
-            float angle = (float)Math.Atan(((v * v) - root) / (gravity * x));
-
             velocity = new(1, 0);
-
-            if (target.X < player.position.X)
-            {
-                angle = (float)(Math.PI - angle);
-                velocity *= -1;
-            }
-            
-            velocity.RotatedBy(angle);
-            velocity.Normalize();
+            velocity = velocity.RotatedBy(UltimateRangerExpansion.LaunchAngle(position, target, v * 60, gravity));
             velocity *= v;
         }
     }

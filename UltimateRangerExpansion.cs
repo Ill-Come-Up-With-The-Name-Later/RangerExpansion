@@ -61,5 +61,65 @@ namespace UltimateRangerExpansion
 
             return closest;
         }
+
+        /// <summary>
+        /// Calculates angle to launch a projectile
+        /// along a parabolic curve form start to end
+        /// <br>
+        /// Scaling is applied to ensure no
+        /// overflows
+        /// </summary>
+        /// <param name="start">
+        /// The launch point
+        /// </param>
+        /// <param name="end">
+        /// The target end point
+        /// </param>
+        /// <param name="vel">
+        /// The initial velocity of the projectile
+        /// </param>
+        /// <param name="gravity">
+        /// The amount of gravity on the projectile
+        /// </param>
+        /// <param name="scaling">
+        /// The amount to scale x, y, gravity, and velocity by
+        /// </param>
+        /// <returns>
+        /// The angle (in radians) required to launch the projectile
+        /// from start to end
+        /// </returns>
+        public static float LaunchAngle(Vector2 start, Vector2 end, float vel, float gravity, float scaling = 0.1f)
+        {
+            if (start.X == end.X)
+                if (end.Y < start.Y)
+                    return (float)((3 * Math.PI) / 2);
+                else
+                    return (float)(Math.PI / 2);
+
+            float x = (float)((start.X - end.X) * -1 * scaling);
+            float y = (float)((start.Y - end.Y) * -1 * scaling);
+
+            vel *= scaling;
+            gravity *= scaling;
+
+            float discriminant = (float)(Math.Pow(vel, 4) - (gravity * ((gravity * x * x) + (2 * y * vel * vel))));
+
+            if(discriminant < 0)
+                return 0;
+
+            float root = (float)Math.Sqrt(discriminant);
+            float angle = (float)Math.Atan(((vel * vel) - root) / (gravity * x));
+
+            if (angle < 0)
+                angle += 2 * (float)Math.PI;
+
+            if (end.X < start.X)
+                angle += (float)Math.PI;
+
+            if (angle > 2 * Math.PI)
+                angle -= 2 * (float)Math.PI;
+
+            return angle;
+        }
     }
 }

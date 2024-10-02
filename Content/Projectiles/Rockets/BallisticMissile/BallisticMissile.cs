@@ -13,6 +13,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile
         {
             ProjectileID.Sets.IsARocketThatDealsDoubleDamageToPrimaryEnemy[Type] = true;
             ProjectileID.Sets.PlayerHurtDamageIgnoresDifficultyScaling[Type] = true;
+            ProjectileID.Sets.RocketsSkipDamageForPlayers[Type] = true;
 
             ProjectileID.Sets.Explosive[Type] = true;
         }
@@ -25,12 +26,12 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile
             Projectile.penetrate = -1;
             Projectile.DamageType = DamageClass.Ranged;
 
-            Projectile.timeLeft = 300;
+            Projectile.timeLeft = 1200;
         }
 
         public override void AI()
         {
-            Projectile.velocity.Y += 1 / 6;
+            Projectile.velocity.Y += 1 / 3;
 
             if (Projectile.owner == Main.myPlayer && Projectile.timeLeft <= 3)
             {
