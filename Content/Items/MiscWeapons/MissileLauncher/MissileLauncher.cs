@@ -11,8 +11,8 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
     class MissileLauncher : ModItem
     {
         Vector2 target = Vector2.Zero;
-        readonly float shootSpeed = 10;
-        readonly float gravity = 10;
+        readonly float v = 10; // Initial velocity
+        readonly float gravity = 10; // Amount of gravity in units / second
 
         public override void SetStaticDefaults()
         {
@@ -42,7 +42,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
             // Gun Properties
             Item.shoot = ModContent.ProjectileType<BallisticMissile>();
-            Item.shootSpeed = shootSpeed;
+            Item.shootSpeed = v;
             Item.useAmmo = AmmoID.Rocket;
 
             Item.value = Item.buyPrice(0, 55, 10, 50);
@@ -67,9 +67,9 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
             float y = target.Y - position.Y;
 
             float discriminant = (float) 
-                (Math.Pow(shootSpeed, 4) 
-                - gravity * ((gravity * x * x)
-                + (2 * y * shootSpeed * shootSpeed)));
+                Math.Abs((Math.Pow(v, 4) 
+                - (gravity * ((gravity * x * x)
+                + (2 * y * v * v)))));
 
             Main.NewText($"Discriminant: {discriminant}");
 
@@ -77,7 +77,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
                 return;
 
             float root = (float)Math.Sqrt(discriminant);
-            float angle = (float)Math.Atan((shootSpeed * shootSpeed - root) / (gravity * x));
+            float angle = (float)Math.Atan(((v * v) - root) / (gravity * x));
 
             velocity = new(1, 0);
 
@@ -89,7 +89,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
             
             velocity.RotatedBy(angle);
             velocity.Normalize();
-            velocity *= shootSpeed;
+            velocity *= v;
         }
     }
 }
