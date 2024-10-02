@@ -88,7 +88,7 @@ namespace UltimateRangerExpansion
         /// The angle (in radians) required to launch the projectile
         /// from start to end
         /// </returns>
-        public static float LaunchAngle(Vector2 start, Vector2 end, float vel, float gravity, float scaling = 0.1f)
+        public static float LaunchAngle(Vector2 start, Vector2 end, float vel, float gravity, float scaling = 1f)
         {
             if (start.X == end.X)
                 if (end.Y < start.Y)
