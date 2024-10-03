@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher;
 
 namespace UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile
 {
@@ -31,7 +32,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile
 
         public override void AI()
         {
-            Projectile.velocity.Y += 1;
+            Projectile.velocity.Y += MissileLauncher.gravity / 60;
 
             if (Projectile.owner == Main.myPlayer && Projectile.timeLeft <= 3)
             {

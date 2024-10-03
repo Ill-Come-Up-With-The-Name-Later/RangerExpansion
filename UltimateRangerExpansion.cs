@@ -104,14 +104,16 @@ namespace UltimateRangerExpansion
             vel *= scaling;
             gravity *= scaling;
 
-            float discriminant = (float)(Math.Pow(vel, 4) - (gravity * ((gravity * x * x) + (2 * y * vel * vel))));
+            float discriminant = (float)(Math.Pow(vel, 4) - gravity * ((gravity * x * x) + (2 * y * vel * vel)));
 
             if(discriminant < 0)
                 return 0;
 
             float root = (float)Math.Sqrt(discriminant);
             float angle = (float)Math.Atan(((vel * vel) - root) / (gravity * x));
+            float angle2 = (float)Math.Atan(((vel * vel) + root) / (gravity * x));
 
+            // Adjust angle 1
             if (angle < 0)
                 angle += 2 * (float)Math.PI;
 
@@ -120,6 +122,18 @@ namespace UltimateRangerExpansion
 
             if (angle > 2 * Math.PI)
                 angle -= 2 * (float)Math.PI;
+
+            // Adjust angle 2
+            if (angle2 < 0)
+                angle2 += 2 * (float)Math.PI;
+
+            if (end.X < start.X)
+                angle2 += (float)Math.PI;
+
+            if (angle2 > 2 * Math.PI)
+                angle2 -= 2 * (float)Math.PI;
+
+            angle2 += (float)Math.PI;
 
             return angle;
         }

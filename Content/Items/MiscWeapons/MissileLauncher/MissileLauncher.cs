@@ -4,14 +4,15 @@ using Terraria;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile;
+using System;
 
 namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 {
     class MissileLauncher : ModItem
     {
         Vector2 target = Vector2.Zero;
-        private static readonly float gravity = 60;
-        private static readonly float vel = (float)(gravity * 0.8);
+        public static readonly float gravity = 50;
+        private static readonly float vel = (float)(gravity * 0.9);
 
         public override void SetStaticDefaults()
         {
@@ -62,8 +63,10 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
+            float angle = UltimateRangerExpansion.LaunchAngle(position, target, vel * 60, gravity);
+
             velocity = new(1, 0);
-            velocity = velocity.RotatedBy(UltimateRangerExpansion.LaunchAngle(position, target, vel * 60, gravity, 1f));
+            velocity = velocity.RotatedBy(angle);
             velocity *= vel;
         }
     }
