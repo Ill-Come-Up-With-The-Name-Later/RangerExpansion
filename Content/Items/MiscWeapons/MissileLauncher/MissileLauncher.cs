@@ -4,7 +4,6 @@ using Terraria;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using UltimateRangerExpansion.Content.Projectiles.Rockets.BallisticMissile;
-using System;
 
 namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 {
@@ -12,7 +11,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
     {
         Vector2 target = Vector2.Zero;
         public static readonly float gravity = 50;
-        private static readonly float vel = (float)(gravity * 0.9);
+        private static readonly float vel = gravity * 1.25f;
 
         public override void SetStaticDefaults()
         {
