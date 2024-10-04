@@ -30,7 +30,7 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.GreenLaserReticle
 
             if (!hideVisual)
             {
-                UltimateRangerExpansion.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDust, Color.LightGreen);
+                UltimateRangerExpansion.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDustLighted, Color.LightGreen);
             }
         }
 

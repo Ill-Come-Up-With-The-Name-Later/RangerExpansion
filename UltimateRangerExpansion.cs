@@ -165,6 +165,7 @@ namespace UltimateRangerExpansion
                 dust.scale = dustScale; 
                 dust.velocity *= 0.1f;
                 dust.noLight = false;
+                dust.alpha = 0;
 
                 Lighting.AddLight(dust.position, new Vector3(color.R / 255, color.G / 255, color.B / 255));
             }
