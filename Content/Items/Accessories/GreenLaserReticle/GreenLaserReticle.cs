@@ -1,12 +1,11 @@
 ﻿using Terraria.ID;
-using Terraria.ModLoader;
 using Terraria;
+using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-
-namespace UltimateRangerExpansion.Content.Items.Accessories.RedLaserReticle
+namespace UltimateRangerExpansion.Content.Items.Accessories.GreenLaserReticle
 {
-    class RedLaserReticle : ModItem
+    class GreenLaserReticle : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -29,9 +28,9 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.RedLaserReticle
             player.GetDamage(DamageClass.Ranged) *= 1.05f;
             player.GetCritChance(DamageClass.Ranged) *= 1.05f;
 
-            if(!hideVisual)
+            if (!hideVisual)
             {
-                UltimateRangerExpansion.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDust, Color.Red);
+                UltimateRangerExpansion.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDust, Color.LightGreen);
             }
         }
 
@@ -41,7 +40,7 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.RedLaserReticle
                 .AddRecipeGroup(RecipeGroupID.IronBar, 5)
                 .AddIngredient(ItemID.Glass)
                 .AddIngredient(ItemID.Wire, 5)
-                .AddIngredient(ItemID.Ruby)
+                .AddIngredient(ItemID.Emerald)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

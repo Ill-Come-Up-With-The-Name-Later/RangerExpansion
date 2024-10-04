@@ -149,7 +149,7 @@ namespace UltimateRangerExpansion
         /// <param name="dustAmount">
         /// Amount of dusts to spawn at each interval
         /// </param>
-        public static void DrawDustLine(Vector2 pointA, Vector2 pointB, int dustType, Color color, float dustScale = 1f, int dustAmount = 50)
+        public static void DrawDustLine(Vector2 pointA, Vector2 pointB, int dustType, Color color, float dustScale = 0.66f, int dustAmount = 50)
         {
             Vector2 direction = pointB - pointA;
 
@@ -160,10 +160,13 @@ namespace UltimateRangerExpansion
             {
                 Vector2 dustPosition = pointA + step * (distance * (i / (float)dustAmount));
 
-                Dust dust = Dust.NewDustPerfect(dustPosition, dustType);
+                Dust dust = Dust.NewDustPerfect(dustPosition, dustType, newColor: color);
                 dust.noGravity = true;   
                 dust.scale = dustScale; 
-                dust.velocity *= 0.1f; 
+                dust.velocity *= 0.1f;
+                dust.noLight = false;
+
+                Lighting.AddLight(dust.position, new Vector3(color.R / 255, color.G / 255, color.B / 255));
             }
         }
     }

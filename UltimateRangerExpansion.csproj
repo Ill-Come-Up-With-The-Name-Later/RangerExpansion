@@ -8,6 +8,7 @@
 	  <Platforms>AnyCPU;ARM64;x86</Platforms>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Content\Items\Accessories\GreenLaserReticle\GreenLaserReticle.png" />
 	  <None Remove="Content\Items\Bows\Disaster\TheDisaster.png" />
 	  <None Remove="Content\Items\Guns\VortexScattergun\VortexScattergun.png" />
 	  <None Remove="Content\Items\Slingshots\Hallow\HallowSlingshot.png" />

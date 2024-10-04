@@ -271,6 +271,15 @@ Items: {
 			*BANG* Oops!'
 			'''
 	}
+
+	GreenLaserReticle: {
+		DisplayName: Green Laser Reticle
+		Tooltip:
+			'''
+			'Just in case you don’t like red! 
+			Also, stop shooting my cats.'
+			'''
+	}
 }
 
 Projectiles: {
