@@ -62,7 +62,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.MissileLauncher
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            float angle = UltimateRangerExpansion.LaunchAngle(position, target, vel * 60, gravity, 1f);
+            float angle = Utils.LaunchAngle(position, target, vel * 60, gravity, 1f);
 
             velocity = new(1, 0);
             velocity = velocity.RotatedBy(angle);

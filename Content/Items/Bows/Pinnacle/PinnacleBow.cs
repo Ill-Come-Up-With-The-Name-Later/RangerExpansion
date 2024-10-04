@@ -100,8 +100,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
                 Projectile bow = Main.projectile[Projectile.NewProjectile(source, shootPos, velocity,
                     bowProjectile, damage, knockback, Main.myPlayer)];
 
-                Vector2 aimPos = UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance) == null ?
-                    Main.MouseWorld : UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance).position;
+                Vector2 aimPos = Utils.ClosestNPC(Main.MouseWorld, seekDistance) == null ?
+                    Main.MouseWorld : Utils.ClosestNPC(Main.MouseWorld, seekDistance).position;
 
                 Vector2 projVelocity = aimPos - bow.Center;
                 projVelocity.Normalize();
@@ -149,10 +149,10 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
 
             // Rain arrows from the sky
             Vector2 center;
-            Vector2 val = UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance) == null ?
-                    Main.MouseWorld : UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance).position;
+            Vector2 val = Utils.ClosestNPC(Main.MouseWorld, seekDistance) == null ?
+                    Main.MouseWorld : Utils.ClosestNPC(Main.MouseWorld, seekDistance).position;
 
-            NPC closest = UltimateRangerExpansion.ClosestNPC(Main.MouseWorld, seekDistance);
+            NPC closest = Utils.ClosestNPC(Main.MouseWorld, seekDistance);
 
             float num2 = val.Y;
             if (num2 > player.Center.Y - 200f)

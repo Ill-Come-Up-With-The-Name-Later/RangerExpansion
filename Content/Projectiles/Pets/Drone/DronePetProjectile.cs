@@ -58,7 +58,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.Pets.Drone
 
             if(attackTarget != -1)
             {
-                
                 NPC targetNPC = Main.npc[attackTarget];
 
                 Vector2 enemyPos = targetNPC.Center;

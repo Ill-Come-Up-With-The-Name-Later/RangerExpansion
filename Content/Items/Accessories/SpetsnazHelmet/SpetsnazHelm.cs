@@ -6,6 +6,8 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.SpetsnazHelmet
 {
     class SpetsnazHelm : ModItem
     {
+        readonly float bulletDamage = 5;
+
         public override void SetStaticDefaults()
         {
             Item.ResearchUnlockCount = 1;
@@ -25,7 +27,7 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.SpetsnazHelmet
         {
             player.aggro -= 500;
             player.nightVision = true;
-            player.bulletDamage *= 1.05f;
+            player.bulletDamage *= 1 + (bulletDamage / 100);
         }
 
         public override void AddRecipes()
