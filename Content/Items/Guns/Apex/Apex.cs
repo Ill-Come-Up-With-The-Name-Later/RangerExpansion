@@ -55,8 +55,14 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
             return false;
         }
 
-        public override bool AltFunctionUse(Player player)
+        public override bool CanRightClick()
         {
+            return true;
+        }
+
+        public override void RightClick(Player player)
+        {
+            Item.stack++;
             mode++;
 
             if (mode > modeDesc.Count)
@@ -103,8 +109,6 @@ namespace UltimateRangerExpansion.Content.Items.Guns.Apex
                 Dust.NewDust(player.position, 2, 5, DustID.TintableDustLighted, newColor: new Color(new Random().Next(0, 255),
                         new Random().Next(0, 255), new Random().Next(0, 255)));
             }
-
-            return false;
         }
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)

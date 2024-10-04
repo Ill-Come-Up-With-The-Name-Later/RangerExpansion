@@ -257,6 +257,21 @@ Items: {
 			to set target.
 			'''
 	}
+
+	SpetsnazHelm: {
+		DisplayName: Spetsnaz Helm
+		Tooltip: "'From Russia With Sneakiness...'"
+	}
+
+	RedLaserReticle: {
+		DisplayName: Red Laser Reticle
+		Tooltip:
+			'''
+			'Cats love it too, see? 
+			*BANG* Oops!
+			a-and, it's out of battery.'
+			'''
+	}
 }
 
 Projectiles: {
