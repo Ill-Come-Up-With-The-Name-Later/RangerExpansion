@@ -29,6 +29,11 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.RedLaserReticle
             player.GetAttackSpeed(DamageClass.Ranged) *= 1.1f;
             player.GetDamage(DamageClass.Ranged) *= 1.05f;
             player.GetCritChance(DamageClass.Ranged) *= 1.05f;
+
+            if(!hideVisual)
+            {
+                UltimateRangerExpansion.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDustLighted, Color.Red, 0.5f);
+            }
         }
 
         public override void AddRecipes()

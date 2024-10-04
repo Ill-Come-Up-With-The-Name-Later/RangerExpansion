@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace UltimateRangerExpansion
@@ -125,6 +126,45 @@ namespace UltimateRangerExpansion
                 angle -= 2 * (float)Math.PI;
 
             return angle;
+        }
+
+        /// <summary>
+        /// Draws a line of dust from point A to B
+        /// </summary>
+        /// <param name="pointA">
+        /// Starting point
+        /// </param>
+        /// <param name="pointB">
+        /// Ending point
+        /// </param>
+        /// <param name="dustType">
+        /// The kind of dust to use
+        /// </param>
+        /// <param name="color">
+        /// The color of the dust
+        /// </param>
+        /// <param name="dustScale">
+        /// Size of the dust
+        /// </param>
+        /// <param name="dustAmount">
+        /// Amount of dusts to spawn at each interval
+        /// </param>
+        public static void DrawDustLine(Vector2 pointA, Vector2 pointB, int dustType, Color color, float dustScale = 1f, int dustAmount = 50)
+        {
+            Vector2 direction = pointB - pointA;
+
+            float distance = direction.Length();
+            Vector2 step = direction / distance;
+
+            for (int i = 0; i <= dustAmount; i++)
+            {
+                Vector2 dustPosition = pointA + step * (distance * (i / (float)dustAmount));
+
+                Dust dust = Dust.NewDustPerfect(dustPosition, dustType);
+                dust.noGravity = true;   
+                dust.scale = dustScale; 
+                dust.velocity *= 0.1f; 
+            }
         }
     }
 }
