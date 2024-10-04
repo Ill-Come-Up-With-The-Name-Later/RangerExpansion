@@ -160,6 +160,12 @@ namespace UltimateRangerExpansion
             {
                 Vector2 dustPosition = pointA + step * (distance * (i / (float)dustAmount));
 
+                int tileX = (int)(dustPosition.X / 16f);
+                int tileY = (int)(dustPosition.Y / 16f);
+
+                if (!WorldGen.TileEmpty(tileX, tileY))
+                    break;
+
                 Dust dust = Dust.NewDustPerfect(dustPosition, dustType, newColor: color);
                 dust.noGravity = true;   
                 dust.scale = dustScale; 
