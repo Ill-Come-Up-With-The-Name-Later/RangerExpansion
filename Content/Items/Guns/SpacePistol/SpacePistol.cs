@@ -20,6 +20,8 @@ namespace UltimateRangerExpansion.Content.Items.Guns.SpacePistol
             Item.crit = 2;
 
             Item.DamageType = DamageClass.Ranged;
+            Item.useAmmo = AmmoID.Bullet;
+            Item.mana = 0;
         }
 
         public override void AddRecipes()
