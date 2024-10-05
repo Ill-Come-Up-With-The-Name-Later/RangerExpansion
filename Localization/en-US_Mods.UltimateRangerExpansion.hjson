@@ -276,7 +276,7 @@ Items: {
 		DisplayName: Green Laser Reticle
 		Tooltip:
 			'''
-			'Just in case you don’t like red! 
+			'Just in case you donï¿½t like red! 
 			Also, stop shooting my cats.'
 			'''
 	}
@@ -313,6 +313,7 @@ Projectiles: {
 	MarrowProjectile.DisplayName: Marrow Projectile
 	DronePetProjectile.DisplayName: Drone Pet Projectile
 	BallisticMissile.DisplayName: Ballistic Missile
+	DroneRocket.DisplayName: Drone Rocket
 }
 
 Prefixes: {
