@@ -196,7 +196,7 @@ Items: {
 	}
 
 	TheDisaster: {
-		DisplayName: The Disaster
+		DisplayName: Disaster
 		Tooltip:
 			'''
 			'...And the disaster after 
@@ -246,7 +246,7 @@ Items: {
 
 	DronePetSummon: {
 		DisplayName: Remote Controller
-		Tooltip: ""
+		Tooltip: "Summons a drone to join you."
 	}
 
 	MissileLauncher: {
@@ -276,7 +276,7 @@ Items: {
 		DisplayName: Green Laser Reticle
 		Tooltip:
 			'''
-			'Just in case you don�t like red! 
+			'Just in case you don't like red! 
 			Also, stop shooting my cats.'
 			'''
 	}
@@ -286,32 +286,32 @@ Projectiles: {
 	DuplexBullet.DisplayName: Duplex Bullet
 	RedLaser.DisplayName: Red Laser
 	GreenLaser.DisplayName: Green Laser
-	DuplexBulletProjectile.DisplayName: Duplex Bullet Projectile
-	LuminiteDartProjectile.DisplayName: Luminite Dart Projectile
-	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart Projectile
-	VenomDartProjectile.DisplayName: Venom Dart Projectile
-	TrackerBulletProjectile.DisplayName: Tracker Bullet Projectile
-	HollowDartProjectile.DisplayName: Hollow Dart Projectile
-	APBulletProjectile.DisplayName: AP Bullet Projectile
-	RockProjectile.DisplayName: Rock Projectile
-	LeadBallProjectile.DisplayName: Lead Ball Projectile
-	IronBallProjectile.DisplayName: Iron Ball Projectile
-	CeramicBallProjectile.DisplayName: Ceramic Ball Projectile
-	MoltenRockProjectile.DisplayName: Molten Rock Projectile
-	CopperBowProjectile.DisplayName: Copper Bow Projectile
-	TsunamiProjectile.DisplayName: Tsunami Projectile
-	TendonBowProjectile.DisplayName: Tendon Bow Projectile
-	ShadowflameBowProjectile.DisplayName: Shadowflame Bow Projectile
-	PhantasmProjectile.DisplayName: Phantasm Projectile
-	MoltenFuryProjectile.DisplayName: Molten Fury Projectile
-	EventideProjectile.DisplayName: Eventide Projectile
-	DemonBowProjectile.DisplayName: Demon Bow Projectile
-	DaedalusBowProjectile.DisplayName: Daedalus Bow Projectile
-	BeesKneesProjectile.DisplayName: Bees Knees Projectile
-	AerialBaneProjectile.DisplayName: Aerial Bane Projectile
-	PinnacleProjectile.DisplayName: Pinnacle Projectile
-	MarrowProjectile.DisplayName: Marrow Projectile
-	DronePetProjectile.DisplayName: Drone Pet Projectile
+	DuplexBulletProjectile.DisplayName: Duplex Bullet
+	LuminiteDartProjectile.DisplayName: Luminite Dart
+	ChlorophyteDartProjectile.DisplayName: Chlorophyte Dart
+	VenomDartProjectile.DisplayName: Venom Dart
+	TrackerBulletProjectile.DisplayName: Tracker Bullet
+	HollowDartProjectile.DisplayName: Hollow Dart
+	APBulletProjectile.DisplayName: AP Bullet
+	RockProjectile.DisplayName: Rock
+	LeadBallProjectile.DisplayName: Lead Ball
+	IronBallProjectile.DisplayName: Iron Ball
+	CeramicBallProjectile.DisplayName: Ceramic Ball
+	MoltenRockProjectile.DisplayName: Molten Rock
+	CopperBowProjectile.DisplayName: Copper Bow
+	TsunamiProjectile.DisplayName: Tsunami
+	TendonBowProjectile.DisplayName: Tendon Bow
+	ShadowflameBowProjectile.DisplayName: Shadowflame Bow
+	PhantasmProjectile.DisplayName: Phantasm
+	MoltenFuryProjectile.DisplayName: Molten Fury
+	EventideProjectile.DisplayName: Eventide
+	DemonBowProjectile.DisplayName: Demon Bow
+	DaedalusBowProjectile.DisplayName: Daedalus Bow
+	BeesKneesProjectile.DisplayName: Bees Knees
+	AerialBaneProjectile.DisplayName: Aerial Bane
+	PinnacleProjectile.DisplayName: Pinnacle
+	MarrowProjectile.DisplayName: Marrow
+	DronePetProjectile.DisplayName: Drone Pet
 	BallisticMissile.DisplayName: Ballistic Missile
 	DroneRocket.DisplayName: Drone Rocket
 }
