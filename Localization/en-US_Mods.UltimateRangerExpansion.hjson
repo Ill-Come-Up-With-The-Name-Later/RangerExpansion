@@ -285,6 +285,15 @@ Items: {
 		DisplayName: Bullet Pouch
 		Tooltip: Gives a chance to save ammo.
 	}
+
+	NoIdeasLeft: {
+		DisplayName: Blank Space
+		Tooltip:
+			'''
+			I could show you incredible things
+			magic, madness, heaven, sin...
+			'''
+	}
 }
 
 Projectiles: {
@@ -319,6 +328,10 @@ Projectiles: {
 	DronePetProjectile.DisplayName: Drone Pet
 	BallisticMissile.DisplayName: Ballistic Missile
 	DroneRocket.DisplayName: Drone Rocket
+	Sin.DisplayName: Sin
+	Magic.DisplayName: Magic
+	Madness.DisplayName: Madness
+	Heaven.DisplayName: Heaven
 }
 
 Prefixes: {
