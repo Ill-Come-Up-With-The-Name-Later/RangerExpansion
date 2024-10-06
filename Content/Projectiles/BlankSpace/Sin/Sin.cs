@@ -26,7 +26,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Sin
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
 
-            Projectile.penetrate = 10;
             Projectile.usesLocalNPCImmunity = true;
 
             AIType = ProjectileID.Bullet;
