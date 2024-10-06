@@ -54,7 +54,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.BlankSpace
             float rotation = MathHelper.ToRadians(10);
 
             position += Vector2.Normalize(velocity) * 8f;
-            velocity *= 0.2f;
+            velocity *= 0.8f;
 
             int[] projectiles = [ModContent.ProjectileType<Magic>(), ModContent.ProjectileType<Madness>(),
                 ModContent.ProjectileType<Heaven>(), ModContent.ProjectileType<Sin>()];

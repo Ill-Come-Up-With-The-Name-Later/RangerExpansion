@@ -26,12 +26,29 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Madness
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
 
+            Projectile.penetrate = 10;
+            Projectile.usesLocalNPCImmunity = true;
+
             AIType = ProjectileID.Bullet;
         }
 
         public override void AI()
         {
-            Dust.NewDust(Projectile.position, 1, 1, DustID.TintableDustLighted, Projectile.velocity.X / 2, Projectile.velocity.Y / 2, newColor: Color.Red);
+            if (Projectile.timeLeft % 10 == 0)
+                Dust.NewDust(Projectile.position, 1, 1, DustID.TintableDustLighted, 
+                    Projectile.velocity.X / 2, Projectile.velocity.Y / 2, newColor: Color.Red);
+
+            NPC npc = Utils.ClosestNPC(Projectile.position, 600);
+
+            if (npc != null)
+            {
+                Vector2 npcPos = npc.position;
+                Vector2 velocity = npcPos - Projectile.position;
+                velocity.Normalize();
+                velocity *= 25;
+
+                Projectile.velocity = velocity;
+            }
         }
     }
 }

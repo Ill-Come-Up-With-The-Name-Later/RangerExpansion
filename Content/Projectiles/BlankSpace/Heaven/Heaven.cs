@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -25,12 +26,29 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Heaven
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
 
+            Projectile.penetrate = 10;
+            Projectile.usesLocalNPCImmunity = true;
+
             AIType = ProjectileID.Bullet;
         }
 
         public override void AI()
         {
-            Dust.NewDust(Projectile.position, 1, 1, DustID.UltraBrightTorch, Projectile.velocity.X / 2, Projectile.velocity.Y / 2);
+            if (Projectile.timeLeft % 10 == 0)
+                Dust.NewDust(Projectile.position, 1, 1, DustID.UltraBrightTorch, Projectile.velocity.X / 2, 
+                    Projectile.velocity.Y / 2);
+
+            NPC npc = Utils.ClosestNPC(Projectile.position, 600);
+
+            if (npc != null)
+            {
+                Vector2 npcPos = npc.position;
+                Vector2 velocity = npcPos - Projectile.position;
+                velocity.Normalize();
+                velocity *= 25;
+
+                Projectile.velocity = velocity;
+            }
         }
     }
 }
