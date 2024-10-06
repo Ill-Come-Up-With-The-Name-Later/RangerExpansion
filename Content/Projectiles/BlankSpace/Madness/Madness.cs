@@ -7,6 +7,12 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Madness
 {
     class Madness : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+        }
+
         public override void SetDefaults()
         {
             Projectile.width = 16;
@@ -25,7 +31,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Madness
 
         public override void AI()
         {
-            Dust.NewDust(Projectile.position, 1, 1, DustID.TintableDustLighted, 0, 0, newColor: Color.Red);
+            Dust.NewDust(Projectile.position, 1, 1, DustID.TintableDustLighted, Projectile.velocity.X / 2, Projectile.velocity.Y / 2, newColor: Color.Red);
         }
     }
 }

@@ -6,6 +6,12 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Magic
 {
     class Magic : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+        }
+
         public override void SetDefaults()
         {
             Projectile.width = 36;
@@ -24,7 +30,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Magic
 
         public override void AI()
         {
-            Dust.NewDust(Projectile.position, 2, 2, DustID.RainbowRod, 0, 0);
+            Dust.NewDust(Projectile.position, 2, 2, DustID.RainbowRod, Projectile.velocity.X / 2, Projectile.velocity.Y / 2);
         }
     }
 }

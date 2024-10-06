@@ -290,8 +290,8 @@ Items: {
 		DisplayName: Blank Space
 		Tooltip:
 			'''
-			I could show you incredible things
-			magic, madness, heaven, sin...
+			'I could show you incredible things
+			magic, madness, heaven, sin...'
 			'''
 	}
 }

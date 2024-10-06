@@ -6,6 +6,12 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Sin
 {
     class Sin : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+        }
+
         public override void SetDefaults()
         {
             Projectile.width = 18;
@@ -24,7 +30,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Sin
 
         public override void AI()
         {
-            Dust.NewDust(Projectile.position, 1, 1, DustID.FlameBurst, 0, 0);
+            Dust.NewDust(Projectile.position, 1, 1, DustID.FlameBurst, Projectile.velocity.X / 2, Projectile.velocity.Y / 2);
         }
     }
 }
