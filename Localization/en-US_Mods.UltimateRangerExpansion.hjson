@@ -246,7 +246,7 @@ Items: {
 
 	DronePetSummon: {
 		DisplayName: Remote Controller
-		Tooltip: "Summons a drone to join you."
+		Tooltip: Summons a drone to join you.
 	}
 
 	MissileLauncher: {
@@ -279,6 +279,11 @@ Items: {
 			'Just in case you don't like red! 
 			Also, stop shooting my cats.'
 			'''
+	}
+
+	BulletPouch: {
+		DisplayName: Bullet Pouch
+		Tooltip: "Gives a chance to save ammo."
 	}
 }
 

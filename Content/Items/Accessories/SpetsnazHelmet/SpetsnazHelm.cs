@@ -21,6 +21,8 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.SpetsnazHelmet
             Item.accessory = true;
             Item.rare = ItemRarityID.Yellow;
             Item.value = Item.buyPrice(0, 10, 0, 0);
+
+            Item.defense = 4;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
