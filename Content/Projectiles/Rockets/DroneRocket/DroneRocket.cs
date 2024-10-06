@@ -23,6 +23,9 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.DroneRocket
             Projectile.width = 26;
             Projectile.height = 20;
             Projectile.DamageType = DamageClass.Ranged;
+            Projectile.friendly = true;
+
+            Projectile.penetrate = -1;
 
             Projectile.timeLeft = 1000;
         }
@@ -69,12 +72,6 @@ namespace UltimateRangerExpansion.Content.Projectiles.Rockets.DroneRocket
                     Projectile.rotation = Projectile.velocity.ToRotation();
                 }
             }
-        }
-
-        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            Projectile.velocity *= 0f;
-            Projectile.timeLeft = 3;
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

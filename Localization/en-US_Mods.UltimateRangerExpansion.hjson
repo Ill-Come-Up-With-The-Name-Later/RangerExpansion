@@ -283,7 +283,7 @@ Items: {
 
 	BulletPouch: {
 		DisplayName: Bullet Pouch
-		Tooltip: "Gives a chance to save ammo."
+		Tooltip: Gives a chance to save ammo.
 	}
 }
 
