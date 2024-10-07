@@ -299,6 +299,11 @@ Items: {
 		DisplayName: Grenade Launcher
 		Tooltip: Actually shoots grenades.
 	}
+
+	SplittingArrow: {
+		DisplayName: Splitting Arrow
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -337,6 +342,7 @@ Projectiles: {
 	Magic.DisplayName: Magic
 	Madness.DisplayName: Madness
 	Heaven.DisplayName: Heaven
+	SplittingArrowProjectile.DisplayName: Splitting Arrow
 }
 
 Prefixes: {

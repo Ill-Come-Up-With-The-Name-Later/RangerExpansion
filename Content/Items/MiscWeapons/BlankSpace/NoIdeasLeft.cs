@@ -30,7 +30,6 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.BlankSpace
             Item.useAnimation = 2;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
-            Item.consumeAmmoOnLastShotOnly = true;
             Item.UseSound = SoundID.Item40;
 
             // Weapon Properties
