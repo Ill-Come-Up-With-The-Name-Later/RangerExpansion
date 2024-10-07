@@ -67,5 +67,13 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.BlankSpace
 
             return false;
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(UltimateRangerExpansion.Calamity.Find<ModItem>("ShadowspecBar").Type, 81)
+                .AddTile(UltimateRangerExpansion.Calamity.Find<ModTile>("DraedonsForge").Type)
+                .Register();
+        }
     }
 }

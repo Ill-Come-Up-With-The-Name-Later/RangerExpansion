@@ -297,7 +297,7 @@ Items: {
 
 	GrenadeLauncher: {
 		DisplayName: Grenade Launcher
-		Tooltip: "Actually shoots grenades."
+		Tooltip: Actually shoots grenades.
 	}
 }
 
