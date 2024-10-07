@@ -9,7 +9,7 @@ using UltimateRangerExpansion.Content.Projectiles.BlankSpace.Madness;
 using UltimateRangerExpansion.Content.Projectiles.BlankSpace.Heaven;
 using UltimateRangerExpansion.Content.Projectiles.BlankSpace.Sin;
 
-namespace UltimateRangerExpansion.Content.Items.Guns.BlankSpace
+namespace UltimateRangerExpansion.Content.Items.MiscWeapons.BlankSpace
 {
     class NoIdeasLeft : ModItem
     {

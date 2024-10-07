@@ -8,6 +8,12 @@
 	  <Platforms>AnyCPU;ARM64;x86</Platforms>
 	</PropertyGroup>
 	<ItemGroup>
+	  <AdditionalFiles Remove="Content\Items\Guns\BlankSpace\**" />
+	  <Compile Remove="Content\Items\Guns\BlankSpace\**" />
+	  <EmbeddedResource Remove="Content\Items\Guns\BlankSpace\**" />
+	  <None Remove="Content\Items\Guns\BlankSpace\**" />
+	</ItemGroup>
+	<ItemGroup>
 	  <None Remove="Content\Items\Accessories\GreenLaserReticle\GreenLaserReticle.png" />
 	  <None Remove="Content\Items\Bows\Disaster\TheDisaster.png" />
 	  <None Remove="Content\Items\Guns\VortexScattergun\VortexScattergun.png" />
