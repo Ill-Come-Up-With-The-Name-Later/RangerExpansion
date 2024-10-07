@@ -294,6 +294,11 @@ Items: {
 			magic, madness, heaven, sin...'
 			'''
 	}
+
+	GrenadeLauncher: {
+		DisplayName: Grenade Launcher
+		Tooltip: "Actually shoots grenades."
+	}
 }
 
 Projectiles: {
