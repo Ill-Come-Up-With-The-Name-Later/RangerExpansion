@@ -18,18 +18,18 @@ namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
             Projectile.width = 58;
             Projectile.height = 26;
 
-            Projectile.timeLeft = 180;
+            Projectile.timeLeft = 150;
         }
 
         public override void AI()
         {
             Projectile.rotation = Projectile.velocity.ToRotation();
 
-            if (Projectile.timeLeft % 30 == 0)
+            if (Projectile.timeLeft % 15 == 0)
             {
                 if (Projectile.owner == Main.myPlayer)
                 {
-                    Vector2 velocity = new(Projectile.velocity.X / 10, 2);
+                    Vector2 velocity = new(Projectile.velocity.X * 0.075f, 2);
 
                     Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity, ProjectileID.RocketI, 200, 3, Main.myPlayer)];
