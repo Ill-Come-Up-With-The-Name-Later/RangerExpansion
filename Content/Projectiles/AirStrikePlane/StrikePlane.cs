@@ -23,7 +23,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
 
         public override void AI()
         {
-            Projectile.rotation = (float)(Projectile.velocity.ToRotation() + Math.PI);
+            Projectile.rotation = Projectile.velocity.ToRotation();
 
             if (Projectile.timeLeft % 30 == 0)
             {
