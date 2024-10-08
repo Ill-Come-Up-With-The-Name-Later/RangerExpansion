@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System;
 
 namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
 {
@@ -22,7 +23,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
 
         public override void AI()
         {
-            Projectile.rotation = Projectile.velocity.ToRotation();
+            Projectile.rotation = (float)(Projectile.velocity.ToRotation() + Math.PI);
 
             if (Projectile.timeLeft % 30 == 0)
             {
