@@ -29,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.AirStrikeCaller
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 200;
+            Item.damage = 500;
             Item.noMelee = true;
             Item.crit = 7;
 

@@ -32,7 +32,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
                     Vector2 velocity = new(Projectile.velocity.X * 0.075f, 2);
 
                     Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
-                            velocity, ProjectileID.RocketI, 200, 3, Main.myPlayer)];
+                            velocity, ProjectileID.RocketIII, 500, 3, Main.myPlayer)];
 
                     proj.netUpdate = true;
                     proj.usesLocalNPCImmunity = true;
