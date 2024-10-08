@@ -19,6 +19,7 @@
 	  <None Remove="Content\Items\Guns\VortexScattergun\VortexScattergun.png" />
 	  <None Remove="Content\Items\Slingshots\Hallow\HallowSlingshot.png" />
 	  <None Remove="Content\Items\Slingshots\Pearlwood\PearlwoodSlingshot.png" />
+	  <None Remove="Content\Projectiles\AirStrikePlane\StrikePlane.png" />
 	  <None Remove="Content\Projectiles\Arrows\SplittingArrow\SplittingArrowProjectile.png" />
 	  <None Remove="Content\Tiles\Paintings\Danger\DangerPaintingTile.png" />
 	</ItemGroup>

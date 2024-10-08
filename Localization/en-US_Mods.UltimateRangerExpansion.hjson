@@ -302,7 +302,12 @@ Items: {
 
 	SplittingArrow: {
 		DisplayName: Splitting Arrow
-		Tooltip: ""
+		Tooltip: Arrows split into two more.
+	}
+
+	StrikeCaller: {
+		DisplayName: Air Strike Caller
+		Tooltip: "'Requesting air support.'"
 	}
 }
 
@@ -343,6 +348,7 @@ Projectiles: {
 	Madness.DisplayName: Madness
 	Heaven.DisplayName: Heaven
 	SplittingArrowProjectile.DisplayName: Splitting Arrow
+	StrikePlane.DisplayName: Strike Plane
 }
 
 Prefixes: {
