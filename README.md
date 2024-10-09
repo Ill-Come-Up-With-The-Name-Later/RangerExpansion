@@ -25,6 +25,8 @@ Upcoming music box tracks by hat.
       <li> Guided Bullet Item </li>
       <li> Hollow Dart </li>
       <li> Molten Rock Projectile </li>
+      <li> Hallow Slingshot </li>
+      <li> Pearlwood Slingshot </li>
     </ul>
   </li>
 </ul>
