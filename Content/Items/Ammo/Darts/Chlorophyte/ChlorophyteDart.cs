@@ -14,7 +14,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Chlorophyte
 
         public override void SetDefaults()
         {
-            Item.damage = 13;
+            Item.damage = 9;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 14;
             Item.height = 24;

@@ -14,7 +14,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Venom
 
         public override void SetDefaults()
         {
-            Item.damage = 11;
+            Item.damage = 7;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 14;
             Item.height = 28;

@@ -14,7 +14,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Luminite
 
         public override void SetDefaults()
         {
-            Item.damage = 16;
+            Item.damage = 12;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 14;
             Item.height = 28;

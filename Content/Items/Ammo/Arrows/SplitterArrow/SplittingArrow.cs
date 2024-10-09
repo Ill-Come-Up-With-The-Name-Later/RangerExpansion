@@ -15,7 +15,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Arrows.SplitterArrow
         {
             Item.CloneDefaults(ItemID.WoodenArrow);
 
-            Item.damage = 2;
+            Item.damage = 3;
 
             Item.rare = ItemRarityID.LightRed;
 
@@ -24,8 +24,8 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Arrows.SplitterArrow
 
         public override void AddRecipes()
         {
-            CreateRecipe(99)
-                .AddIngredient(ItemID.WoodenArrow, 99)
+            CreateRecipe(40)
+                .AddIngredient(ItemID.WoodenArrow, 120)
                 .AddTile(TileID.CrystalBall)
                 .Register();
         }

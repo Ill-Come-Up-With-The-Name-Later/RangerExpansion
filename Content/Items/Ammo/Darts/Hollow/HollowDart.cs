@@ -14,7 +14,7 @@ namespace UltimateRangerExpansion.Content.Items.Ammo.Darts.Hollow
 
         public override void SetDefaults()
         {
-            Item.damage = 15;
+            Item.damage = 8;
             Item.DamageType = DamageClass.Ranged;
             Item.width = 14;
             Item.height = 24;
