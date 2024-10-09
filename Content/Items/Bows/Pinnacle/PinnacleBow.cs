@@ -33,8 +33,8 @@ namespace UltimateRangerExpansion.Content.Items.Bows.Pinnacle
         public override void SetDefaults()
         {
             // Common Properties
-            Item.width = 28;
-            Item.height = 46;
+            Item.width = 30;
+            Item.height = 60;
             Item.rare = ItemRarityID.Red;
 
             // Use Properties

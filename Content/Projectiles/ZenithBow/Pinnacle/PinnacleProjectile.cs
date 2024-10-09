@@ -13,8 +13,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.ZenithBow.Pinnacle
         {
             Projectile.CloneDefaults(ModContent.ProjectileType<CopperBowProjectile>());
 
-            Projectile.width = 28;
-            Projectile.height = 46;
+            Projectile.width = 30;
+            Projectile.height = 60;
         }
 
         public override void AI()
