@@ -2,9 +2,9 @@
 using System;
 using Terraria;
 
-namespace UltimateRangerExpansion
+namespace UltimateRangerExpansion.Utils
 {
-    public static class Utils
+    public static class Utilities
     {
         /// <summary>
         /// Distance between two points
@@ -33,9 +33,9 @@ namespace UltimateRangerExpansion
         /// Closest NPC within searchDist or null if
         /// none exist
         /// </returns>
-        public static NPC? ClosestNPC(Vector2 position, float searchDist)
+        public static NPC ClosestNPC(Vector2 position, float searchDist)
         {
-            NPC? closest = null;
+            NPC closest = null;
             float maxDist = searchDist;
 
             foreach (NPC npc in Main.ActiveNPCs)
@@ -85,7 +85,7 @@ namespace UltimateRangerExpansion
         {
             if (start.X == end.X)
                 if (end.Y < start.Y)
-                    return (float)((3 * Math.PI) / 2);
+                    return (float)(3 * Math.PI / 2);
                 else if (end.Y > start.Y)
                     return (float)(Math.PI / 2);
                 else
@@ -97,13 +97,13 @@ namespace UltimateRangerExpansion
             vel *= scaling;
             gravity *= scaling;
 
-            float discriminant = (float)(Math.Pow(vel, 4) - gravity * ((gravity * x * x) + (2 * y * vel * vel)));
+            float discriminant = (float)(Math.Pow(vel, 4) - gravity * (gravity * x * x + 2 * y * vel * vel));
 
             if (discriminant < 0)
                 return 0;
 
             float root = (float)Math.Sqrt(discriminant);
-            float angle = (float)Math.Atan(((vel * vel) - root) / (gravity * x));
+            float angle = (float)Math.Atan((vel * vel - root) / (gravity * x));
 
             // Adjust angle 1
             if (angle < 0)

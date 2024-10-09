@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using UltimateRangerExpansion.Utils;
 
 namespace UltimateRangerExpansion.Content.Items.Accessories.GreenLaserReticle
 {
@@ -39,7 +40,7 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.GreenLaserReticle
 
             if (!hideVisual)
             {
-                Utils.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDustLighted, Color.LightGreen);
+                Utilities.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDustLighted, Color.LightGreen);
             }
         }
 

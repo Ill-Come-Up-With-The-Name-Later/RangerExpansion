@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System;
+using UltimateRangerExpansion.Utils;
 
 namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker
 {
@@ -54,7 +55,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker
 
             // Normalize the velocity to a direction then multiply it and scale speed with distance
             velocity.Normalize();
-            velocity *= (float)Math.Atan(Utils.DistanceBetween(cursorPos, Projectile.position)) * 10;
+            velocity *= (float)Math.Atan(Utilities.DistanceBetween(cursorPos, Projectile.position)) * 10;
 
             Projectile.velocity = velocity;
             Lighting.AddLight(Projectile.position, 0.0f, 0.3f, 0.3f);

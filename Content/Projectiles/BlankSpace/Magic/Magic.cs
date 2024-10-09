@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Utils;
 
 namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Magic
 {
@@ -37,7 +38,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Magic
                 Dust.NewDust(Projectile.position, 2, 2, DustID.RainbowRod, Projectile.velocity.X / 2, 
                     Projectile.velocity.Y / 2);
 
-            NPC npc = Utils.ClosestNPC(Projectile.position, 600);
+            NPC npc = Utilities.ClosestNPC(Projectile.position, 600);
 
             if (npc != null)
             {

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Utils;
 
 namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Madness
 {
@@ -37,7 +38,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.BlankSpace.Madness
                 Dust.NewDust(Projectile.position, 1, 1, DustID.TintableDustLighted, 
                     Projectile.velocity.X / 2, Projectile.velocity.Y / 2, newColor: Color.Red);
 
-            NPC npc = Utils.ClosestNPC(Projectile.position, 600);
+            NPC npc = Utilities.ClosestNPC(Projectile.position, 600);
 
             if (npc != null)
             {
