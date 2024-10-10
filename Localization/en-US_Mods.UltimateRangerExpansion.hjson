@@ -267,6 +267,7 @@ Items: {
 		DisplayName: Red Laser Reticle
 		Tooltip:
 			'''
+			Makes you a better shooter.
 			'Cats love it too, see? 
 			*BANG* Oops!'
 			'''
@@ -276,6 +277,7 @@ Items: {
 		DisplayName: Green Laser Reticle
 		Tooltip:
 			'''
+			Makes you a better shooter.
 			'Just in case you don't like red! 
 			Also, stop shooting my cats.'
 			'''
