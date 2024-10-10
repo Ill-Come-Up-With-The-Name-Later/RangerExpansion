@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
-using System;
 
 namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
 {
@@ -37,19 +36,19 @@ namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
                     proj.netUpdate = true;
                     proj.usesLocalNPCImmunity = true;
                 }
+            }
 
-                int frameSpeed = 5;
-                Projectile.frameCounter++;
+            int frameSpeed = 5;
+            Projectile.frameCounter++;
 
-                if (Projectile.frameCounter >= frameSpeed)
+            if (Projectile.frameCounter >= frameSpeed)
+            {
+                Projectile.frameCounter = 0;
+                Projectile.frame++;
+
+                if (Projectile.frame >= Main.projFrames[Projectile.type])
                 {
-                    Projectile.frameCounter = 0;
-                    Projectile.frame++;
-
-                    if (Projectile.frame >= Main.projFrames[Projectile.type])
-                    {
-                        Projectile.frame = 0;
-                    }
+                    Projectile.frame = 0;
                 }
             }
         }
