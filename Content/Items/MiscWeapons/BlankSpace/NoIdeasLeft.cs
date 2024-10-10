@@ -1,13 +1,13 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
-using UltimateRangerExpansion.Content.Rarities;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using UltimateRangerExpansion.Content.Projectiles.BlankSpace.Magic;
 using UltimateRangerExpansion.Content.Projectiles.BlankSpace.Madness;
 using UltimateRangerExpansion.Content.Projectiles.BlankSpace.Heaven;
 using UltimateRangerExpansion.Content.Projectiles.BlankSpace.Sin;
+using UltimateRangerExpansion.Content.Rarities;
 
 namespace UltimateRangerExpansion.Content.Items.MiscWeapons.BlankSpace
 {
@@ -23,7 +23,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.BlankSpace
             // Common Properties
             Item.width = 10;
             Item.height = 10;
-            Item.rare = ModContent.RarityType<DeveloperRarity>();
+            Item.rare = ModContent.RarityType<RandomIdeas>();
 
             // Use Properties
             Item.useTime = 2;
