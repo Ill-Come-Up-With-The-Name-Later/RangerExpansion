@@ -38,6 +38,8 @@ namespace UltimateRangerExpansion.Content.Items.Accessories.GreenLaserReticle
             player.GetDamage(DamageClass.Ranged) *= 1 + (damageBoost / 100);
             player.GetCritChance(DamageClass.Ranged) *= 1 + (critChanceBoost / 100);
 
+            player.GetModPlayer<RangerExpansionPlayer>().reticle = true;
+
             if (!hideVisual)
             {
                 Utilities.DrawDustLine(player.Center, Main.MouseWorld, DustID.TintableDustLighted, Color.LightGreen);
