@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using UltimateRangerExpansion.Utils;
 
 namespace UltimateRangerExpansion.Content.Items.Guns.AWP
 {
@@ -24,7 +25,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.AWP
             Item.useAnimation = 45;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
-            Item.UseSound = SoundID.Item40;
+            Item.UseSound = ModSounds.AWP;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;

@@ -4,6 +4,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using UltimateRangerExpansion.Content.Rarities;
+using UltimateRangerExpansion.Utils;
 
 namespace UltimateRangerExpansion.Content.Items.Guns.MP5
 {
@@ -28,6 +29,8 @@ namespace UltimateRangerExpansion.Content.Items.Guns.MP5
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
             Item.consumeAmmoOnLastShotOnly = true;
+
+            Item.UseSound = ModSounds.MP5;
 
             // Weapon Properties
             Item.DamageType = DamageClass.Ranged;
@@ -56,7 +59,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.MP5
             float rotation = MathHelper.ToRadians(6);
             velocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
 
-            SoundEngine.PlaySound(SoundID.Item11, position); // Play sound every shot
+            SoundEngine.PlaySound(Item.UseSound, position); // Play sound every shot
         }
     }
 }
