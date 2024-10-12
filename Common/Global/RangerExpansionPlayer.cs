@@ -2,14 +2,14 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using UltimateRangerExpansion.Content.Buffs.Innacurate;
 
-namespace UltimateRangerExpansion.Content.Items.Accessories
+namespace UltimateRangerExpansion.Common.Global
 {
     class RangerExpansionPlayer : ModPlayer
     {
         public bool reticle;
-
-        readonly int spread = 8;
+        private int spread = 8;
 
         public override void ResetEffects()
         {
@@ -18,9 +18,12 @@ namespace UltimateRangerExpansion.Content.Items.Accessories
 
         public override void ModifyShootStats(Item item, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if(item.DamageType == DamageClass.Ranged)
+            if (item.DamageType == DamageClass.Ranged)
             {
-                if (!reticle)
+                if (Player.HasBuff<Innacurate>())
+                    spread += 4;
+
+                if (!reticle || Player.HasBuff<Innacurate>())
                 {
                     if (item.ammo == AmmoID.Arrow)
                     {
@@ -29,7 +32,7 @@ namespace UltimateRangerExpansion.Content.Items.Accessories
                     }
                     else
                     {
-                        float rotation = MathHelper.ToRadians(8);
+                        float rotation = MathHelper.ToRadians(spread);
                         velocity = velocity.RotatedByRandom(MathHelper.Lerp(-rotation, rotation, 1));
                     }
                 }

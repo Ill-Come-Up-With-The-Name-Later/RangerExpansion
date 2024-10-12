@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework;
 using UltimateRangerExpansion.Utils;
+using UltimateRangerExpansion.Common.Global;
 
 namespace UltimateRangerExpansion.Content.Items.Accessories.RedLaserReticle
 {

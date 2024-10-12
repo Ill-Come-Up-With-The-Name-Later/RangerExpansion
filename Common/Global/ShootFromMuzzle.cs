@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace UltimateRangerExpansion.Content.Items
+namespace UltimateRangerExpansion.Common.Global
 {
     class ShootFromMuzzle : GlobalItem
     {

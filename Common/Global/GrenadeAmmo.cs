@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace UltimateRangerExpansion.Content.Items.MiscWeapons.GrenadeLauncher
+namespace UltimateRangerExpansion.Common.Global
 {
     class GrenadeAmmo : GlobalItem
     {
@@ -11,7 +11,7 @@ namespace UltimateRangerExpansion.Content.Items.MiscWeapons.GrenadeLauncher
             switch (entity.type)
             {
                 case ItemID.Grenade:
-                    entity.ammo = ItemID.Grenade; 
+                    entity.ammo = ItemID.Grenade;
                     break;
                 case ItemID.BouncyGrenade:
                     entity.ammo = ItemID.Grenade;
