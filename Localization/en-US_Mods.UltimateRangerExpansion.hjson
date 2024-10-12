@@ -396,4 +396,9 @@ Buffs: {
 		DisplayName: Drone
 		Description: A drone now fights with you.
 	}
+
+	Inaccurate: {
+		DisplayName: Inaccurate
+		Description: You can't shoot straight!
+	}
 }

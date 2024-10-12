@@ -7,7 +7,7 @@ namespace UltimateRangerExpansion.Common.Global
 {
     class VortexInflictInnacurate : GlobalProjectile
     {
-        int multiplier = 1;
+        private static int multiplier = 1;
 
         public override void OnHitPlayer(Projectile projectile, Player target, Player.HurtInfo info)
         {
