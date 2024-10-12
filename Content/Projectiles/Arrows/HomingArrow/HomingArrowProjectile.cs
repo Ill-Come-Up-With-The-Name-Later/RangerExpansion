@@ -29,7 +29,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.Arrows.HomingArrow
                 Vector2 npcPos = npc.position;
                 Vector2 velocity = npcPos - Projectile.position;
                 velocity.Normalize();
-                velocity *= 15;
+                velocity *= 12.5f;
 
                 Projectile.velocity = velocity;
             }
