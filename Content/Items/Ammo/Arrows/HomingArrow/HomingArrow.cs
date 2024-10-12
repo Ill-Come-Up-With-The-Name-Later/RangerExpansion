@@ -4,7 +4,7 @@ using UltimateRangerExpansion.Content.Projectiles.Arrows.HomingArrow;
 
 namespace UltimateRangerExpansion.Content.Items.Ammo.Arrows.HomingArrow
 {
-    class HomingArrrow : ModItem
+    class HomingArrow : ModItem
     {
         public override void SetStaticDefaults()
         {
