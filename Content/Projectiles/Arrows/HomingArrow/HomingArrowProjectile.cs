@@ -16,11 +16,13 @@ namespace UltimateRangerExpansion.Content.Projectiles.Arrows.HomingArrow
 
         public override void AI()
         {
-            Player owner = Main.player[Projectile.owner];
-
             Projectile.rotation += MathHelper.Pi;
 
             NPC npc = Utilities.ClosestNPC(Projectile.position, 900);
+
+            if (Projectile.timeLeft % 5 == 0)
+                for(int i = 0; i < 9; i++)
+                    Dust.NewDust(Projectile.position, 1, 1, DustID.Blood);
 
             if (npc != null)
             {

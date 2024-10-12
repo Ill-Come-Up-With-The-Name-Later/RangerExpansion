@@ -27,6 +27,7 @@ Upcoming music box tracks by hat.
       <li> Molten Rock Projectile </li>
       <li> Hallow Slingshot </li>
       <li> Pearlwood Slingshot </li>
+      <li> Homing Arrow </li>
     </ul>
   </li>
 </ul>
