@@ -28,7 +28,7 @@ namespace UltimateRangerExpansion.Content.Projectiles.AirStrikePlane
             {
                 if (Projectile.owner == Main.myPlayer)
                 {
-                    Vector2 velocity = new(Projectile.velocity.X * 0.075f, 2);
+                    Vector2 velocity = new(Projectile.velocity.X * 0.075f, 2.4f);
 
                     Projectile proj = Main.projectile[Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center,
                             velocity, ProjectileID.RocketIII, 500, 3, Main.myPlayer)];

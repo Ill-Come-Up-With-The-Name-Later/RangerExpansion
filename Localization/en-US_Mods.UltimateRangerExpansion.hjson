@@ -260,7 +260,11 @@ Items: {
 
 	SpetsnazHelm: {
 		DisplayName: Spetsnaz Helm
-		Tooltip: "'From Russia With Sneakiness...'"
+		Tooltip: 
+			'''
+			Counts as Night Vision Goggles.
+			'From Russia With Sneakiness...'
+			'''
 	}
 
 	RedLaserReticle: {
@@ -311,6 +315,11 @@ Items: {
 		DisplayName: Air Strike Caller
 		Tooltip: "'Requesting air support.'"
 	}
+
+	HomingArrow: {
+		DisplayName: Homing Arrow
+		Tooltip: "'It sees you...'"
+	}
 }
 
 Projectiles: {
@@ -351,6 +360,7 @@ Projectiles: {
 	Heaven.DisplayName: Heaven
 	SplittingArrowProjectile.DisplayName: Splitting Arrow
 	StrikePlane.DisplayName: Strike Plane
+	HomingArrowProjectile.DisplayName: Homing Arrow
 }
 
 Prefixes: {
