@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using UltimateRangerExpansion.Content.Buffs.Innacurate;
+using UltimateRangerExpansion.Content.Buffs.Inaccurate;
 
 namespace UltimateRangerExpansion.Common.Global
 {
@@ -20,10 +20,10 @@ namespace UltimateRangerExpansion.Common.Global
         {
             if (item.DamageType == DamageClass.Ranged)
             {
-                if (Player.HasBuff<Innacurate>())
+                if (Player.HasBuff<Inaccurate>())
                     spread += 4;
 
-                if (!reticle || Player.HasBuff<Innacurate>())
+                if (!reticle || Player.HasBuff<Inaccurate>())
                 {
                     if (item.ammo == AmmoID.Arrow)
                     {

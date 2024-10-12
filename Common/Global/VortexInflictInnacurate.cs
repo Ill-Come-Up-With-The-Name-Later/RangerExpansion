@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using UltimateRangerExpansion.Content.Buffs.Innacurate;
+using UltimateRangerExpansion.Content.Buffs.Inaccurate;
 
 namespace UltimateRangerExpansion.Common.Global
 {
@@ -21,7 +21,7 @@ namespace UltimateRangerExpansion.Common.Global
                     if (Main.zenithWorld && Main.expertMode) multiplier = 3;
                     if (Main.zenithWorld && Main.masterMode) multiplier = 5;
 
-                    target.AddBuff(ModContent.BuffType<Innacurate>(), 60 * 5 * multiplier);
+                    target.AddBuff(ModContent.BuffType<Inaccurate>(), 60 * 5 * multiplier);
                 }
             }
         }
