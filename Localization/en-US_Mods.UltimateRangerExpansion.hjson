@@ -260,7 +260,7 @@ Items: {
 
 	SpetsnazHelm: {
 		DisplayName: Spetsnaz Helm
-		Tooltip: 
+		Tooltip:
 			'''
 			Counts as Night Vision Goggles.
 			'From Russia With Sneakiness...'

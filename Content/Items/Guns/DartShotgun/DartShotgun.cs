@@ -36,7 +36,7 @@ namespace UltimateRangerExpansion.Content.Items.Guns.DartShotgun
 
             // Gun Properties
             Item.shoot = ProjectileID.PurificationPowder;
-            Item.shootSpeed = 45f;
+            Item.shootSpeed = 32f;
             Item.useAmmo = AmmoID.Dart;
 
             Item.UseSound = SoundID.Item11;
