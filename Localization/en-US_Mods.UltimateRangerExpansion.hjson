@@ -317,7 +317,7 @@ Items: {
 	}
 
 	HomingArrow: {
-		DisplayName: Homing Arrow
+		DisplayName: Seeking Arrow
 		Tooltip: "'It sees you...'"
 	}
 }
@@ -360,7 +360,7 @@ Projectiles: {
 	Heaven.DisplayName: Heaven
 	SplittingArrowProjectile.DisplayName: Splitting Arrow
 	StrikePlane.DisplayName: Strike Plane
-	HomingArrowProjectile.DisplayName: Homing Arrow
+	HomingArrowProjectile.DisplayName: Seeking Arrow
 }
 
 Prefixes: {
