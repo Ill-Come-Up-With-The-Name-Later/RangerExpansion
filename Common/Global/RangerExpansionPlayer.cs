@@ -14,6 +14,7 @@ namespace UltimateRangerExpansion.Common.Global
         public override void ResetEffects()
         {
             reticle = false;
+            spread = 8;
         }
 
         public override void ModifyShootStats(Item item, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
