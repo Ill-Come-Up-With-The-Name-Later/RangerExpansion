@@ -21,6 +21,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Darts.Hollow
             Projectile.light = 0.2f;
             Projectile.penetrate = 2;
 
+            Projectile.extraUpdates = 1;
+
             AIType = ProjectileID.CrystalDart;
         }
 

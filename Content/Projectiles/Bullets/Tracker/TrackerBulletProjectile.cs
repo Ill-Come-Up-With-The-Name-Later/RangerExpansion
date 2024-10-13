@@ -31,6 +31,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Bullets.Tracker
             Projectile.tileCollide = true;
             Projectile.scale = 0.75f;
 
+            Projectile.extraUpdates = 1;
+
             AIType = ProjectileID.ChlorophyteBullet;
         }
 

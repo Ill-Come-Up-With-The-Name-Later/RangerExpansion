@@ -11,6 +11,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Arrows.SplittingArrow
         {
             Projectile.CloneDefaults(ProjectileID.WoodenArrowFriendly);
             Projectile.timeLeft = 2400;
+
+            Projectile.extraUpdates = 1;
         }
 
         public override void AI()

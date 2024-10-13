@@ -12,6 +12,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Arrows.HomingArrow
         {
             Projectile.CloneDefaults(ProjectileID.WoodenArrowFriendly);
             Projectile.timeLeft = 2400;
+
+            Projectile.extraUpdates = 1;
         }
 
         public override void AI()

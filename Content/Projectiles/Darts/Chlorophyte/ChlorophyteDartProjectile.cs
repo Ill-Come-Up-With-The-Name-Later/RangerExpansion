@@ -23,6 +23,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Darts.Chlorophyte
             Projectile.light = 0.2f;
             Projectile.penetrate = 6;
 
+            Projectile.extraUpdates = 1;
+
             AIType = ProjectileID.CrystalDart;
         }
 

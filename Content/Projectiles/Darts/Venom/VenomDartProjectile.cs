@@ -20,6 +20,8 @@ namespace UltimateRangerExpansion.Content.Projectiles.Darts.Venom
             Projectile.tileCollide = true;
             Projectile.light = 0.2f;
 
+            Projectile.extraUpdates = 1;
+
             AIType = ProjectileID.CrystalDart;
         }
 
